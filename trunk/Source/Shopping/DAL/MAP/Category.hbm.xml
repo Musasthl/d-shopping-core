@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping assembly="COM" namespace="COM.DTO" xmlns="urn:nhibernate-mapping-2.2">
+  <class name="Category" table="[dbo].[Categories]" lazy="true" >
+    <id name="Id" column="Id">
+      <generator class="identity" />
+    </id>
+    <property name="Name">
+      <column name="Name" sql-type="nvarchar" not-null="false" />
+    </property>
+    <many-to-one insert="false" update="false" lazy="false" name="Parent">
+      <column name="ParentId" sql-type="int" not-null="false" />
+    </many-to-one>
+    <!--<property name="ParentId">
+      <column name="ParentId" sql-type="int" not-null="false" />
+    </property> -->
+    <many-to-one insert="false" update="false" lazy="false" name="Status">
+      <column name="StatusId" sql-type="int" not-null="true" />
+    </many-to-one>
+    <!--<property name="StatusId">
+      <column name="StatusId" sql-type="int" not-null="true" />
+    </property>-->
+    <bag name="Categories" inverse="true" cascade="none">
+      <key column="ParentId" />
+      <one-to-many class="Category" />
+    </bag>
+    <bag name="Products" inverse="true" cascade="none">
+      <key column="CategoryId" />
+      <one-to-many class="Product" />
+    </bag>
+  </class>
+</hibernate-mapping>

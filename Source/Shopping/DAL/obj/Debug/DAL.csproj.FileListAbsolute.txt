@@ -1,0 +1,9 @@
+E:\Project\Shopping\d-shopping-core\Source\Shopping\DAL\bin\Debug\DAL.dll
+E:\Project\Shopping\d-shopping-core\Source\Shopping\DAL\bin\Debug\DAL.pdb
+E:\Project\Shopping\d-shopping-core\Source\Shopping\DAL\bin\Debug\COM.dll
+E:\Project\Shopping\d-shopping-core\Source\Shopping\DAL\bin\Debug\Iesi.Collections.dll
+E:\Project\Shopping\d-shopping-core\Source\Shopping\DAL\bin\Debug\NHibernate.dll
+E:\Project\Shopping\d-shopping-core\Source\Shopping\DAL\bin\Debug\COM.pdb
+E:\Project\Shopping\d-shopping-core\Source\Shopping\DAL\obj\Debug\ResolveAssemblyReference.cache
+E:\Project\Shopping\d-shopping-core\Source\Shopping\DAL\obj\Debug\DAL.dll
+E:\Project\Shopping\d-shopping-core\Source\Shopping\DAL\obj\Debug\DAL.pdb

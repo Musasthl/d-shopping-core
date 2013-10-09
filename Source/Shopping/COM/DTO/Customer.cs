@@ -10,7 +10,7 @@ namespace COM.DTO {
 			Customers = new List<Customer>();
 			Invoices = new List<Invoice>();
         }
-        public virtual int Id { get; set; }
+        public virtual int CustomerID { get; set; }
         public virtual Status Status { get; set; }
         public virtual Customer Parent { get; set; }
         public virtual string Name { get; set; }

@@ -1,9 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <hibernate-mapping assembly="COM" namespace="COM.DTO" xmlns="urn:nhibernate-mapping-2.2">
   <class name="Customer" table="[dbo].[Customers]" lazy="true" >
-    <id name="Id" column="Id">
+    <id name="CustomerID" column="CustomerID">
       <generator class="identity" />
     </id>
+    <many-to-one name="Status">
+      <column name="StatusID" sql-type="nvarchar" not-null="false" />
+    </many-to-one>
+    <many-to-one name="Parent">
+      <column name="ParentID" sql-type="int" not-null="false" />
+    </many-to-one>
     <property name="Name">
       <column name="Name" sql-type="nvarchar" not-null="false" />
     </property>
@@ -22,27 +28,15 @@
     <property name="Password">
       <column name="Password" sql-type="nvarchar" not-null="false" />
     </property>
-    <many-to-one insert="false" update="false" lazy="false" name="Status">
-      <column name="StatusId" sql-type="int" not-null="false" />
-    </many-to-one>
-    <!--<property name="StatusId">
-      <column name="StatusId" sql-type="int" not-null="false" />
-    </property> -->
-    <many-to-one insert="false" update="false" lazy="false" name="Parent">
-      <column name="ParentId" sql-type="int" not-null="false" />
-    </many-to-one>
-    <!-- <property name="ParentId">
-      <column name="ParentId" sql-type="int" not-null="false" />
-    </property>-->
     <property name="CreatedDate">
-      <column name="CreatedDate" sql-type="datetime" not-null="false" />
+      <column name="CreatedDate" sql-type="date" not-null="false" />
     </property>
-    <bag name="Customers" inverse="true" cascade="none">
-      <key column="ParentId" />
+    <bag name="Customers" inverse="true">
+      <key column="ParentID" />
       <one-to-many class="Customer" />
     </bag>
-    <bag name="Invoices" inverse="true" cascade="none">
-      <key column="CustomerId" />
+    <bag name="Invoices" inverse="true">
+      <key column="CustomerID" />
       <one-to-many class="Invoice" />
     </bag>
   </class>

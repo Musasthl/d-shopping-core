@@ -1,0 +1,5 @@
+E:\Project\Shopping\d-shopping-core\Source\Shopping\COM\bin\Debug\COM.dll
+E:\Project\Shopping\d-shopping-core\Source\Shopping\COM\bin\Debug\COM.pdb
+E:\Project\Shopping\d-shopping-core\Source\Shopping\COM\obj\Debug\ResolveAssemblyReference.cache
+E:\Project\Shopping\d-shopping-core\Source\Shopping\COM\obj\Debug\COM.dll
+E:\Project\Shopping\d-shopping-core\Source\Shopping\COM\obj\Debug\COM.pdb

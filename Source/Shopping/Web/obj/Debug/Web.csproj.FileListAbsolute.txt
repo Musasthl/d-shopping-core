@@ -1,0 +1,14 @@
+E:\Project\Shopping\d-shopping-core\Source\Shopping\Web\bin\hibernate.cfg.xml
+E:\Project\Shopping\d-shopping-core\Source\Shopping\Web\bin\Web.dll
+E:\Project\Shopping\d-shopping-core\Source\Shopping\Web\bin\Web.pdb
+E:\Project\Shopping\d-shopping-core\Source\Shopping\Web\bin\BUS.dll
+E:\Project\Shopping\d-shopping-core\Source\Shopping\Web\bin\COM.dll
+E:\Project\Shopping\d-shopping-core\Source\Shopping\Web\bin\DAL.dll
+E:\Project\Shopping\d-shopping-core\Source\Shopping\Web\bin\NHibernate.dll
+E:\Project\Shopping\d-shopping-core\Source\Shopping\Web\bin\Iesi.Collections.dll
+E:\Project\Shopping\d-shopping-core\Source\Shopping\Web\bin\BUS.pdb
+E:\Project\Shopping\d-shopping-core\Source\Shopping\Web\bin\COM.pdb
+E:\Project\Shopping\d-shopping-core\Source\Shopping\Web\bin\DAL.pdb
+E:\Project\Shopping\d-shopping-core\Source\Shopping\Web\obj\Debug\ResolveAssemblyReference.cache
+E:\Project\Shopping\d-shopping-core\Source\Shopping\Web\obj\Debug\Web.dll
+E:\Project\Shopping\d-shopping-core\Source\Shopping\Web\obj\Debug\Web.pdb

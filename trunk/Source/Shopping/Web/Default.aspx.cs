@@ -22,7 +22,7 @@ namespace Web
             newCust.Password = Encrypt.EncodePassword("123456");
             newCust.Phone = "0123456";
             newCust.Usename = "dang";
-            CustomerHandler.CreateNewCustomer(newCust);
+            lbError.Text = CustomerHandler.CreateNewCustomer(newCust).ToString();
             Logger.getInstance().log("dang");
         }
     }

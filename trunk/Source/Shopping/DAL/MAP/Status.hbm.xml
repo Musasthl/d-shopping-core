@@ -1,30 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <hibernate-mapping assembly="COM" namespace="COM.DTO" xmlns="urn:nhibernate-mapping-2.2">
-  <class name="Status" table="[dbo].[Status]" lazy="true" >
-    <id name="Id" column="Id">
-      <generator class="identity" />
-    </id>
-    <property name="Name">
-      <column name="Name" sql-type="nvarchar" not-null="false" />
+  <class name="Status" table="Status" lazy="true" >
+    <id name="StatusID" column="StatusID" />
+    <property name="StatusDesc">
+      <column name="StatusDesc" sql-type="nvarchar" not-null="false" />
     </property>
-    <property name="Descriptions">
-      <column name="Descriptions" sql-type="nvarchar" not-null="false" />
-    </property>
-    <bag name="Categories" inverse="true" cascade="none">
-      <key column="StatusId" />
-      <one-to-many class="Category" />
+    <bag name="Customers" inverse="true">
+      <key column="StatusID" />
+      <one-to-many class="Customers" />
     </bag>
-    <bag name="Customers" inverse="true" cascade="none">
-      <key column="StatusId" />
-      <one-to-many class="Customer" />
+    <bag name="Invoices" inverse="true">
+      <key column="StatusID" />
+      <one-to-many class="Invoices" />
     </bag>
-    <bag name="Invoices" inverse="true" cascade="none">
-      <key column="StatusId" />
-      <one-to-many class="Invoice" />
+    <bag name="ProductDetails" inverse="true">
+      <key column="ProductTypeId" />
+      <one-to-many class="ProductDetails" />
     </bag>
-    <bag name="Products" inverse="true" cascade="none">
+    <bag name="Products" inverse="true">
       <key column="StatusId" />
-      <one-to-many class="Product" />
+      <one-to-many class="Products" />
     </bag>
   </class>
 </hibernate-mapping>

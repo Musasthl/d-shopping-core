@@ -9,7 +9,7 @@ namespace DAL.DAO
 {
     public class CustomerDAO
     {
-        public static bool Add(Customer Customer)
+        public static string Add(Customer Customer)
         {
             {
                 using (ISession session = NHibernateHelper.OpenSession())
@@ -19,11 +19,11 @@ namespace DAL.DAO
                     {
                         session.SaveOrUpdate(Customer);
                         transaction.Commit();
-                        return true;
+                        return "";
                     }
                     catch (Exception e)
                     {
-                        return false;
+                        return e.ToString();
                     }
                 }
             }

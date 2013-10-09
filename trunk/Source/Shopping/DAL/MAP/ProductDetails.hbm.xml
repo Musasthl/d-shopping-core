@@ -1,18 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <hibernate-mapping assembly="COM" namespace="COM.DTO" xmlns="urn:nhibernate-mapping-2.2">
-  <class name="ProductDetail" table="[dbo].[ProductDetails]" lazy="true" >
+  <class name="Productdetail" table="ProductDetails" lazy="true" >
     <id name="Id" column="Id">
       <generator class="identity" />
     </id>
-    <many-to-one insert="false" update="false" lazy="false" name="Product">
+    <many-to-one name="ProductId">
       <column name="ProductId" sql-type="int" not-null="false" />
     </many-to-one>
-    <!--<property name="ProductId">
-      <column name="ProductId" sql-type="int" not-null="false" />
-    </property>-->
-    <property name="ProductTypeId">
-      <column name="ProductTypeId (SttId)" sql-type="nvarchar" not-null="false" />
-    </property>
+    <many-to-one name="ProductTypeId">
+      <column name="ProductTypeId" sql-type="nvarchar" not-null="false" />
+    </many-to-one>
     <property name="Descriptions">
       <column name="Descriptions" sql-type="nvarchar" not-null="false" />
     </property>

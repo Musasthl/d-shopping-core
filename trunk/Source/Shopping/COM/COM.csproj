@@ -42,12 +42,24 @@
   <ItemGroup>
     <Compile Include="Common.cs" />
     <Compile Include="CONST.cs" />
-    <Compile Include="DTO\Category.cs" />
-    <Compile Include="DTO\Customer.cs" />
-    <Compile Include="DTO\Invoice.cs" />
-    <Compile Include="DTO\Order.cs" />
-    <Compile Include="DTO\Productdetail.cs" />
-    <Compile Include="DTO\Product.cs" />
+    <Compile Include="DTO\Category.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DTO\Customer.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DTO\Invoice.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DTO\Order.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DTO\Product.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DTO\Productdetail.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="DTO\Status.cs">
       <SubType>Code</SubType>
     </Compile>

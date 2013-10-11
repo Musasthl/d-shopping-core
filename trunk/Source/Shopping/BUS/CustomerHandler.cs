@@ -10,7 +10,7 @@ namespace BUS
 {
     public class CustomerHandler
     {
-        public static string CreateNewCustomer(Customer Customer)
+        public static bool CreateNewCustomer(Customer Customer)
         {
             try
             {
@@ -19,7 +19,7 @@ namespace BUS
             catch (Exception ex)
             {
                 Logger.getInstance().log(ex.ToString());
-                return ex.ToString();
+                return false;
             }
         }
     }

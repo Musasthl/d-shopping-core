@@ -12,11 +12,11 @@
     </property>
     <bag name="Categories" inverse="true">
       <key column="ParentId" />
-      <one-to-many class="Categories" />
+      <one-to-many class="Category" />
     </bag>
     <bag name="Products" inverse="true">
       <key column="CategoryId" />
-      <one-to-many class="Products" />
+      <one-to-many class="Product" />
     </bag>
   </class>
 </hibernate-mapping>

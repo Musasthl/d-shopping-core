@@ -1,25 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <hibernate-mapping assembly="COM" namespace="COM.DTO" xmlns="urn:nhibernate-mapping-2.2">
-  <class name="Status" table="Status" lazy="true" >
+  <class name="Status" table="[dbo].[Status]" lazy="true" >
     <id name="StatusID" column="StatusID" />
     <property name="StatusDesc">
       <column name="StatusDesc" sql-type="nvarchar" not-null="false" />
     </property>
     <bag name="Customers" inverse="true">
       <key column="StatusID" />
-      <one-to-many class="Customers" />
+      <one-to-many class="Customer" />
     </bag>
     <bag name="Invoices" inverse="true">
       <key column="StatusID" />
-      <one-to-many class="Invoices" />
+      <one-to-many class="Invoice" />
     </bag>
     <bag name="ProductDetails" inverse="true">
       <key column="ProductTypeId" />
-      <one-to-many class="ProductDetails" />
+      <one-to-many class="ProductDetail" />
     </bag>
     <bag name="Products" inverse="true">
       <key column="StatusId" />
-      <one-to-many class="Products" />
+      <one-to-many class="Product" />
     </bag>
   </class>
 </hibernate-mapping>

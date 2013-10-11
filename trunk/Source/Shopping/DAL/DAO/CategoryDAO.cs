@@ -4,13 +4,12 @@ using System.Linq;
 using System.Text;
 using COM.DTO;
 using NHibernate;
-using COM;
 
 namespace DAL.DAO
 {
-    public class CustomerDAO
+    public class CategoryDAO
     {
-        public static bool Add(Customer Customer)
+        public static bool Add(Category Category)
         {
             {
                 using (ISession session = NHibernateHelper.OpenSession())
@@ -18,37 +17,36 @@ namespace DAL.DAO
                 {
                     try
                     {
-                        session.SaveOrUpdate(Customer);
+                        session.SaveOrUpdate(Category);
                         transaction.Commit();
                         return true;
                     }
                     catch (Exception e)
                     {
-                        Logger.getInstance().log(e.ToString());
                         return false;
                     }
                 }
             }
         }
-        public static void Update(Customer Customer)
+        public static void Update(Category Category)
         {
             {
                 using (ISession session = NHibernateHelper.OpenSession())
                 using (ITransaction transaction = session.BeginTransaction())
                 {
-                    session.Update(Customer);
+                    session.Update(Category);
                     transaction.Commit();
                 }
             }
         }
 
-        public static void Remove(Customer Customer)
+        public static void Remove(Category Category)
         {
             {
                 using (ISession session = NHibernateHelper.OpenSession())
                 using (ITransaction transaction = session.BeginTransaction())
                 {
-                    session.Delete(Customer);
+                    session.Delete(Category);
                     transaction.Commit();
                 }
             }

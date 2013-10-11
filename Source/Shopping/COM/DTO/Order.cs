@@ -7,8 +7,8 @@ namespace COM.DTO {
     
     public class Order {
         public virtual int OrderID { get; set; }
-        public virtual Product Products { get; set; }
-        public virtual Invoice Invoices { get; set; }
-        public virtual string Quantity { get; set; }
+        public virtual Product Product { get; set; }
+        public virtual Invoice Invoice { get; set; }
+        public virtual int Quantity { get; set; }
     }
 }

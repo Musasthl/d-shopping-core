@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DAO\CategoryDAO.cs" />
     <Compile Include="DAO\CustomerDAO.cs" />
     <Compile Include="NHibernateHelper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -58,10 +59,14 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="MAP\Categories.hbm.xml" />
-    <EmbeddedResource Include="MAP\Customers.hbm.xml" />
+    <EmbeddedResource Include="MAP\Customers.hbm.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
     <EmbeddedResource Include="MAP\Invoices.hbm.xml" />
     <EmbeddedResource Include="MAP\Orders.hbm.xml" />
-    <EmbeddedResource Include="MAP\ProductDetails.hbm.xml" />
+    <EmbeddedResource Include="MAP\ProductDetails.hbm.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
     <EmbeddedResource Include="MAP\Products.hbm.xml" />
     <EmbeddedResource Include="MAP\Status.hbm.xml" />
   </ItemGroup>

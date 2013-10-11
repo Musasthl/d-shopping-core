@@ -16,8 +16,8 @@ namespace COM
         {
             try
             {
-                 
-                String fileLoc = @"Log/" + DateTime.Today.ToString() + ".txt";
+                String fileName = DateTime.Today.Year + "" + DateTime.Today.Month + "" + DateTime.Today.Day;
+                String fileLoc = @"Log/" + fileName + ".txt";
                 FileStream fs = null;
                 if (!File.Exists(fileLoc))
                 {
@@ -30,6 +30,8 @@ namespace COM
             }
             catch (Exception e)
             {
+                
+                
             }
         }
 

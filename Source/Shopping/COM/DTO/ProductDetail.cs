@@ -5,10 +5,10 @@ using System.Collections.Generic;
 
 namespace COM.DTO {
     
-    public class Productdetail {
+    public class ProductDetail {
         public virtual int Id { get; set; }
-        public virtual Product Products { get; set; }
-        public virtual Status Status { get; set; }
+        public virtual Product Product { get; set; }
+        public virtual Status ProductType { get; set; }
         public virtual string Descriptions { get; set; }
     }
 }

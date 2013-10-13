@@ -2,6 +2,7 @@
 <%@ Register Src="~/Component/LeftPanelCategory.ascx" TagPrefix="uc" TagName="LeftPanel" %>
 <%@ Register Src="~/Component/Header.ascx" TagPrefix="uc" TagName="Header" %>
 <%@ Register Src="~/Component/Banner.ascx" TagPrefix="uc" TagName="Banner" %>
+<%@ Register Src="~/Component/Footer.ascx" TagPrefix="uc" TagName="Footer" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
@@ -56,6 +57,7 @@
         </div>
         <div id="d-footer">
             <!-- Include Footer menu, Contact infor, Copyright -->
+            <uc:Footer id="ucFooter" runat="server" />
         </div>
     </div>
     </form>

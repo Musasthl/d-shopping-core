@@ -91,12 +91,14 @@
     </Compile>
     <Compile Include="Component\BottomMenu.ascx.cs">
       <DependentUpon>BottomMenu.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Component\BottomMenu.ascx.designer.cs">
       <DependentUpon>BottomMenu.ascx</DependentUpon>
     </Compile>
     <Compile Include="Component\ConnectFacebook.ascx.cs">
       <DependentUpon>ConnectFacebook.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Component\ConnectFacebook.ascx.designer.cs">
       <DependentUpon>ConnectFacebook.ascx</DependentUpon>
@@ -124,36 +126,42 @@
     </Compile>
     <Compile Include="Component\ProductDiscount.ascx.cs">
       <DependentUpon>ProductDiscount.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Component\ProductDiscount.ascx.designer.cs">
       <DependentUpon>ProductDiscount.ascx</DependentUpon>
     </Compile>
     <Compile Include="Component\ProductHot.ascx.cs">
       <DependentUpon>ProductHot.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Component\ProductHot.ascx.designer.cs">
       <DependentUpon>ProductHot.ascx</DependentUpon>
     </Compile>
     <Compile Include="Component\ProductNewest.ascx.cs">
       <DependentUpon>ProductNewest.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Component\ProductNewest.ascx.designer.cs">
       <DependentUpon>ProductNewest.ascx</DependentUpon>
     </Compile>
     <Compile Include="Component\Register.ascx.cs">
       <DependentUpon>Register.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Component\Register.ascx.designer.cs">
       <DependentUpon>Register.ascx</DependentUpon>
     </Compile>
     <Compile Include="Component\SearchLeftPanel.ascx.cs">
       <DependentUpon>SearchLeftPanel.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Component\SearchLeftPanel.ascx.designer.cs">
       <DependentUpon>SearchLeftPanel.ascx</DependentUpon>
     </Compile>
     <Compile Include="Component\TopMenu.ascx.cs">
       <DependentUpon>TopMenu.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Component\TopMenu.ascx.designer.cs">
       <DependentUpon>TopMenu.ascx</DependentUpon>

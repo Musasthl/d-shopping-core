@@ -22,5 +22,18 @@ namespace BUS
                 return false;
             }
         }
+
+        public static bool Register(User User)
+        {
+            try
+            {
+                return UserDAO.Add(User);
+            }
+            catch (Exception ex)
+            {
+                Logger.getInstance().log(ex.ToString());
+                return false;
+            }
+        }
     }
 }

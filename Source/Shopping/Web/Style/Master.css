@@ -39,21 +39,21 @@ table#d-table-main
 }
 #d-left 
 {
-    width:230px;
+    width:200px;
     border: 1px solid black;
     min-height:600px;
 }
 
 #d-center 
 {
-    width: 530px;
+    width: 780px;
     border: 1px solid black;
     min-height:600px;
 }
 
 #d-right 
 {
-    width : 200px;
+    width : 160px;
     border: 1px solid black;
     min-height:600px;
 }

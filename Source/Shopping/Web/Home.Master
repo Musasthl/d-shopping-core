@@ -1,5 +1,6 @@
 ﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Home.master.cs" Inherits="Web.Home" %>
 <%@ Register Src="~/Component/LeftPanelCategory.ascx" TagPrefix="uc" TagName="LeftPanel" %>
+<%@ Register Src="~/Component/Header.ascx" TagPrefix="uc" TagName="Header" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
@@ -7,8 +8,13 @@
         <asp:ContentPlaceHolder ID="phTitle" runat="server">
         </asp:ContentPlaceHolder>
     </title>
-    <link href="Style/reset.css" rel="stylesheet" type="text/css" />
+    <!-- Style -->
+    <link href="/Style/reset.css" rel="stylesheet" type="text/css" />
     <link href="/Style/Master.css" rel="stylesheet" type="text/css" />
+    
+    <!-- Script -->
+    <script src="/Script/jquery-1.10.2.min.js" type="text/javascript"></script>
+    
     <asp:ContentPlaceHolder ID="phStyle" runat="server">
     </asp:ContentPlaceHolder>
 </head>
@@ -17,6 +23,7 @@
     <div id="d-page">
         <div id="d-header">
             <!-- Include Logo, Shop Name -->
+            <uc:Header id="ucHeader" runat="server" />
         </div>
         <div id="d-content">
             <div id="d-banner">
@@ -28,7 +35,7 @@
                     <tr>
                         <td>
                             <div id="d-left">                                
-                                <uc:LeftPanel id="leftPanel" runat="server" />
+                                <uc:LeftPanel id="ucLeftPanel" runat="server" />
                                 <asp:ContentPlaceHolder ID="phLeft" runat="server">
                                 </asp:ContentPlaceHolder>
                             </div>
@@ -38,14 +45,6 @@
                         <td>
                             <div id="d-center">
                                 <asp:ContentPlaceHolder ID="phCenter" runat="server">
-                                </asp:ContentPlaceHolder>
-                            </div>
-                        </td>
-                        <td class="d-split-col">
-                        </td>
-                        <td>
-                            <div id="d-right">
-                                <asp:ContentPlaceHolder ID="phRight" runat="server">
                                 </asp:ContentPlaceHolder>
                             </div>
                         </td>

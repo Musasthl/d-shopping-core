@@ -50,6 +50,9 @@
     <Reference Include="System.Web.ApplicationServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Component\Banner.ascx" />
+    <Content Include="Component\Footer.ascx" />
+    <Content Include="Component\Header.ascx" />
     <Content Include="Component\LeftPanelCategory.ascx" />
     <Content Include="Default.aspx" />
     <Content Include="Global.asax" />
@@ -68,6 +71,27 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Component\Banner.ascx.cs">
+      <DependentUpon>Banner.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Component\Banner.ascx.designer.cs">
+      <DependentUpon>Banner.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Component\Footer.ascx.cs">
+      <DependentUpon>Footer.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Component\Footer.ascx.designer.cs">
+      <DependentUpon>Footer.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Component\Header.ascx.cs">
+      <DependentUpon>Header.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Component\Header.ascx.designer.cs">
+      <DependentUpon>Header.ascx</DependentUpon>
+    </Compile>
     <Compile Include="Component\LeftPanelCategory.ascx.cs">
       <DependentUpon>LeftPanelCategory.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

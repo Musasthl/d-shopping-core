@@ -40,13 +40,22 @@ namespace Web {
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
         
         /// <summary>
-        /// leftPanel control.
+        /// ucHeader control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::Web.Component.LeftPanelCategory leftPanel;
+        protected global::Web.Component.Header ucHeader;
+        
+        /// <summary>
+        /// ucLeftPanel control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::Web.Component.LeftPanelCategory ucLeftPanel;
         
         /// <summary>
         /// phLeft control.
@@ -65,14 +74,5 @@ namespace Web {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.ContentPlaceHolder phCenter;
-        
-        /// <summary>
-        /// phRight control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder phRight;
     }
 }

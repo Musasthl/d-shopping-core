@@ -41,6 +41,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CategoryHandler.cs" />
+    <Compile Include="ProductHandler.cs" />
+    <Compile Include="UserHandler.cs" />
     <Compile Include="CustomerHandler.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

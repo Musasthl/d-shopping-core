@@ -11,7 +11,7 @@ namespace DAL
     public class NHibernateHelper
     {
         private static ISessionFactory _sessionFactory;
-
+        private static string connectionXML;
         private static ISessionFactory SessionFactory
         {
 
@@ -24,7 +24,7 @@ namespace DAL
                     var configuration = new Configuration();
 
                     configuration.Configure();
-
+                    // configuration.AddXmlString(connectionXML);
                     configuration.AddAssembly(Assembly.GetCallingAssembly());
 
                     _sessionFactory = configuration.BuildSessionFactory();

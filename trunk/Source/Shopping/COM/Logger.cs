@@ -43,6 +43,11 @@ namespace COM
         {
 
         }
+
+        private void log4Net(string _logMessage)
+        {
+            
+        }
         public static Logger getInstance()
         {
             if (_logger == null)

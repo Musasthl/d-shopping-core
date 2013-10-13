@@ -23,5 +23,15 @@ namespace COM
             //Convert encoded bytes back to a 'readable' string
             return BitConverter.ToString(encodedBytes);
         }
+
+        public static string VerifyPhone(string originalPhone)
+        {
+            if (originalPhone == null || originalPhone.Length < 5)
+            {
+                return "";
+            }
+            else
+                return "***-***-" + originalPhone.Substring(originalPhone.Length - 4, originalPhone.Length);
+        }
     }
 }

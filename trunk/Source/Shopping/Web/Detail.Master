@@ -1,10 +1,12 @@
-﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Home.master.cs" Inherits="Web.Home" %>
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Detail.master.cs" Inherits="Web.Detail" %>
 <%@ Register Src="~/Component/LeftPanelCategory.ascx" TagPrefix="uc" TagName="LeftPanel" %>
 <%@ Register Src="~/Component/Header.ascx" TagPrefix="uc" TagName="Header" %>
 <%@ Register Src="~/Component/Banner.ascx" TagPrefix="uc" TagName="Banner" %>
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
 <html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
+<head id="Head1" runat="server">
     <title>
         <asp:ContentPlaceHolder ID="phTitle" runat="server">
         </asp:ContentPlaceHolder>
@@ -36,17 +38,17 @@
                 <table id="d-table-main">
                     <tr>
                         <td>
-                            <div id="d-left">                                
-                                <uc:LeftPanel id="ucLeftPanel" runat="server" />
-                                <asp:ContentPlaceHolder ID="phLeft" runat="server">
+                            <div id="d-center">                                
+                                
+                                <asp:ContentPlaceHolder ID="phCenter" runat="server">
                                 </asp:ContentPlaceHolder>
                             </div>
                         </td>
                         <td class="d-split-col">
                         </td>
                         <td>
-                            <div id="d-center">
-                                <asp:ContentPlaceHolder ID="phCenter" runat="server">
+                            <div id="d-left">
+                                <asp:ContentPlaceHolder ID="phRight" runat="server">
                                 </asp:ContentPlaceHolder>
                             </div>
                         </td>
@@ -61,3 +63,4 @@
     </form>
 </body>
 </html>
+

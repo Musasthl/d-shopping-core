@@ -10,7 +10,16 @@
 namespace Web {
     
     
-    public partial class Home {
+    public partial class Detail {
+        
+        /// <summary>
+        /// Head1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlHead Head1;
         
         /// <summary>
         /// phTitle control.
@@ -58,24 +67,6 @@ namespace Web {
         protected global::Web.Component.Banner ucBanner;
         
         /// <summary>
-        /// ucLeftPanel control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::Web.Component.LeftPanelCategory ucLeftPanel;
-        
-        /// <summary>
-        /// phLeft control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder phLeft;
-        
-        /// <summary>
         /// phCenter control.
         /// </summary>
         /// <remarks>
@@ -83,5 +74,14 @@ namespace Web {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.ContentPlaceHolder phCenter;
+        
+        /// <summary>
+        /// phRight control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.ContentPlaceHolder phRight;
     }
 }

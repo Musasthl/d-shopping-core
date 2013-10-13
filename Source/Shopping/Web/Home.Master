@@ -1,0 +1,62 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Home.master.cs" Inherits="Web.Home" %>
+<%@ Register Src="~/Component/LeftPanelCategory.ascx" TagPrefix="uc" TagName="LeftPanel" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>
+        <asp:ContentPlaceHolder ID="phTitle" runat="server">
+        </asp:ContentPlaceHolder>
+    </title>
+    <link href="Style/reset.css" rel="stylesheet" type="text/css" />
+    <link href="/Style/Master.css" rel="stylesheet" type="text/css" />
+    <asp:ContentPlaceHolder ID="phStyle" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div id="d-page">
+        <div id="d-header">
+            <!-- Include Logo, Shop Name -->
+        </div>
+        <div id="d-content">
+            <div id="d-banner">
+                <!-- Include Banner -->
+            </div>
+            <div id="d-body">
+                <!-- Include left Panel, Center Panel, Right Panel -->
+                <table id="d-table-main">
+                    <tr>
+                        <td>
+                            <div id="d-left">                                
+                                <uc:LeftPanel id="leftPanel" runat="server" />
+                                <asp:ContentPlaceHolder ID="phLeft" runat="server">
+                                </asp:ContentPlaceHolder>
+                            </div>
+                        </td>
+                        <td class="d-split-col">
+                        </td>
+                        <td>
+                            <div id="d-center">
+                                <asp:ContentPlaceHolder ID="phCenter" runat="server">
+                                </asp:ContentPlaceHolder>
+                            </div>
+                        </td>
+                        <td class="d-split-col">
+                        </td>
+                        <td>
+                            <div id="d-right">
+                                <asp:ContentPlaceHolder ID="phRight" runat="server">
+                                </asp:ContentPlaceHolder>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div id="d-footer">
+            <!-- Include Footer menu, Contact infor, Copyright -->
+        </div>
+    </div>
+    </form>
+</body>
+</html>

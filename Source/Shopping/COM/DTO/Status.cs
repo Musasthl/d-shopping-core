@@ -11,12 +11,14 @@ namespace COM.DTO {
 			Invoices = new List<Invoice>();
 			ProductDetails = new List<ProductDetail>();
 			Products = new List<Product>();
+            Users = new List<User>();
         }
         public virtual string StatusID { get; set; }
-        public virtual string StatusDesc { get; set; }
+        public virtual string Name { get; set; }
         public virtual IList<Customer> Customers { get; set; }
         public virtual IList<Invoice> Invoices { get; set; }
         public virtual IList<ProductDetail> ProductDetails { get; set; }
         public virtual IList<Product> Products { get; set; }
+        public virtual IList<User> Users { get; set; }
     }
 }

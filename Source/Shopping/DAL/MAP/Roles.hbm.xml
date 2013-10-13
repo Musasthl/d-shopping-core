@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping assembly="COM" namespace="COM.DTO" xmlns="urn:nhibernate-mapping-2.2">
+  <class name="Role" table="[dbo].[Roles]" lazy="true" >
+    <id name="RoleID" column="RoleID" />
+    <property name="RoleName">
+      <column name="RoleName" sql-type="nvarchar" not-null="false" />
+    </property>
+    <bag name="Users" inverse="true">
+      <key column="RoleID" />
+      <one-to-many class="User" />
+    </bag>
+  </class>
+</hibernate-mapping>

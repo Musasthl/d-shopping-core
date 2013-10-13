@@ -10,7 +10,7 @@
     <property name="Name">
       <column name="Name" sql-type="nvarchar" not-null="false" />
     </property>
-    <bag name="Categories" inverse="true">
+    <bag name="Categories" inverse="true" lazy="false">
       <key column="ParentId" />
       <one-to-many class="Category" />
     </bag>

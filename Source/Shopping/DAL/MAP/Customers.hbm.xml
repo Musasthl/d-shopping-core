@@ -39,5 +39,9 @@
       <key column="CustomerID" />
       <one-to-many class="Invoice" />
     </bag>
+    <bag name="Users" inverse="true">
+      <key column="UserID" />
+      <one-to-many class="User" />
+    </bag>
   </class>
 </hibernate-mapping>

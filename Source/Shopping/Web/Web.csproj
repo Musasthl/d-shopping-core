@@ -51,15 +51,24 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Component\Banner.ascx" />
+    <Content Include="Component\BottomMenu.ascx" />
+    <Content Include="Component\ConnectFacebook.ascx" />
     <Content Include="Component\Footer.ascx" />
     <Content Include="Component\Header.ascx" />
     <Content Include="Component\LeftPanelCategory.ascx" />
+    <Content Include="Component\ProductDiscount.ascx" />
+    <Content Include="Component\ProductHot.ascx" />
+    <Content Include="Component\ProductNewest.ascx" />
+    <Content Include="Component\Register.ascx" />
+    <Content Include="Component\SearchLeftPanel.ascx" />
+    <Content Include="Component\TopMenu.ascx" />
     <Content Include="Default.aspx" />
     <Content Include="Global.asax" />
     <Content Include="hibernate.cfg.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Home.aspx" />
+    <Content Include="Product.aspx" />
     <Content Include="Script\jquery-1.10.2.js" />
     <Content Include="Script\jquery-1.10.2.min.js" />
     <Content Include="Style\Master.css" />
@@ -79,6 +88,18 @@
     </Compile>
     <Compile Include="Component\Banner.ascx.designer.cs">
       <DependentUpon>Banner.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Component\BottomMenu.ascx.cs">
+      <DependentUpon>BottomMenu.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Component\BottomMenu.ascx.designer.cs">
+      <DependentUpon>BottomMenu.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Component\ConnectFacebook.ascx.cs">
+      <DependentUpon>ConnectFacebook.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Component\ConnectFacebook.ascx.designer.cs">
+      <DependentUpon>ConnectFacebook.ascx</DependentUpon>
     </Compile>
     <Compile Include="Component\Footer.ascx.cs">
       <DependentUpon>Footer.ascx</DependentUpon>
@@ -101,12 +122,55 @@
     <Compile Include="Component\LeftPanelCategory.ascx.designer.cs">
       <DependentUpon>LeftPanelCategory.ascx</DependentUpon>
     </Compile>
+    <Compile Include="Component\ProductDiscount.ascx.cs">
+      <DependentUpon>ProductDiscount.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Component\ProductDiscount.ascx.designer.cs">
+      <DependentUpon>ProductDiscount.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Component\ProductHot.ascx.cs">
+      <DependentUpon>ProductHot.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Component\ProductHot.ascx.designer.cs">
+      <DependentUpon>ProductHot.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Component\ProductNewest.ascx.cs">
+      <DependentUpon>ProductNewest.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Component\ProductNewest.ascx.designer.cs">
+      <DependentUpon>ProductNewest.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Component\Register.ascx.cs">
+      <DependentUpon>Register.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Component\Register.ascx.designer.cs">
+      <DependentUpon>Register.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Component\SearchLeftPanel.ascx.cs">
+      <DependentUpon>SearchLeftPanel.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Component\SearchLeftPanel.ascx.designer.cs">
+      <DependentUpon>SearchLeftPanel.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Component\TopMenu.ascx.cs">
+      <DependentUpon>TopMenu.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Component\TopMenu.ascx.designer.cs">
+      <DependentUpon>TopMenu.ascx</DependentUpon>
+    </Compile>
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Detail.Master.cs">
+      <DependentUpon>Detail.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Detail.Master.designer.cs">
+      <DependentUpon>Detail.Master</DependentUpon>
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -124,6 +188,13 @@
     </Compile>
     <Compile Include="Home.Master.designer.cs">
       <DependentUpon>Home.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Product.aspx.cs">
+      <DependentUpon>Product.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Product.aspx.designer.cs">
+      <DependentUpon>Product.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Site.Master.cs">
@@ -150,7 +221,9 @@
       <Name>COM</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Content Include="Detail.Master" />
+  </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
   <ProjectExtensions>

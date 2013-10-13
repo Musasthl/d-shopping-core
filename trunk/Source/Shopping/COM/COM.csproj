@@ -60,9 +60,11 @@
     <Compile Include="DTO\Productdetail.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="DTO\Role.cs" />
     <Compile Include="DTO\Status.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="DTO\User.cs" />
     <Compile Include="Encrypt.cs" />
     <Compile Include="Logger.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

@@ -17,13 +17,13 @@ namespace Web
             Customer newCust = new Customer();
             newCust.Address = "";
             newCust.CreatedDate = DateTime.Today;
-            newCust.Email = "dang@email.com";
+            newCust.Email = "new_dang@email.com";
             newCust.Name = "Example";
             newCust.Password = Encrypt.EncodePassword("123456");
             newCust.Phone = "0123456";
             newCust.Usename = "dang";
             lbError.Text = CustomerHandler.CreateNewCustomer(newCust).ToString();
-            Logger.getInstance().log("dang");
+            // Logger.getInstance().log("dang");
         }
     }
 }

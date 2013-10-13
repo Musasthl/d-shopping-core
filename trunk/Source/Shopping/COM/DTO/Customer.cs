@@ -9,6 +9,7 @@ namespace COM.DTO {
         public Customer() {
 			Customers = new List<Customer>();
 			Invoices = new List<Invoice>();
+            Users = new List<User>();
         }
         public virtual int CustomerID { get; set; }
         public virtual Status Status { get; set; }
@@ -22,5 +23,6 @@ namespace COM.DTO {
         public virtual DateTime? CreatedDate { get; set; }
         public virtual IList<Customer> Customers { get; set; }
         public virtual IList<Invoice> Invoices { get; set; }
+        public virtual IList<User> Users { get; set; }
     }
 }

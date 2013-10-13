@@ -2,8 +2,8 @@
 <hibernate-mapping assembly="COM" namespace="COM.DTO" xmlns="urn:nhibernate-mapping-2.2">
   <class name="Status" table="[dbo].[Status]" lazy="true" >
     <id name="StatusID" column="StatusID" />
-    <property name="StatusDesc">
-      <column name="StatusDesc" sql-type="nvarchar" not-null="false" />
+    <property name="Name">
+      <column name="StatusName" sql-type="nvarchar" not-null="false" />
     </property>
     <bag name="Customers" inverse="true">
       <key column="StatusID" />
@@ -20,6 +20,10 @@
     <bag name="Products" inverse="true">
       <key column="StatusId" />
       <one-to-many class="Product" />
+    </bag>
+    <bag name="Users" inverse="true">
+      <key column="UserID" />
+      <one-to-many class="User" />
     </bag>
   </class>
 </hibernate-mapping>

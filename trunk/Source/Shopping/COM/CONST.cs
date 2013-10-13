@@ -7,12 +7,13 @@ namespace COM
 {
     public class CONST
     {
-        public class PARAM
+        public static class PARAM
         {
             public const string PRODUCT = "ProductId";
             public const string CATEGORY = "CategoryId";
+            public const string USER = "UserId";
         }
-        public class ROLE
+        public static class ROLE
         {
             public const int SADMIN = 0;
             public const int ADMIN = 10;
@@ -24,6 +25,14 @@ namespace COM
         {
 
         }
+        public static class STATUS
+        {
+            public const string ACTIVE = "Active";
+            public const string DELETE = "Delete";
+            public const string PENDING = "Pending";
+
+        }
+
         public class GENDER
         {
             public const string MALE = "M";

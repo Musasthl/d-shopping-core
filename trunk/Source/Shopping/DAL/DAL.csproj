@@ -58,7 +58,9 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="MAP\Categories.hbm.xml" />
+    <EmbeddedResource Include="MAP\Categories.hbm.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
     <EmbeddedResource Include="MAP\Customers.hbm.xml">
       <SubType>Designer</SubType>
     </EmbeddedResource>
@@ -69,6 +71,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MAP\Products.hbm.xml" />
     <EmbeddedResource Include="MAP\Status.hbm.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="MAP\Roles.hbm.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="MAP\Users.hbm.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -14,6 +14,7 @@ namespace COM.DTO {
         public virtual Category Category { get; set; }
         public virtual Status Status { get; set; }
         public virtual string ProductName { get; set; }
+        public virtual string Code { get; set; }
         public virtual string Description { get; set; }
         public virtual int? Price { get; set; }
         public virtual string Quantity { get; set; }

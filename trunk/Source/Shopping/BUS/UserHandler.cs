@@ -27,6 +27,9 @@ namespace BUS
         {
             try
             {
+                User.Role = RoleDAO.getRoleById(COM.CONST.ROLE.NORMALUSER);
+                User.CreatedDate = DateTime.Now;
+                
                 return UserDAO.Add(User);
             }
             catch (Exception ex)

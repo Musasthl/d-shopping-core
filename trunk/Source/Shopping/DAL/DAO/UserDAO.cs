@@ -8,7 +8,7 @@ using COM;
 
 namespace DAL.DAO
 {
-    class UserDAO
+    public class UserDAO
     {
         public static bool Add(User user)
         {

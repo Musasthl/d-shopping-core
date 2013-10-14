@@ -13,6 +13,9 @@
     <property name="ProductName">
       <column name="ProductName" sql-type="nvarchar" not-null="false" />
     </property>
+    <property name="Code">
+      <column name="Code" sql-type="nvarchar" not-null="false" />
+    </property>
     <property name="Description">
       <column name="Description" sql-type="nvarchar" not-null="false" />
     </property>

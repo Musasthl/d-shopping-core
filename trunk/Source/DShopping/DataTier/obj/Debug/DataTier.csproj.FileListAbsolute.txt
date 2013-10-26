@@ -1,0 +1,5 @@
+E:\soure code\ShoppingCore\Source\DShopping\DataTier\bin\Debug\DataTier.dll
+E:\soure code\ShoppingCore\Source\DShopping\DataTier\bin\Debug\DataTier.pdb
+E:\soure code\ShoppingCore\Source\DShopping\DataTier\obj\Debug\DataTier.csprojResolveAssemblyReference.cache
+E:\soure code\ShoppingCore\Source\DShopping\DataTier\obj\Debug\DataTier.dll
+E:\soure code\ShoppingCore\Source\DShopping\DataTier\obj\Debug\DataTier.pdb

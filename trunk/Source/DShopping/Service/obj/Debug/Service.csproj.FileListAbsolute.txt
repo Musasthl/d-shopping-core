@@ -1,0 +1,5 @@
+E:\soure code\ShoppingCore\Source\DShopping\Service\bin\Debug\Service.dll
+E:\soure code\ShoppingCore\Source\DShopping\Service\bin\Debug\Service.pdb
+E:\soure code\ShoppingCore\Source\DShopping\Service\obj\Debug\Service.csprojResolveAssemblyReference.cache
+E:\soure code\ShoppingCore\Source\DShopping\Service\obj\Debug\Service.dll
+E:\soure code\ShoppingCore\Source\DShopping\Service\obj\Debug\Service.pdb

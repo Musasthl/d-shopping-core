@@ -24,3 +24,31 @@ E:\soure code\ShoppingCore\Source\DShopping\Website\bin\System.Web.WebPages.Razo
 E:\soure code\ShoppingCore\Source\DShopping\Website\obj\Debug\Website.csprojResolveAssemblyReference.cache
 E:\soure code\ShoppingCore\Source\DShopping\Website\obj\Debug\Website.dll
 E:\soure code\ShoppingCore\Source\DShopping\Website\obj\Debug\Website.pdb
+E:\Project\Shopping\d-shopping-core\Source\DShopping\Website\bin\Website.dll
+E:\Project\Shopping\d-shopping-core\Source\DShopping\Website\bin\Website.pdb
+E:\Project\Shopping\d-shopping-core\Source\DShopping\Website\bin\Microsoft.Web.Infrastructure.dll
+E:\Project\Shopping\d-shopping-core\Source\DShopping\Website\bin\Newtonsoft.Json.dll
+E:\Project\Shopping\d-shopping-core\Source\DShopping\Website\bin\Service.dll
+E:\Project\Shopping\d-shopping-core\Source\DShopping\Website\bin\System.Net.Http.Formatting.dll
+E:\Project\Shopping\d-shopping-core\Source\DShopping\Website\bin\System.Web.Helpers.dll
+E:\Project\Shopping\d-shopping-core\Source\DShopping\Website\bin\System.Web.Http.dll
+E:\Project\Shopping\d-shopping-core\Source\DShopping\Website\bin\System.Web.Http.WebHost.dll
+E:\Project\Shopping\d-shopping-core\Source\DShopping\Website\bin\System.Web.Mvc.dll
+E:\Project\Shopping\d-shopping-core\Source\DShopping\Website\bin\System.Web.Razor.dll
+E:\Project\Shopping\d-shopping-core\Source\DShopping\Website\bin\System.Web.WebPages.Deployment.dll
+E:\Project\Shopping\d-shopping-core\Source\DShopping\Website\bin\System.Web.WebPages.dll
+E:\Project\Shopping\d-shopping-core\Source\DShopping\Website\bin\System.Web.WebPages.Razor.dll
+E:\Project\Shopping\d-shopping-core\Source\DShopping\Website\bin\Service.pdb
+E:\Project\Shopping\d-shopping-core\Source\DShopping\Website\bin\Newtonsoft.Json.xml
+E:\Project\Shopping\d-shopping-core\Source\DShopping\Website\bin\System.Net.Http.Formatting.xml
+E:\Project\Shopping\d-shopping-core\Source\DShopping\Website\bin\System.Web.Helpers.xml
+E:\Project\Shopping\d-shopping-core\Source\DShopping\Website\bin\System.Web.Http.xml
+E:\Project\Shopping\d-shopping-core\Source\DShopping\Website\bin\System.Web.Http.WebHost.xml
+E:\Project\Shopping\d-shopping-core\Source\DShopping\Website\bin\System.Web.Mvc.xml
+E:\Project\Shopping\d-shopping-core\Source\DShopping\Website\bin\System.Web.Razor.xml
+E:\Project\Shopping\d-shopping-core\Source\DShopping\Website\bin\System.Web.WebPages.xml
+E:\Project\Shopping\d-shopping-core\Source\DShopping\Website\bin\System.Web.WebPages.Deployment.xml
+E:\Project\Shopping\d-shopping-core\Source\DShopping\Website\bin\System.Web.WebPages.Razor.xml
+E:\Project\Shopping\d-shopping-core\Source\DShopping\Website\obj\Debug\Website.csprojResolveAssemblyReference.cache
+E:\Project\Shopping\d-shopping-core\Source\DShopping\Website\obj\Debug\Website.dll
+E:\Project\Shopping\d-shopping-core\Source\DShopping\Website\obj\Debug\Website.pdb

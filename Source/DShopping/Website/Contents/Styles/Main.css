@@ -1,0 +1,67 @@
+﻿/* Overall page format */
+#d-page  
+{
+    
+    width:100%;
+}
+
+#d-header 
+{
+    width:100%;
+    min-height:100px;
+    border: 1px solid Blue;
+}
+
+#d-content 
+{
+    width:1000px;
+    margin:0 auto;
+    min-height:200px;
+    border: 1px solid black;
+}
+#d-banner 
+{
+    min-height:300px;
+    border: 1px solid green;
+}
+table#d-table-main 
+{
+    width:100%;
+}
+.d-split-col 
+{
+    width:20px; 
+}
+.d-split-row 
+{
+    height:20px;
+    min-height:20px;
+}
+#d-left 
+{
+    width:200px;
+    border: 1px solid black;
+    min-height:600px;
+}
+
+#d-center 
+{
+    width: 780px;
+    border: 1px solid black;
+    min-height:600px;
+}
+
+#d-right 
+{
+    width : 160px;
+    border: 1px solid black;
+    min-height:600px;
+}
+
+#d-footer 
+{
+    width:100%;
+    min-height:350px;
+    background-color:Aqua;
+    
+}

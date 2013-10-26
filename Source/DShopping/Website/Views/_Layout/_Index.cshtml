@@ -1,0 +1,50 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+
+
+<!-- Style -->
+<link href="~/Contents/Styles/reset.css" rel="stylesheet" type="text/css" />
+<link href="~/Contents/Styles/Main.css" rel="stylesheet" type="text/css" />
+
+<!-- Script -->
+<script src="~/Contents/Scripts/jquery-1.10.2.min.js" type="text/javascript"></script>
+
+<div id="d-page">
+    <div id="d-header">
+        <!-- Include Logo, Shop Name -->
+        @Html.Action("Header", "Component")
+    </div>
+    <div id="d-content">
+        <div id="d-banner">
+            <!-- Include Banner -->
+            <!-- Render section Banner -->
+        </div>
+        <div id="d-body">
+            <!-- Include left Panel, Center Panel, Right Panel -->
+            <table id="d-table-main">
+                <tr>
+                    <td>
+                        <div id="d-left">
+
+                            <!-- Render section left -->
+                        </div>
+                    </td>
+                    <td class="d-split-col"></td>
+                    <td>
+                        <div id="d-center">
+                            @RenderBody()
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div id="d-footer">
+        <!-- Include Footer menu, Contact infor, Copyright -->
+        <!-- Render section footer -->
+    </div>
+</div>

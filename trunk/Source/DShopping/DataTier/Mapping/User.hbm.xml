@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping assembly="DataTier" namespace="DataTier.Entities" xmlns="urn:nhibernate-mapping-2.2">
+  <class name="User" table="[dbo].[Users]" lazy="true" >
+    <id name="UserId" column="UserId">
+      <generator class="identity" />
+    </id>
+    <many-to-one name="Roles">
+      <column name="RoleId" sql-type="int" not-null="false" />
+    </many-to-one>
+    <property name="Username">
+      <column name="Username" sql-type="nvarchar" not-null="false" />
+    </property>
+    <property name="Password">
+      <column name="Password" sql-type="nvarchar" not-null="false" />
+    </property>
+  </class>
+</hibernate-mapping>

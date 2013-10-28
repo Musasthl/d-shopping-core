@@ -105,8 +105,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controllers\ComponentController.cs" />
+    <Compile Include="Controllers\ComponentHomeController.cs" />
+    <Compile Include="Controllers\ComponentMenuController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Controllers\IndexController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -116,6 +117,7 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Content Include="Contents\Images\Home\Banner.JPG" />
     <Content Include="Contents\Scripts\jquery-1.10.2.js" />
     <Content Include="Contents\Scripts\jquery-1.10.2.min.js" />
     <Content Include="Contents\Styles\Main.css" />
@@ -132,7 +134,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Contents\Images\" />
     <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
@@ -151,10 +152,49 @@
     <Content Include="Views\_Layout\_Detail.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\Component\Header.cshtml" />
+    <Content Include="Views\ComponentHome\Header.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Home\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\ComponentHome\Footer.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\ComponentHome\Banner.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Component\ConnectFacebook.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\ComponentLeftPanel\Category.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\ComponentProduct\ProductDiscount.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\ComponentProduct\ProductHot.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\ComponentProduct\ProductNewest.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Component\Register.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\ComponentLeftPanel\Search.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\ComponentMenu\TopMenu.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Component\Login.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\ComponentMenu\BottomMenu.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\ComponentLeftPanel\Advertising.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

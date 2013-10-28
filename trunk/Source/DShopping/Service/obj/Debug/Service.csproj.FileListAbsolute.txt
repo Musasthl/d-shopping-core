@@ -10,3 +10,8 @@ E:\Project\Shopping\d-shopping-core\Source\DShopping\Service\bin\Debug\DataTier.
 E:\Project\Shopping\d-shopping-core\Source\DShopping\Service\obj\Debug\Service.csprojResolveAssemblyReference.cache
 E:\Project\Shopping\d-shopping-core\Source\DShopping\Service\obj\Debug\Service.dll
 E:\Project\Shopping\d-shopping-core\Source\DShopping\Service\obj\Debug\Service.pdb
+E:\Project\Shopping\d-shopping-core\Source\DShopping\Service\bin\Debug\NHibernate.dll
+E:\Project\Shopping\d-shopping-core\Source\DShopping\Service\bin\Debug\Iesi.Collections.dll
+E:\Project\Shopping\d-shopping-core\Source\DShopping\Service\bin\Debug\NHibernate.xml
+E:\Project\Shopping\d-shopping-core\Source\DShopping\Service\bin\Debug\Iesi.Collections.xml
+E:\Project\Shopping\d-shopping-core\Source\DShopping\Service\bin\Debug\hibernate.cfg.xml

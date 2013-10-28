@@ -17,14 +17,7 @@ namespace Website.Controllers
             return View();
         }
 
-        public ActionResult Header()
-        {
-            UserDTO user = new UserDTO();
-            user.username = "a";
-            user.password = "b";
-            ViewBag.test = "TestBag";
-            return PartialView(user);
-        }
+
 
     }
 }

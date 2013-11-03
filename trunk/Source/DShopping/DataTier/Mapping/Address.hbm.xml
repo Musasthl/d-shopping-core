@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping assembly="DataTier" namespace="DataTier.Entities" xmlns="urn:nhibernate-mapping-2.2">
+  <class name="Address" table="[dbo].[Address]" lazy="true" >
+    <id name="Id" column="Id">
+      <generator class="identity" />
+    </id>
+    <property name="AddressVal">
+      <column name="Address" sql-type="nvarchar" not-null="false" />
+    </property>
+    <property name="Wards">
+      <column name="Wards" sql-type="nvarchar" not-null="false" />
+    </property>
+    <property name="District">
+      <column name="District" sql-type="nvarchar" not-null="false" />
+    </property>
+    <property name="City">
+      <column name="City" sql-type="nvarchar" not-null="false" />
+    </property>
+    <property name="State">
+      <column name="State" sql-type="nvarchar" not-null="false" />
+    </property>
+    <property name="PostalCode">
+      <column name="PostalCode" sql-type="nchar" not-null="false" />
+    </property>
+    <property name="Country">
+      <column name="Country" sql-type="nvarchar" not-null="false" />
+    </property>
+    <bag name="Customers" inverse="true">
+      <key column="AddressId" />
+      <one-to-many class="Customers" />
+    </bag>
+    <bag name="Supplies" inverse="true">
+      <key column="AddressId" />
+      <one-to-many class="Supplies" />
+    </bag>
+  </class>
+</hibernate-mapping>

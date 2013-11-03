@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping assembly="DataTier" namespace="DataTier.Entities" xmlns="urn:nhibernate-mapping-2.2">
+  <class name="Products" table="Products" lazy="true" >
+    <id name="Id" column="ProductId">
+      <generator class="identity" />
+    </id>
+    <many-to-one name="Category">
+      <column name="CategoryId" sql-type="int" not-null="false" />
+    </many-to-one>
+    <many-to-one name="Status">
+      <column name="StatusId" sql-type="nvarchar" not-null="true" />
+    </many-to-one>
+    <many-to-one name="Unit">
+      <column name="Unit" sql-type="nvarchar" not-null="true" />
+    </many-to-one>
+    <property name="Name">
+      <column name="Name" sql-type="nvarchar" not-null="false" />
+    </property>
+    <property name="Description">
+      <column name="Description" sql-type="nvarchar" not-null="false" />
+    </property>
+    <property name="Quantity">
+      <column name="Quantity" sql-type="nvarchar" not-null="false" />
+    </property>
+    <property name="Code">
+      <column name="Code" sql-type="nchar" not-null="false" />
+    </property>
+    <property name="Price">
+      <column name="Price" sql-type="float" not-null="false" />
+    </property>
+    <property name="QuantityAvailable">
+      <column name="QuantityAvailable" sql-type="float" not-null="false" />
+    </property>
+    <property name="QuantityPending">
+      <column name="QuantityPending" sql-type="float" not-null="false" />
+    </property>
+    <bag name="Orders" inverse="true">
+      <key column="ProductId" />
+      <one-to-many class="Orders" />
+    </bag>
+    <bag name="ProductDetails" inverse="true">
+      <key column="ProductId" />
+      <one-to-many class="ProductDetails" />
+    </bag>
+    <bag name="ProductSuppliers" inverse="true">
+      <key column="ProductId" />
+      <one-to-many class="ProductSuppliers" />
+    </bag>
+  </class>
+</hibernate-mapping>

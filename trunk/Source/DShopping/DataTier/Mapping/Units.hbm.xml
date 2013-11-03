@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping assembly="DataTier" namespace="DataTier.Entities" xmlns="urn:nhibernate-mapping-2.2">
+  <class name="Units" table="Units" lazy="true" >
+    <id name="Name" column="Name" />
+    <property name="Description">
+      <column name="Description" sql-type="nvarchar" not-null="false" />
+    </property>
+    <bag name="Orders" inverse="true">
+      <key column="Unit" />
+      <one-to-many class="Orders" />
+    </bag>
+    <bag name="Products" inverse="true">
+      <key column="Unit" />
+      <one-to-many class="Products" />
+    </bag>
+  </class>
+</hibernate-mapping>

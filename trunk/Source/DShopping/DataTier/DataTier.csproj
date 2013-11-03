@@ -45,24 +45,58 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DAO\CategoryDAO.cs" />
-    <Compile Include="DAO\UserDAO.cs" />
-    <Compile Include="Entities\Category.cs" />
-    <Compile Include="Entities\Role.cs" />
-    <Compile Include="Entities\User.cs" />
+    <Compile Include="DAO\DAO.cs" />
+    <Compile Include="Entities\Address.cs" />
+    <Compile Include="Entities\Categories.cs" />
+    <Compile Include="Entities\CategoryRelations.cs" />
+    <Compile Include="Entities\Customers.cs" />
+    <Compile Include="Entities\FAQs.cs" />
+    <Compile Include="Entities\Invoices.cs" />
+    <Compile Include="Entities\MessageReceivers.cs" />
+    <Compile Include="Entities\Messages.cs" />
+    <Compile Include="Entities\News.cs" />
+    <Compile Include="Entities\Orders.cs" />
+    <Compile Include="Entities\ProductDetails.cs" />
+    <Compile Include="Entities\Products.cs" />
+    <Compile Include="Entities\ProductSuppliers.cs" />
+    <Compile Include="Entities\Roles.cs" />
+    <Compile Include="Entities\ShippingMethods.cs" />
+    <Compile Include="Entities\Status.cs" />
+    <Compile Include="Entities\Supplies.cs" />
+    <Compile Include="Entities\Units.cs" />
+    <Compile Include="Entities\Users.cs" />
+    <Compile Include="Entity.cs" />
     <Compile Include="NHibernateHelper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <EmbeddedResource Include="Mapping\Address.hbm.xml" />
+    <EmbeddedResource Include="Mapping\Categories.hbm.xml" />
+    <EmbeddedResource Include="Mapping\CategoryRelations.hbm.xml" />
+    <EmbeddedResource Include="Mapping\Customers.hbm.xml" />
+    <EmbeddedResource Include="Mapping\FAQs.hbm.xml" />
+    <EmbeddedResource Include="Mapping\Invoices.hbm.xml" />
+    <EmbeddedResource Include="Mapping\MessageReceivers.hbm.xml" />
+    <EmbeddedResource Include="Mapping\Messages.hbm.xml" />
+    <EmbeddedResource Include="Mapping\News.hbm.xml" />
+    <EmbeddedResource Include="Mapping\Orders.hbm.xml" />
+    <EmbeddedResource Include="Mapping\ProductDetails.hbm.xml" />
+    <EmbeddedResource Include="Mapping\Products.hbm.xml" />
+    <EmbeddedResource Include="Mapping\ProductSuppliers.hbm.xml" />
+    <EmbeddedResource Include="Mapping\Roles.hbm.xml" />
+    <EmbeddedResource Include="Mapping\ShippingMethods.hbm.xml" />
+    <EmbeddedResource Include="Mapping\Status.hbm.xml" />
+    <EmbeddedResource Include="Mapping\Supplies.hbm.xml" />
+    <EmbeddedResource Include="Mapping\Units.hbm.xml" />
+    <EmbeddedResource Include="Mapping\Users.hbm.xml" />
+  </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="hibernate.cfg.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
-    <EmbeddedResource Include="Mapping\Role.hbm.xml" />
-    <EmbeddedResource Include="Mapping\User.hbm.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

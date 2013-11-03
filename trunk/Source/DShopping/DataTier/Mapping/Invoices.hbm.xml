@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping assembly="DataTier" namespace="DataTier.Entities" xmlns="urn:nhibernate-mapping-2.2">
+  <class name="Invoices" table="Invoices" lazy="true" >
+    <id name="InvoiceId" column="InvoiceId">
+      <generator class="identity" />
+    </id>
+    <many-to-one name="Customer">
+      <column name="CustomerId" sql-type="int" not-null="true" />
+    </many-to-one>
+    <many-to-one name="Status">
+      <column name="StatusId" sql-type="nvarchar" not-null="true" />
+    </many-to-one>
+    <many-to-one name="ShippingMethods">
+      <column name="ShippingMethod" sql-type="int" not-null="false" />
+    </many-to-one>
+    <property name="OrderedTime">
+      <column name="OrderedTime" sql-type="datetime" not-null="true" />
+    </property>
+    <property name="ExpectedDeliveryTime">
+      <column name="ExpectedDeliveryTime" sql-type="datetime" not-null="false" />
+    </property>
+    <property name="ActualDeliveryTime">
+      <column name="ActualDeliveryTime" sql-type="datetime" not-null="false" />
+    </property>
+    <bag name="Orders" inverse="true">
+      <key column="InvoiceId" />
+      <one-to-many class="Orders" />
+    </bag>
+  </class>
+</hibernate-mapping>

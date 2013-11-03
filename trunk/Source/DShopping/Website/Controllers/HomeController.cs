@@ -14,7 +14,8 @@ namespace Website.Controllers
 
         public ActionResult Index()
         {
-
+            UserDto newU = new UserDto();
+            ViewBag.Message = newU.addUser();
             return View();
         }
 

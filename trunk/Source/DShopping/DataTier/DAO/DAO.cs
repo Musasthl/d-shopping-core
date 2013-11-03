@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using DataTier.Entities;
 using NHibernate;
 
-namespace DataTier
+namespace DataTier.DAO
 {
     public abstract class DAO
     {
@@ -107,7 +107,6 @@ namespace DataTier
                 }
             }
         }
-
 
         public static List<Object> getAll()
         {

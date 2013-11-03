@@ -108,6 +108,7 @@
     <Compile Include="Controllers\ComponentHomeController.cs" />
     <Compile Include="Controllers\ComponentMenuController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="ExtensionMethod\UrlHelperMethod.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>

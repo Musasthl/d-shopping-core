@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping assembly="DataTier" namespace="DataTier.Entities" xmlns="urn:nhibernate-mapping-2.2">
+  <class name="Customers" table="Customers" lazy="true" >
+    <id name="CustomerId" column="CustomerId">
+      <generator class="identity" />
+    </id>
+    <many-to-one name="Address">
+      <column name="AddressId" sql-type="int" not-null="false" />
+    </many-to-one>
+    <many-to-one name="Status">
+      <column name="StatusId" sql-type="nvarchar" not-null="false" />
+    </many-to-one>
+    <many-to-one name="Parent">
+      <column name="ParentId" sql-type="int" not-null="false" />
+    </many-to-one>
+    <property name="ContactName">
+      <column name="ContactName" sql-type="nvarchar" not-null="true" />
+    </property>
+    <property name="Email">
+      <column name="Email" sql-type="nvarchar" not-null="false" />
+    </property>
+    <property name="PhoneMobile">
+      <column name="PhoneMobile" sql-type="nchar" not-null="false" />
+    </property>
+    <property name="Avatar">
+      <column name="Avatar" sql-type="nvarchar" not-null="false" />
+    </property>
+    <property name="IdentityPassport">
+      <column name="IdentityPassport" sql-type="nvarchar" not-null="false" />
+    </property>
+    <property name="CreatedDate">
+      <column name="CreatedDate" sql-type="datetime" not-null="false" />
+    </property>
+    <property name="CompanyName">
+      <column name="CompanyName" sql-type="nvarchar" not-null="false" />
+    </property>
+    <property name="JobTitle">
+      <column name="JobTitle" sql-type="nvarchar" not-null="false" />
+    </property>
+    <property name="PhoneOffice">
+      <column name="PhoneOffice" sql-type="nchar" not-null="false" />
+    </property>
+    <property name="Website">
+      <column name="Website" sql-type="nvarchar" not-null="false" />
+    </property>
+    <property name="TaxCode">
+      <column name="TaxCode" sql-type="nchar" not-null="false" />
+    </property>
+    <property name="Fax">
+      <column name="Fax" sql-type="nchar" not-null="false" />
+    </property>
+    <bag name="Childs" inverse="true">
+      <key column="ParentId" />
+      <one-to-many class="Customers" />
+    </bag>
+    <bag name="Invoices" inverse="true">
+      <key column="CustomerId" />
+      <one-to-many class="Invoices" />
+    </bag>
+    <bag name="Users" inverse="true">
+      <key column="CustomerId" />
+      <one-to-many class="Users" />
+    </bag>
+  </class>
+</hibernate-mapping>

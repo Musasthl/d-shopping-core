@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping assembly="DataTier" namespace="DataTier.Entities" xmlns="urn:nhibernate-mapping-2.2">
+  <class name="Categories" table="[dbo].[Categories]" lazy="true" >
+    <id name="CategoryId" column="CategoryId">
+      <generator class="identity" />
+    </id>
+    <many-to-one name="Status">
+      <column name="StatusId" sql-type="nvarchar" not-null="true" />
+    </many-to-one>
+    <property name="Name">
+      <column name="Name" sql-type="nvarchar" not-null="true" />
+    </property>
+    <property name="Description">
+      <column name="Description" sql-type="nvarchar" not-null="false" />
+    </property>
+    <property name="Image">
+      <column name="Image" sql-type="nvarchar" not-null="false" />
+    </property>
+    <property name="Position">
+      <column name="Position" sql-type="int" not-null="false" />
+    </property>
+    <bag name="Child" inverse="true">
+      <key column="ChildId" />
+      <one-to-many class="CategoryRelations" />
+    </bag>
+    <bag name="Parent" inverse="true">
+      <key column="ParentId" />
+      <one-to-many class="CategoryRelations" />
+    </bag>
+    <bag name="Products" inverse="true">
+      <key column="CategoryId" />
+      <one-to-many class="Products" />
+    </bag>
+  </class>
+</hibernate-mapping>

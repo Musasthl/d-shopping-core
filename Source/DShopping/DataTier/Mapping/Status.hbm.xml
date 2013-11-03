@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping assembly="DataTier" namespace="DataTier.Entities" xmlns="urn:nhibernate-mapping-2.2">
+  <class name="Status" table="Status" lazy="true" >
+    <id name="Id" column="StatusId" />
+    <property name="Name">
+      <column name="StatusName" sql-type="nvarchar" not-null="false" />
+    </property>
+    <bag name="Categories" inverse="true">
+      <key column="Status" />
+      <one-to-many class="Categories" />
+    </bag>
+    <bag name="Customers" inverse="true">
+      <key column="Status" />
+      <one-to-many class="Customers" />
+    </bag>
+    <bag name="FAQs" inverse="true">
+      <key column="Status" />
+      <one-to-many class="FAQs" />
+    </bag>
+    <bag name="Invoices" inverse="true">
+      <key column="Status" />
+      <one-to-many class="Invoices" />
+    </bag>
+    <bag name="MessageReceivers" inverse="true">
+      <key column="Status" />
+      <one-to-many class="MessageReceivers" />
+    </bag>
+    <bag name="Messages" inverse="true">
+      <key column="Status" />
+      <one-to-many class="Messages" />
+    </bag>
+    <bag name="News" inverse="true">
+      <key column="Status" />
+      <one-to-many class="News" />
+    </bag>
+    <bag name="ProductTypeIds" inverse="true">
+      <key column="ProductTypeId" />
+      <one-to-many class="ProductDetails" />
+    </bag>
+    <bag name="ProductDetails" inverse="true">
+      <key column="Status" />
+      <one-to-many class="ProductDetails" />
+    </bag>
+    <bag name="Products" inverse="true">
+      <key column="Status" />
+      <one-to-many class="Products" />
+    </bag>
+    <bag name="Supplies" inverse="true">
+      <key column="Status" />
+      <one-to-many class="Supplies" />
+    </bag>
+    <bag name="Users" inverse="true">
+      <key column="Status" />
+      <one-to-many class="Users" />
+    </bag>
+  </class>
+</hibernate-mapping>

@@ -33,8 +33,8 @@ namespace Service.DTO
 
         public void getAllCatogory()
         {
-            List<Category> srcCategory = CategoryDAO.getAll();
-            foreach (Category cat in srcCategory)
+            List<Object> srcCategory = DAO.getAll();
+            foreach (Categories cat in srcCategory)
             {
                 CategoryDto newCategoryDTO = new CategoryDto();
                 category.Add(newCategoryDTO);

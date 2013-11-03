@@ -24,19 +24,30 @@
             @Html.Action("Banner", "ComponentHome")
         </div>
         <div id="d-body">
+            <div id="d-topmennu">
+                <!-- Top menu -->
+                @Html.Action("TopMenu", "ComponentMenu")
+            </div>
             <!-- Include left Panel, Center Panel, Right Panel -->
             <table id="d-table-main">
                 <tr>
                     <td>
                         <div id="d-left">
-
                             <!-- Render section left -->
+                            @Html.Action("Category", "ComponentLeftPanel")
+                            <div class="d-split-row" />
+                            @Html.Action("Advertising", "ComponentLeftPanel")
                         </div>
                     </td>
-                    <td class="d-split-col"></td>
                     <td>
                         <div id="d-center">
                             @RenderBody()
+                        </div>
+                    </td>
+                    <td>
+                        <div id="d-right">
+                            @Html.Action("OnlineContact", "ComponentRightPanel")
+
                         </div>
                     </td>
                 </tr>

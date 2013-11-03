@@ -1,66 +1,74 @@
 ﻿/* Overall page format */
-#d-page  
+#d-page
 {
-    
+    width: 100%;
+}
+
+#d-header
+{
+    width: 100%;
+    min-height: 0px;
+}
+
+#d-content
+{
+    width: 1000px;
+    margin: 0 auto;
+}
+
+#d-banner
+{
+    width: 1000px;
+    margin: 0 auto;
+    height: 200px;
+}
+
+#d-topmennu
+{   
+    height:200px;
     width:100%;
+    background:url("../Contents/Images/Home/menu_top_bg.png") no-repeat scroll 0% 0% transparent;
+}
+table#d-table-main
+{
+    width: 100%;
 }
 
-#d-header 
+.d-split-col
 {
-    width:100%;
-    min-height:100px;
-    border: 1px solid Blue;
+    width: 10px;
 }
 
-#d-content 
+.d-split-row
 {
-    width:1000px;
-    margin:0 auto;
-    min-height:200px;
+    height: 5px;
+    min-height: 5px;
+}
+
+#d-left
+{
+    width: 180px;
     border: 1px solid black;
+    min-height: 100px;
 }
-#d-banner 
-{
 
-}
-table#d-table-main 
+#d-center
 {
-    width:100%;
-}
-.d-split-col 
-{
-    width:20px; 
-}
-.d-split-row 
-{
-    height:20px;
-    min-height:20px;
-}
-#d-left 
-{
-    width:200px;
+    width: 610px;
     border: 1px solid black;
-    min-height:600px;
+    min-height: 600px;
 }
 
-#d-center 
+#d-right
 {
-    width: 780px;
+    width: 210px;
     border: 1px solid black;
-    min-height:600px;
+    min-height: 600px;
 }
 
-#d-right 
+#d-footer
 {
-    width : 160px;
-    border: 1px solid black;
-    min-height:600px;
-}
-
-#d-footer 
-{
-    width:100%;
-    min-height:350px;
-    background-color:Aqua;
-    
+    width: 100%;
+    min-height: 350px;
+    background-color: Aqua;
 }

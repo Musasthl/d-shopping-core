@@ -10,6 +10,10 @@ namespace Website.ExtensionMethod
     {
         public static string Image(this UrlHelper urlHelper, string imageName)
         {
+            if (imageName == "Banner")
+            {
+                return urlHelper.Content("~/Contents/Images/Banner.JPG");
+            }
             return urlHelper.Content("~/Contents/Images/" + imageName);            
         }
 

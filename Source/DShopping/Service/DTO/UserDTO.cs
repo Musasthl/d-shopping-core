@@ -8,7 +8,7 @@ using DataTier.Entities;
 
 namespace Service.DTO
 {
-    public class UserDTO
+    public class UserDto
     {
         public string username { get; set; }
         public string password { get; set; }
@@ -19,10 +19,7 @@ namespace Service.DTO
 
         public void addUser(string username, string password)
         {
-            User a = new User();
-            a.Username = username;
-            a.Password = password;
-            UserDAO.Add(a);
+            
         }
 
     }

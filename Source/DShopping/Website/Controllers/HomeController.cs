@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using Service.DTO;
+using Service;
 
 namespace Website.Controllers
 {
@@ -17,6 +18,11 @@ namespace Website.Controllers
             UserDto newU = new UserDto();
             newU.addUser();
             return View();
+        }
+
+        public void TestLogger()
+        {
+            Logger.Instance.Info("testLog");
         }
 
     }

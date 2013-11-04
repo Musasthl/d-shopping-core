@@ -1,35 +1,137 @@
 ﻿/* Overall page format */
-#d-page
+html
 {
-    width: 100%;
+    overflow: -moz-scrollbars-vertical;
+    margin: 0;
+    padding: 0;
 }
+
+body
+{
+    background-color: #ffffff;
+    color: #000000;
+    font-family: 'Signika', sans-serif;
+    margin: 0px;
+    padding: 0px;
+}
+
+body, td, th, input, textarea, select, a
+{
+    font-size: 12px;
+}
+
+h1, .welcome
+{
+    color: #333;
+    margin-top: 0px;
+    margin-bottom: 20px;
+    font-size: 28px;
+    font-weight: bold;
+    text-shadow: 0 0 1px rgba(0, 0, 0, .01);
+}
+
+h2
+{
+    color: #000000;
+    font-size: 16px;
+    margin-top: 0px;
+    margin-bottom: 5px;
+}
+
+p
+{
+    margin-top: 0px;
+    margin-bottom: 20px;
+}
+
+a, a:visited, a b
+{
+    color: #D03112;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+    a:hover
+    {
+        text-decoration: none;
+    }
+
+    a img
+    {
+        border: none;
+    }
+
+form
+{
+    padding: 0;
+    margin: 0;
+    display: inline;
+}
+
+input[type='text'], input[type='password'], textarea
+{
+    background: #F8F8F8;
+    padding: 6px;
+    margin-left: 0px;
+    margin-right: 0px;
+    border-top: 1px solid #bbb;
+    border-right: 1px solid #bbb;
+    border-left: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    -khtml-border-radius: 2px;
+    border-radius: 2px;
+    margin: 3px;
+}
+
+    input[type='text']:focus, input[type='password']:focus, textarea:focus
+    {
+        -webkit-box-shadow: 0px 0px 3px #444;
+        -moz-box-shadow: 0px 0px 3px #444;
+        box-shadow: 0px 0px 3px #444;
+    }
+
+label
+{
+    cursor: pointer;
+}
+
 
 #d-header
 {
-    width: 100%;
+    width: 1240px;
+    margin: 0 auto;
     height: 90px;
+    padding-bottom: 10px;
+    position: relative;
+    z-index: 99;
 }
+
 
 #d-content
 {
-    width: 1280px;
+    width: 1240px;
     margin: 0 auto;
 }
 
 #d-banner
 {
-    width: 1280px;
-    height:0px;
+    width: 1240px;
+    height: 0px;
     margin: 0 auto;
 }
 
 #d-topmennu
-{   
-    height:200px;
-    width:100%;
-    background:url("/Contents/Images/Home/menu_top_bg.png") no-repeat left top;
-    overflow:hidden;
+{
+    background-image: url("/Contents/Images/Home/supermenu-bg.png");
+    height: 40px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    padding: 0px 5px;
+    background-color: rgb(35, 135, 22);
 }
+
 table#d-table-main
 {
     width: 100%;
@@ -37,7 +139,7 @@ table#d-table-main
 
 .d-split-col
 {
-    width: 10px;
+    width: 15px;
 }
 
 .d-split-row
@@ -48,24 +150,21 @@ table#d-table-main
 
 #d-left
 {
-    width: 170px;
+    width: 180px;
     border: 1px solid black;
     min-height: 100px;
-    padding:0px 5px;
 }
 
 #d-center
 {
-    width: 600px;
+    width: 850px;
     border: 1px solid black;
     min-height: 600px;
-    padding:0px 5px;
 }
 
 #d-right
 {
-    padding:0px 5px;
-    width: 200px;
+    width: 180px;
     border: 1px solid black;
     min-height: 600px;
 }

@@ -21,24 +21,30 @@ namespace Service.DTO
             this.name = name;
         }
 
-    }
-
-    public class CategoryList
-    {
-        private List<CategoryDto> category;
-        CategoryList()
+        public List<CategoryDto> getChildCategory()
         {
-
+            // get child
+            return childCategory;
         }
 
-        public void getAllCatogory()
-        {
-            List<Object> srcCategory = DAO.getAll();
-            foreach (Categories cat in srcCategory)
-            {
-                CategoryDto newCategoryDTO = new CategoryDto();
-                category.Add(newCategoryDTO);
-            }
-        }
     }
+
+    //public class CategoryList
+    //{
+    //    private List<CategoryDto> category;
+    //    CategoryList()
+    //    {
+
+    //    }
+
+    //    public void getAllCatogory()
+    //    {
+    //        List<Object> srcCategory = DAO.getAll();
+    //        foreach (Categories cat in srcCategory)
+    //        {
+    //            CategoryDto newCategoryDTO = new CategoryDto();
+    //            category.Add(newCategoryDTO);
+    //        }
+    //    }
+    //}
 }

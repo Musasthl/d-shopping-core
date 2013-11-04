@@ -17,12 +17,12 @@
 <div id="d-page">
     <div id="d-header">
         <!-- Include Logo, Shop Name -->
-        @*@Html.Action("Login", "Account")*@
+        @Html.Action("Header", "ComponentHome")
     </div>
     <div id="d-content">
         <div id="d-banner">
             <!-- Include Banner -->
-            @Html.Action("Banner", "ComponentHome")
+            @*@Html.Action("Banner", "ComponentHome")*@
         </div>
         <div id="d-body">
             <div id="d-topmennu">
@@ -48,7 +48,10 @@
                     <td>
                         <div id="d-right">
                             @Html.Action("OnlineContact", "ComponentRightPanel")
-
+                            <br />
+                            @Html.Action("AboutUs", "ComponentRightPanel")
+                            <br />
+                          
                         </div>
                     </td>
                 </tr>

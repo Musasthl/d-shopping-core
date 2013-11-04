@@ -108,9 +108,21 @@ namespace DataTier.DAO
             }
         }
 
-        public static List<Object> getAll()
+        public static IList<Categories> getAll()
         {
-            return null;
+            try
+            {
+                using (ISession session = NHibernateHelper.OpenSession())
+                {
+                    var obj = session.QueryOver<Categories>()
+                        .List();
+                    return obj.ToList();
+                }
+            }
+            catch (Exception ex)
+            {
+                return null;
+            }
         }
     }
 }

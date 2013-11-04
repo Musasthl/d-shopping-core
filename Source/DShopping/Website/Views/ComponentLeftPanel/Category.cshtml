@@ -1,1 +1,10 @@
-﻿
+﻿@model IList<Service.DTO.CategoryDto>
+
+@ViewBag.abc
+
+@{
+    foreach( var cat in Model){
+        <h4>@cat.name</h4>   
+    }
+    
+    } 

@@ -48,8 +48,7 @@ namespace Service
         }
         public class PAGE
         {
-            public const string ADMIN_INDEX = "/admin/index.aspx";
-            public const string ADMIN_LOGIN = "/admin/login.aspx";
+
         }
 
     }

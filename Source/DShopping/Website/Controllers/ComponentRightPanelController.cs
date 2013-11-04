@@ -20,5 +20,10 @@ namespace Website.Controllers
         {
             return PartialView();
         }
+
+        public ActionResult AboutUs()
+        {
+            return PartialView();
+        }
     }
 }

@@ -35,5 +35,9 @@ namespace Website.Controllers
             return PartialView();
         }
 
+        public ActionResult ProductHot()
+        {
+            return PartialView();
+        }
     }
 }

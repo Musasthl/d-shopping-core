@@ -10,6 +10,7 @@
 <!-- Style -->
 <link href="~/Contents/Styles/reset.css" rel="stylesheet" type="text/css" />
 <link href="~/Contents/Styles/Main.css" rel="stylesheet" type="text/css" />
+<link href="~/Contents/Styles/LeftPanel.css" rel="stylesheet" type="text/css" />
 
 <!-- Script -->
 <script src="~/Contents/Scripts/jquery-1.10.2.min.js" type="text/javascript"></script>
@@ -37,14 +38,16 @@
                             <!-- Render section left -->
                             @Html.Action("Category", "ComponentLeftPanel")
                             <div class="d-split-row" />
-                            @Html.Action("Advertising", "ComponentLeftPanel")
+                            @Html.Action("ProductHot", "ComponentLeftPanel")
                         </div>
                     </td>
+                    <td class="d-split-col" />
                     <td>
                         <div id="d-center">
                             @RenderBody()
                         </div>
                     </td>
+                    <td class="d-split-col" />
                     <td>
                         <div id="d-right">
                             @Html.Action("OnlineContact", "ComponentRightPanel")

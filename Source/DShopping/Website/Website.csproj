@@ -215,6 +215,9 @@
   <ItemGroup>
     <Content Include="Views\ComponentLeftPanel\ProductHot.cshtml" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\ComponentRightPanel\ProductNewest.cshtml" />
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

@@ -164,8 +164,6 @@ table#d-table-main
 #d-right
 {
     width: 180px;
-    border: 1px solid black;
-    min-height: 600px;
 }
 
 #d-footer

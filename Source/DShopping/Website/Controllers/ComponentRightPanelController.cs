@@ -25,5 +25,10 @@ namespace Website.Controllers
         {
             return PartialView();
         }
+
+        public ActionResult ProductNewest()
+        {
+            return PartialView();
+        }
     }
 }

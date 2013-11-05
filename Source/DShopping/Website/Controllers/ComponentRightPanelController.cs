@@ -30,5 +30,10 @@ namespace Website.Controllers
         {
             return PartialView();
         }
+
+        public ActionResult Search()
+        {
+            return PartialView();
+        }
     }
 }

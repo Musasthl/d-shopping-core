@@ -8,21 +8,15 @@ using NHibernate;
 
 namespace DataTier.DAO
 {
-    public class ProductDAO:DAO
+    public class ProductDAO : DAO
     {
         public static Products getProductById(int id)
         {
             try
             {
                 using (ISession session = NHibernateHelper.OpenSession())
-                {
-                    var Product = session.QueryOver<Products>()
-                                    .Where(p => p.Id == id
-                                              && p.Status.Id == "Active")
-                        .List();
-                    
-                    return Product.ElementAt(1);
-                }
+                    return session.Get<Products>(id);
+
             }
             catch (Exception ex)
             {
@@ -41,7 +35,7 @@ namespace DataTier.DAO
                                               && p.Status.Id == "Active")
                         .List();
 
-                    return Product.ElementAt(1);
+                    return Product.ElementAt(0);
                 }
             }
             catch (Exception ex)
@@ -61,7 +55,7 @@ namespace DataTier.DAO
                                               && p.Status.Id == "Active")
                         .List();
 
-                    return Product.ElementAt(1);
+                    return Product.ElementAt(0);
                 }
             }
             catch (Exception ex)
@@ -89,14 +83,14 @@ namespace DataTier.DAO
             }
         }
 
-        public static IList<Products> getAllProductByCategory(String codeID)
+        public static IList<Products> getAllProductByCategory(int categoryId)
         {
             try
             {
                 using (ISession session = NHibernateHelper.OpenSession())
                 {
                     var Product = session.QueryOver<Products>()
-                                     .Where(p => p.Code == codeID
+                                     .Where(p => p.Category.CategoryId == categoryId
                                                 && p.Status.Id == "Active")
                         .List();
 
@@ -111,9 +105,9 @@ namespace DataTier.DAO
 
         public static IList<Products> getHotProduct()
         {
-            
+
             return null;
-            
+
         }
 
         public static IList<Products> getDiscountProduct()

@@ -139,7 +139,7 @@ table#d-table-main
 
 .d-split-col
 {
-    width: 15px;
+    width: 10px;
 }
 
 .d-split-row
@@ -151,13 +151,12 @@ table#d-table-main
 #d-left
 {
     width: 180px;
-    border: 1px solid black;
-    min-height: 100px;
+
 }
 
 #d-center
 {
-    width: 850px;
+    width: 860px;
     border: 1px solid black;
     min-height: 600px;
 }

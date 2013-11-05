@@ -121,11 +121,13 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Content Include="Contents\Images\Home\Banner.JPG" />
+    <Content Include="Contents\Images\Home\bmh.png" />
     <Content Include="Contents\Images\Home\button-search.png" />
     <Content Include="Contents\Images\Home\supermenu-bg.png" />
     <Content Include="Contents\Scripts\jquery-1.10.2.js" />
     <Content Include="Contents\Scripts\jquery-1.10.2.min.js" />
     <Content Include="Contents\Styles\Header.css" />
+    <Content Include="Contents\Styles\LeftPanel.css" />
     <Content Include="Contents\Styles\Main.css" />
     <Content Include="Contents\Styles\reset.css" />
     <Content Include="Global.asax" />
@@ -209,6 +211,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\ComponentRightPanel\AboutUs.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\ComponentLeftPanel\ProductHot.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

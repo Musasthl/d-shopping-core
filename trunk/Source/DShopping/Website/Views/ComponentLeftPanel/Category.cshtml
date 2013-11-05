@@ -1,10 +1,24 @@
 ﻿@model IList<Service.DTO.CategoryDto>
 
-@ViewBag.abc
 
-@{
-    foreach( var cat in Model){
-        <h4>@cat.name</h4>   
-    }
+
+<div class="d-left-container">
+    <div class="d-left-heading">
+        Danh Mục
+    </div>
+    <div class="d-left-body">
+        <ul>
+            @{
+                foreach (var cat in Model)
+                {
+                <li class="d-left-li ">
+                    <a class="d-left-a" href="http://vitinhantin.com/linh-kien-vi-tinh">@cat.name</a>
+                </li>
+
+                }
     
-    } 
+            }
+        </ul>
+    </div>
+
+</div>

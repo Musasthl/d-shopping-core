@@ -1,0 +1,86 @@
+﻿.d-left-container
+{
+    margin-bottom: 15px;
+}
+
+.d-left-heading
+{
+    padding: 4px 8px;
+    background: url("/Contents/Images/Home/bmh.png") repeat-x scroll center top transparent;
+    font-size: 14px;
+    line-height: 20px;
+    border: 1px solid rgb(204, 204, 204);
+    font-weight: bold;
+    border-radius: 3px 3px 0px 0px;
+}
+
+.d-left-box-heading
+{
+    margin: 4px;
+    padding: 9px;
+    background: url("/Contents/Images/Home/menubg.png") repeat-x scroll center top rgb(30, 30, 30);
+    font-family: 'Signika',sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 14px;
+    color: rgb(235, 235, 235);
+    border-radius: 2px;
+    background-color: rgb(15, 107, 23);
+}
+
+.d-left-body
+{
+    background: none repeat scroll 0% 0% rgb(255, 255, 255);
+    border-width: medium 1px 1px;
+    border-style: none solid solid;
+    border-color: -moz-use-text-color rgb(204, 204, 204) rgb(204, 204, 204);
+    -moz-border-top-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    border-image: none;
+    padding: 2px 4px 4px;
+    border-radius: 0px 0px 3px 3px;
+}
+
+    .d-left-body ul
+    {
+        list-style: none outside none;
+    }
+
+        .d-left-body ul li.d-left-li
+        {
+            background: url("/Contents/Images/Home/arrow.png") no-repeat scroll right center transparent;
+        }
+
+            .d-left-body ul li.d-left-li a.d-left-a
+            {
+                background: url("/Contents/Images/Home/mcn2.png") no-repeat scroll left bottom transparent;
+                font-size: 12px;
+                line-height: 14px;
+                display: block;
+                font-weight: bold;
+                padding: 7px 7px 10px 2px;
+                color: rgb(51, 51, 51);
+                text-shadow: 1px 1px 1px rgb(255, 255, 255);
+                text-decoration: none;
+            }
+
+            .d-left-body ul li.d-left-li:hover a.d-left-a
+            {
+                background: none repeat scroll 0% 0% rgb(238, 238, 238);
+                border-radius: 0px 5px 0px 5px;
+            }
+
+
+.d-left-box-body-item
+{
+    width: 150px;
+    display: inline-block;
+    vertical-align: top;
+    padding-bottom: 5px;
+    margin-bottom: 5px;
+    background: none repeat scroll 0% 0% rgb(255, 255, 255);
+    border-bottom: 1px solid rgb(231, 231, 231);
+    text-align: left;
+}

@@ -120,9 +120,13 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Content Include="Contents\Images\Home\adv_180_150.gif" />
+    <Content Include="Contents\Images\Home\arrow.png" />
     <Content Include="Contents\Images\Home\Banner.JPG" />
     <Content Include="Contents\Images\Home\bmh.png" />
     <Content Include="Contents\Images\Home\button-search.png" />
+    <Content Include="Contents\Images\Home\mcn2.png" />
+    <Content Include="Contents\Images\Home\menubg.png" />
     <Content Include="Contents\Images\Home\supermenu-bg.png" />
     <Content Include="Contents\Scripts\jquery-1.10.2.js" />
     <Content Include="Contents\Scripts\jquery-1.10.2.min.js" />
@@ -217,6 +221,12 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\ComponentRightPanel\ProductNewest.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\ComponentRightPanel\Search.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\ComponentRightPanel\Advertising.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

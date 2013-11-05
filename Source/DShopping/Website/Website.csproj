@@ -130,6 +130,7 @@
     <Content Include="Contents\Images\Home\supermenu-bg.png" />
     <Content Include="Contents\Scripts\jquery-1.10.2.js" />
     <Content Include="Contents\Scripts\jquery-1.10.2.min.js" />
+    <Content Include="Contents\Styles\Footer.css" />
     <Content Include="Contents\Styles\Header.css" />
     <Content Include="Contents\Styles\LeftPanel.css" />
     <Content Include="Contents\Styles\Main.css" />

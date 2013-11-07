@@ -17,7 +17,10 @@ namespace Website.Controllers
             return View();
         }
 
-
+        public ActionResult SlideShowCenter()
+        {
+            return PartialView();
+        }
 
     }
 }

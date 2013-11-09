@@ -50,10 +50,16 @@
   <ItemGroup>
     <Compile Include="Common.cs" />
     <Compile Include="CONST.cs" />
+    <Compile Include="DTO\ProductDetailsDto.cs" />
+    <Compile Include="DTO\ProductDto.cs" />
+    <Compile Include="DTO\RoleDto.cs" />
     <Compile Include="DTO\UserDto.cs" />
     <Compile Include="DTO\CategoryDto.cs" />
     <Compile Include="Encrypt.cs" />
     <Compile Include="Handler\CategoryHandler.cs" />
+    <Compile Include="Handler\ProductHandler.cs" />
+    <Compile Include="Handler\RoleHandler.cs" />
+    <Compile Include="Handler\UserHandler.cs" />
     <Compile Include="Logger.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Validation.cs" />

@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using Service.DTO;
+using Service.Handler;
 
 namespace Website.Controllers
 {
@@ -28,7 +30,8 @@ namespace Website.Controllers
 
         public ActionResult ProductNewest()
         {
-            return PartialView();
+            List<ProductDto> newestProduct = ProductHandler.getNewestProduct();
+            return PartialView(newestProduct);
         }
 
         public ActionResult Search()

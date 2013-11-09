@@ -1,25 +1,23 @@
-﻿<div class="d-left-box">
+﻿@model IList<Service.DTO.ProductDto>
+
+<div class="d-left-box">
     <div class="d-left-box-heading">
         Sản phẩm Mới nhất
     </div>
     <div class="d-left-box-body">
 
-        @*            @{
-                foreach (var cat in Model)
-                {
-                *@
-        <div class="d-left-box-body-item">
-            Item
-        </div>
-        <div class="d-left-box-body-item">
-            Item
-        </div>
-        <div class="d-left-box-body-item">
-            Item
-        </div>
-        @*                }
+        @{
+            foreach (var product in Model)
+            {
+                
+            <div class="d-left-box-body-item">
+                @product.Name <br />
+                @product.Code <br />
+                @product.Description
+            </div>
+            }
     
-            }*@
+        }
 
     </div>
 

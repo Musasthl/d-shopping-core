@@ -51,5 +51,11 @@ namespace Service
 
         }
 
+        public class PRODUCT
+        {
+            public const int NO_NEWEST = 5;
+
+        }
+
     }
 }

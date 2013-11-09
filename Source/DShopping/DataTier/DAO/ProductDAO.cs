@@ -114,5 +114,28 @@ namespace DataTier.DAO
         {
             return null;
         }
+
+        public static IList<Products> getNewestProduct(int noOfProduct)
+        {
+            try
+            {
+                using (ISession session = NHibernateHelper.OpenSession())
+                {
+                    var Product = session.QueryOver<Products>()
+                        
+                        .Where(p => p.Status.Id == "Active")
+                        .OrderBy(p => p.CreatedDate).Desc
+                        .Take(noOfProduct)
+                        .List();
+
+                    return Product;
+                }
+            }
+            catch (Exception ex)
+            {
+                return null;
+            }
+
+        }
     }
 }

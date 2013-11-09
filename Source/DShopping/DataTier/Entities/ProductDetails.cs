@@ -11,5 +11,6 @@ namespace DataTier.Entities {
         public virtual Status Status { get; set; }
         public virtual Status ProductTypeId { get; set; }
         public virtual string Contents { get; set; }
+        public virtual DateTime CreatedDate { get; set; } 
     }
 }

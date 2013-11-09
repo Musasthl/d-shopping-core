@@ -3,16 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using DataTier;
 using DataTier.DAO;
 using DataTier.Entities;
 
-namespace Service.DTO
+namespace Service.Handler
 {
-    public class UserDto
+    public class RoleHandler
     {
-        public string username { get; set; }
-        public string password { get; set; }
 
     }
 }

@@ -1,11 +1,6 @@
 ﻿<script src="~/Contents/Scripts/jquery-1.10.2.min.js" type="text/javascript"></script>
-<script src="~/Contents/Scripts/jqFancyTransitions.js" type="text/javascript"></script>
+<script src="~/Contents/Scripts/jqFancyTransitions.1.8.min.js" type="text/javascript"></script>
 
-<script>
-    $(document).ready(function () {
-        $('#slideshowHolder').jqFancyTransitions({ width: 860, height: 400 });
-    });
-</script>
 
 <div id='slideshowHolder'>
     <img src="~/Contents/Images/Slideshow/01.jpg" alt='img1' />
@@ -13,3 +8,9 @@
     <img src="~/Contents/Images/Slideshow/03.jpg" alt='img3' />
     <img src="~/Contents/Images/Slideshow/04.jpg" alt="img4" />
 </div>
+
+<script>
+    $(document).ready(function () {
+        $('#slideshowHolder').jqFancyTransitions({ width: 860, height: 400 });
+    });
+</script>

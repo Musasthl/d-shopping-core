@@ -28,6 +28,9 @@
     <property name="Price">
       <column name="Price" sql-type="float" not-null="false" />
     </property>
+    <property name="CreatedDate">
+      <column name="CreatedDate" sql-type="datetime" not-null="false" />
+    </property>
     <property name="QuantityAvailable">
       <column name="QuantityAvailable" sql-type="float" not-null="false" />
     </property>

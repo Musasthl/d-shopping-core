@@ -29,22 +29,5 @@ namespace Service.DTO
 
     }
 
-    //public class CategoryList
-    //{
-    //    private List<CategoryDto> category;
-    //    CategoryList()
-    //    {
-
-    //    }
-
-    //    public void getAllCatogory()
-    //    {
-    //        List<Object> srcCategory = DAO.getAll();
-    //        foreach (Categories cat in srcCategory)
-    //        {
-    //            CategoryDto newCategoryDTO = new CategoryDto();
-    //            category.Add(newCategoryDTO);
-    //        }
-    //    }
-    //}
+   
 }

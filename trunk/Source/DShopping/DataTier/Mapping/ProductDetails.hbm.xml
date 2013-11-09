@@ -16,5 +16,8 @@
     <property name="Contents">
       <column name="Contents" sql-type="nvarchar" not-null="false" />
     </property>
+    <property name="CreatedDate">
+      <column name="CreatedDate" sql-type="datetime" not-null="false" />
+    </property>
   </class>
 </hibernate-mapping>

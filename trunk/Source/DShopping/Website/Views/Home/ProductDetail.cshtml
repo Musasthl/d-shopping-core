@@ -1,0 +1,54 @@
+﻿@{
+    var productImage = "/Contents/Images/image.jpg";
+    var productTitle = "";
+    var productPrice = "20,000";
+    var productCode = "XXXX";
+    var productStatus = "Còn hàng";
+
+    Layout = "~/Views/_Layout/_Index.cshtml";
+}
+<link href="~/Contents/Styles/ProductDetail.css" rel="stylesheet" />
+
+<title>@ViewBag.Title </title>
+
+<h3>@productTitle</h3>
+<table id="d-product">
+    <tr>
+        <td id="d-product-image">
+            <img src="@productImage" />
+            <div id="" />
+        </td>
+        <td id="d-product-overview">
+            <div class="d-product-overview-part">
+                Giá: @productPrice VNĐ
+
+            </div>
+            <div class="d-product-overview-part">
+                Giá: @productPrice VNĐ
+
+            </div>
+            <div class="d-product-overview-part">
+                Mã sản phẩm: @productCode
+                <br />
+                Tình trạng: @productStatus
+
+            </div>
+            <div class="d-product-overview-part">
+                <input type="button" name="Đặt hàng" title="Đặt hàng" />
+            </div>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2">
+            <!-- Mô tả -->
+        </td>
+    </tr>
+    <tr>
+
+        <td colspan="2">
+            <!-- Sản phẩm liên quan -->
+        </td>
+    </tr>
+
+
+</table>

@@ -125,6 +125,7 @@
     <Content Include="Contents\Images\Home\Banner.JPG" />
     <Content Include="Contents\Images\Home\bmh.png" />
     <Content Include="Contents\Images\Home\button-search.png" />
+    <Content Include="Contents\Images\Home\logo.png" />
     <Content Include="Contents\Images\Home\mcn2.png" />
     <Content Include="Contents\Images\Home\menubg.png" />
     <Content Include="Contents\Images\Home\supermenu-bg.png" />

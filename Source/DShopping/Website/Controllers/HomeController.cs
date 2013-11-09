@@ -25,5 +25,10 @@ namespace Website.Controllers
             Logger.Instance.Info("testLog");
         }
 
+        public ActionResult ProductDetail(int id)
+        {
+            return View();
+        }
+
     }
 }

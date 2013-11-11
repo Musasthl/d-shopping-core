@@ -108,6 +108,7 @@
     <Compile Include="Controllers\ComponentHomeController.cs" />
     <Compile Include="Controllers\ComponentLeftPanelController.cs" />
     <Compile Include="Controllers\ComponentMenuController.cs" />
+    <Compile Include="Controllers\ComponentProductController.cs" />
     <Compile Include="Controllers\ComponentRightPanelController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="ExtensionMethod\UrlHelperMethod.cs" />
@@ -243,6 +244,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Home\ProductDetail.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\ComponentProduct\ProductList.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

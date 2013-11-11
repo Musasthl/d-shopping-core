@@ -11,7 +11,7 @@
       <column name="StatusId" sql-type="nvarchar" not-null="true" />
     </many-to-one>
     <many-to-one name="Unit">
-      <column name="Unit" sql-type="nvarchar" not-null="true" />
+      <column name="Unit" sql-type="nvarchar" not-null="false" />
     </many-to-one>
     <property name="Name">
       <column name="Name" sql-type="nvarchar" not-null="false" />

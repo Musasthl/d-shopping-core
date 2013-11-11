@@ -16,7 +16,7 @@ namespace Website.Controllers
         public ActionResult Index()
         {
             UserDto newU = new UserDto();
-            newU.addUser();
+            //newU.addUser();
             return View();
         }
 

@@ -31,6 +31,7 @@ namespace Service
             public const string DELETE = "Delete";
             public const string PENDING = "Pending";
 
+            public const string P_IMAGE = "P_Image";
         }
 
         public class GENDER

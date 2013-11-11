@@ -30,7 +30,7 @@ namespace Website.Controllers
 
         public ActionResult ProductNewest()
         {
-            List<ProductDto> newestProduct = ProductHandler.getNewestProduct();
+            List<ProductOverviewDto> newestProduct = ProductHandler.getNewestProduct();
             return PartialView(newestProduct);
         }
 

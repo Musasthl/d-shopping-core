@@ -48,6 +48,7 @@
     <Compile Include="DAO\CategoryDAO.cs" />
     <Compile Include="DAO\DAO.cs" />
     <Compile Include="DAO\ProductDAO.cs" />
+    <Compile Include="DAO\ProductDetailDAO.cs" />
     <Compile Include="DAO\RoleDAO.cs" />
     <Compile Include="Entities\Address.cs" />
     <Compile Include="Entities\Categories.cs" />

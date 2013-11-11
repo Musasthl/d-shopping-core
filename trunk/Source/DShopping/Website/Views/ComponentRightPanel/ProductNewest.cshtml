@@ -1,4 +1,4 @@
-﻿@model IList<Service.DTO.ProductDto>
+﻿@model IList<Service.DTO.ProductOverviewDto>
 
 <div class="d-left-box">
     <div class="d-left-box-heading">
@@ -11,9 +11,15 @@
             {
                 
             <div class="d-left-box-body-item">
-                @product.Name <br />
-                @product.Code <br />
-                @product.Description
+                <table>
+                    <tr>
+                        <td class="d-left-box-image">@product.image</td>
+                        <td>
+                            <div class="d-left-box-title">@product.name</div>
+                            <div class="d-left-box-price">@product.price</div>
+                        </td>
+                    </tr>
+                </table>
             </div>
             }
     

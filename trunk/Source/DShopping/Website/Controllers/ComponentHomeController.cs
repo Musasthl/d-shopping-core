@@ -23,6 +23,7 @@ namespace Website.Controllers
 
         public ActionResult Footer()
         {
+            // Controller Footer 
             return PartialView();
         }
     }

@@ -21,7 +21,7 @@
         @Html.Action("Header", "ComponentHome")
     </div>
     <div id="d-content">
-    
+ 
         <div id="d-banner">
             <!-- Include Banner -->
             @*@Html.Action("Banner", "ComponentHome")*@
@@ -30,7 +30,10 @@
             <div id="d-topmennu">
                 <!-- Top menu -->
                 @Html.Action("TopMenu", "ComponentMenu")
+
+                
             </div>
+            
             <!-- Include left Panel, Center Panel, Right Panel -->
             <table id="d-table-main">
                 <tr>
@@ -44,7 +47,7 @@
                     </td>
                     <td class="d-split-col" />
                     <td>
-                        <div id="content"><div class="welcome">Chào mừng đến với Vi Tính Trần Bảo</div>
+                        <div id="content"><div class="welcome">Chào mừng đến với Vi Tính Trần Bảo</div></div>
                         
                         <div id="d-center">
                             @RenderBody()

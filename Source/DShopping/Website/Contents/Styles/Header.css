@@ -6,11 +6,19 @@
     height:70px;
 }
 
-#d-header-search
+#d-header-data
 {
     position: absolute;
     top: 19px;
     right: 161px;
+    width: 278px;
+}
+
+#d-header-search
+{
+    position: absolute;
+    top: 105px;
+    right: 10px;
     width: 278px;
     z-index: 15;
 }

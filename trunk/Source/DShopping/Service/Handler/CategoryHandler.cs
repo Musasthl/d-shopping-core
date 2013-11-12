@@ -6,21 +6,20 @@ using System.Threading.Tasks;
 using DataTier.DAO;
 using DataTier.Entities;
 using Service.DTO;
+using AutoMapper;
 
 namespace Service.Handler
 {
     public class CategoryHandler
     {
+        
         public List<CategoryDto> getAllCategory()
         {
+            Mapper.AddProfile<ConverterProfile>();
             List<CategoryDto> catDto = new List<CategoryDto>();
             List<Categories> cats = DAO.getAll().ToList();
-            // List<Categories> cats2 = DAO.getAll();
-            foreach (Categories cat in cats)
-            {
-                if(cat.Status.Id == CONST.STATUS.ACTIVE)
-                    catDto.Add(new CategoryDto(cat.CategoryId, cat.Name));
-            }
+
+            catDto = Common.ConvertToListCategoryDto(cats);
             // Sorted by Position
 
             return catDto;

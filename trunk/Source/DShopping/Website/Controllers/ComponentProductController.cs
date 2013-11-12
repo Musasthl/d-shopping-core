@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Web;
 using System.Web.Mvc;
+using Service.Handler;
 
 namespace Website.Controllers
 {
@@ -10,6 +12,8 @@ namespace Website.Controllers
     {
         //
         // GET: /ComponentProduct/
+
+        
 
         public ActionResult Index()
         {
@@ -21,5 +25,6 @@ namespace Website.Controllers
             return View();
         }
 
+        
     }
 }

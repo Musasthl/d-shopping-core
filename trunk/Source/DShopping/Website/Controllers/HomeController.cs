@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.Mvc;
 using Service.DTO;
 using Service;
+using Service.Handler;
 
 namespace Website.Controllers
 {
@@ -12,6 +13,8 @@ namespace Website.Controllers
     {
         //
         // GET: /Home/
+
+        private static ProductHandler _productHandler = new ProductHandler();
 
         public ActionResult Index()
         {
@@ -28,6 +31,13 @@ namespace Website.Controllers
         public ActionResult ProductDetail(int id)
         {
             return View();
+        }
+
+        public ActionResult ProductByCategory(int categoryId)
+        {
+            var result = _productHandler.GetProductsByCategoryId(categoryId);
+
+            return View(result);
         }
 
     }

@@ -8,17 +8,17 @@ namespace Service.DTO
 {
     public class ProductOverviewDto
     {
-        public int id { get; set; }
-        public string name { get; set; }
-        public string image { get; set; }
-        public float price { get; set; }
+        public int Id { get; set; }
+        public string Name { get; set; }
+        public string Image { get; set; }
+        public float Price { get; set; }
 
         public ProductOverviewDto(int id, string name, string image, float price)
         {
-            this.id = id;
-            this.name = name;
-            this.image = image;
-            this.price = price;
+            this.Id = id;
+            this.Name = name;
+            this.Image = image;
+            this.Price = price;
         }
     }
 }

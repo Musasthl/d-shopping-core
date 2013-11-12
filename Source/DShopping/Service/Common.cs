@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using AutoMapper;
 using DataTier.DAO;
 using DataTier.Entities;
 using Service.DTO;
@@ -10,28 +11,34 @@ namespace Service
 {
     public class Common
     {
-        #region Product Converter
+        public Common()
+        {
+            Initialize();
+        }
 
-        public static List<ProductDto> convert(List<Products> listProducts)
+        private static void Initialize()
+        {
+            Mapper.AddProfile<ConverterProfile>();
+        }
+
+        #region Product Converter
+        public static ProductDto ConvertToProductDto(Products products)
+        {
+            var prodDto = Mapper.Map<Products, ProductDto>(products);
+            return prodDto;
+        }
+
+        public static List<ProductDto> ConvertToListProductDto(List<Products> listProducts)
         {
             List<ProductDto> newListProdDto = new List<ProductDto>();
             foreach (Products prods in listProducts)
             {
-                newListProdDto.Add(convert(prods));
+                newListProdDto.Add(ConvertToProductDto(prods));
 
             }
             return newListProdDto;
         }
-        public static ProductDto convert(Products products)
-        {
-            ProductDto prodDto = new ProductDto();
-            prodDto.Id = products.Id;
-            prodDto.Name = products.Name;
-            prodDto.Price = products.Price;
-            prodDto.Description = products.Description;
-            prodDto.Code = products.Code;
-            return prodDto;
-        }
+        
 
         public static List<ProductOverviewDto> convertOverview(List<Products> listProducts)
         {
@@ -57,6 +64,25 @@ namespace Service
             ProductOverviewDto prodDto = new ProductOverviewDto(id, name, image, price);
             
             return prodDto;
+        }
+        #endregion
+
+        #region Category Converter
+        public static CategoryDto ConvertToCategoryDto(Categories products)
+        {
+            var prodDto = Mapper.Map<Categories, CategoryDto>(products);
+            return prodDto;
+        }
+
+        public static List<CategoryDto> ConvertToListCategoryDto(List<Categories> listProducts)
+        {
+            List<CategoryDto> newListProdDto = new List<CategoryDto>();
+            foreach (Categories prods in listProducts)
+            {
+                newListProdDto.Add(ConvertToCategoryDto(prods));
+
+            }
+            return newListProdDto;
         }
         #endregion
     }

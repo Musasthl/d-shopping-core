@@ -1,0 +1,18 @@
+﻿@using System.Activities.Statements
+@model IList<Service.DTO.ProductDto>
+@{
+    ViewBag.Title = "ProductByCategory";
+    Layout = "~/Views/_Layout/_Index.cshtml";
+}
+
+@if( Model != null && Model.Any()){
+
+foreach (var product in Model)
+{
+    <h1>@product.Code</h1>
+}
+}
+else
+{
+  <h1>no product</h1>
+}

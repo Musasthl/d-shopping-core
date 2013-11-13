@@ -128,7 +128,7 @@ namespace DataTier.DAO
                         .Take(noOfProduct)
                         .List();
 
-                    return null;
+                    return Product;
                 }
             }
             catch (Exception ex)

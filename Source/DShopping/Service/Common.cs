@@ -54,13 +54,19 @@ namespace Service
         {
             int id = products.Id;
             string name = products.Name;
-            float price ;
+            float price = 0;
+            string image = "" ;
             if(products.Price == null) 
                 price = 0;
             else price = (float)products.Price;
-
-            List<ProductDetails> prodDetails = ProductDetailDAO.getAllProductDetailByTypeId(CONST.STATUS.P_IMAGE).ToList();
-            string image = prodDetails.ElementAt(0).Contents;
+            IList<ProductDetails> IProdDetails = ProductDetailDAO.getAllProductDetailByTypeId(CONST.STATUS.P_IMAGE);
+            if (IProdDetails != null)
+            {
+                List<ProductDetails> prodDetails = IProdDetails.ToList();
+                if ( prodDetails.Count > 0 )
+                    image = prodDetails.ElementAt(0).Contents;
+            }
+            
             ProductOverviewDto prodDto = new ProductOverviewDto(id, name, image, price);
             
             return prodDto;

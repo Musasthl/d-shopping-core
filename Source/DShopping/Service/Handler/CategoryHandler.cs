@@ -24,5 +24,17 @@ namespace Service.Handler
 
             return catDto;
         }
+
+        public List<CategoryDto> getAllCategoryByParentId(int ParentId)
+        {
+            Mapper.AddProfile<ConverterProfile>();
+            List<CategoryDto> catDto = new List<CategoryDto>();
+            List<Categories> cats = CategoryDAO.getAllActiveCategoryByParent(ParentId).ToList();
+
+            catDto = Common.ConvertToListCategoryDto(cats);
+            // Sorted by Position
+
+            return catDto;
+        }
     }
 }

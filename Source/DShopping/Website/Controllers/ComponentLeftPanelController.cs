@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using Service;
 using Service.DTO;
 using Service.Handler;
 
@@ -23,9 +24,8 @@ namespace Website.Controllers
 
         public ActionResult Category()
         {
-            List<CategoryDto> catList = _category.getAllCategory();
-            ViewBag.abc = catList.ElementAt(0).name;
-                
+            List<CategoryDto> catList = _category.getAllCategoryByParentId(CONST.CATEGORY.CAT_TRANBAO);
+            
 
             return PartialView(catList);
         }

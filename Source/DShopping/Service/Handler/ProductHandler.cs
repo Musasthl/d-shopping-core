@@ -26,10 +26,11 @@ namespace Service.Handler
 
         public static List<ProductOverviewDto> getNewestProduct()
         {
-            //List<Products> newestProduct = ProductDAO.getNewestProduct(CONST.PRODUCT.NO_NEWEST).ToList();
+            IList<Products> INewest = ProductDAO.getNewestProduct(CONST.PRODUCT.NO_NEWEST);
+            if (INewest == null) return null;
+            List<Products> newestProduct = INewest.ToList();
 
-            //return Common.convertOverview(newestProduct);
-            return Common.convertOverview(new List<Products>());
+            return Common.convertOverview(newestProduct);
         }
 
         public ProductDto GetProductDetailById(int productId)

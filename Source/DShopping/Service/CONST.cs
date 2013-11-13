@@ -58,5 +58,11 @@ namespace Service
 
         }
 
+        public class CATEGORY
+        {
+            public const int CAT_TRANBAO = 1;
+            public const int CAT_SHOPMUABAN = 3;
+        }
+
     }
 }

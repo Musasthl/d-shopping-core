@@ -28,13 +28,15 @@ namespace Website.Controllers
             Logger.Instance.Info("testLog");
         }
 
-        public ActionResult ProductDetail(int id)
+        public ActionResult ProductDetail(int productId)
         {
-            return View();
+            var result = _productHandler.GetProductDetailById(productId);
+            return View(result);
         }
 
-        public ActionResult ProductByCategory(int categoryId)
+        public ActionResult ProductByCategory(int categoryId, string categoryName)
         {
+            ViewBag.CategoryName = categoryName;
             var result = _productHandler.GetProductsByCategoryId(categoryId);
 
             return View(result);

@@ -150,6 +150,7 @@
     <Content Include="Contents\Styles\LeftPanel.css" />
     <Content Include="Contents\Styles\Main.css" />
     <Content Include="Contents\Styles\ProductDetail.css" />
+    <Content Include="Contents\Styles\ProductList.css" />
     <Content Include="Contents\Styles\reset.css" />
     <Content Include="Global.asax" />
     <Content Include="hibernate.cfg.xml">

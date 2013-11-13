@@ -21,16 +21,26 @@ namespace Service.Handler
                 return result;
             }
 
-            return null;
+            return new List<ProductDto>();
         }
 
         public static List<ProductOverviewDto> getNewestProduct()
         {
-            List<Products> newestProduct = ProductDAO.getNewestProduct(CONST.PRODUCT.NO_NEWEST).ToList();
+            //List<Products> newestProduct = ProductDAO.getNewestProduct(CONST.PRODUCT.NO_NEWEST).ToList();
 
-            return Common.convertOverview(newestProduct);
+            //return Common.convertOverview(newestProduct);
+            return Common.convertOverview(new List<Products>());
         }
 
-        
+        public ProductDto GetProductDetailById(int productId)
+        {
+            var productDetail = ProductDAO.getProductById(productId);
+            if (productDetail != null)
+            {
+                var result = Common.ConvertToProductDto(productDetail);
+                return result;
+            }
+            return new ProductDto();
+        }
     }
 }

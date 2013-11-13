@@ -18,7 +18,13 @@ namespace Service
 
             #region Product
 
-            Mapper.CreateMap<Products, ProductDto>();
+            Mapper.CreateMap<Products, ProductDto>()
+                .ForMemberEx(d => d.Image, 
+                                s => s.ProductDetails.
+                                        FirstOrDefault(p => p.ProductTypeId.Id == CONST.STATUS.P_IMAGE
+                                                        && p.Status.Id == "Active"
+                                                        )
+                             );
 
             Mapper.CreateMap<Products, ProductOverviewDto>()
                 .ForMemberEx(d => d.Image, 

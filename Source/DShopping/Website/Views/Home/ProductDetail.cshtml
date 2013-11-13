@@ -1,36 +1,34 @@
-﻿@{
-    var productImage = "/Contents/Images/image.jpg";
-    var productTitle = "";
-    var productPrice = "20,000";
-    var productCode = "XXXX";
-    var productStatus = "Còn hàng";
+﻿@model Service.DTO.ProductDto
+@{
+    
 
     Layout = "~/Views/_Layout/_Index.cshtml";
 }
 <link href="~/Contents/Styles/ProductDetail.css" rel="stylesheet" />
 
 <title>@ViewBag.Title </title>
-
-<h3>@productTitle</h3>
+@if (Model != null)
+{
+    <h3>@Model.Name</h3>
 <table id="d-product">
     <tr>
         <td id="d-product-image">
-            <img src="@productImage" />
+            <img src="@Model.Image" />
             <div id="" />
         </td>
         <td id="d-product-overview">
             <div class="d-product-overview-part">
-                Giá: @productPrice VNĐ
+                Giá: @Model.Price VNĐ
 
             </div>
-            <div class="d-product-overview-part">
+            @*<div class="d-product-overview-part">
                 Giá: @productPrice VNĐ
 
-            </div>
+            </div>*@
             <div class="d-product-overview-part">
-                Mã sản phẩm: @productCode
+                Mã sản phẩm: @Model.Code
                 <br />
-                Tình trạng: @productStatus
+                Tình trạng: "Còn hàng"
 
             </div>
             <div class="d-product-overview-part">
@@ -52,3 +50,5 @@
 
 
 </table>
+}
+

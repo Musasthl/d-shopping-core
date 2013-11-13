@@ -1,18 +1,125 @@
 ﻿@using System.Activities.Statements
+@using Website.ExtensionMethod
 @model IList<Service.DTO.ProductDto>
 @{
     ViewBag.Title = "ProductByCategory";
     Layout = "~/Views/_Layout/_Index.cshtml";
 }
 
-@if( Model != null && Model.Any()){
+<link href="~/Contents/Styles/ProductList.css" rel="stylesheet" />
 
-foreach (var product in Model)
+<h1>@ViewBag.CategoryName</h1>
+@if (Model != null && Model.Any())
 {
-    <h1>@product.Code</h1>
-}
+
+    <div class="line-top"></div>
+    <div class="product-grid">
+        @foreach (var product in Model)
+        {
+            <div>
+                <div class="prod-image">
+                    <a href="@Url.Action("ProductDetail","Home")?productId=@product.Id">
+                        <img src="@Url.Image(product.Image)" title="" alt="" width="80" height="80"/>
+                    </a>
+                </div>
+                <div class="prod-name">
+                    <a href="#">@product.Name</a>
+                </div>
+                <div class="prod-price">@product.Price đ </div>
+            </div>
+        }
+    </div>
+    <div class="line-bottom"></div>
 }
 else
 {
-  <h1>no product</h1>
+    <div class="line-top"></div>
+    <div class="product-grid">
+        
+        <div>
+            <div class="prod-image">
+                <a href="@Url.Action("ProductDetail","Home")?productId=1">
+                    <img src="@Url.Image("image.jpg")" title="" alt="" width="80" height="80"/>
+                </a>
+            </div>
+            <div class="prod-name">
+                <a href="#">KEYBOARD DELL 1400</a>
+            </div>
+            <div class="prod-price">450.000đ </div>
+        </div>
+        
+        <div>
+            <div class="prod-image">
+                <a href="@Url.Action("ProductDetail","Home")?productId=1">
+                    <img src="@Url.Image("image.jpg")" title="" alt="" width="80" height="80"/>
+                </a>
+            </div>
+            <div class="prod-name">
+                <a href="#">KEYBOARD DELL 1400</a>
+            </div>
+            <div class="prod-price">450.000đ </div>
+        </div>
+        
+        <div>
+            <div class="prod-image">
+                <a href="@Url.Action("ProductDetail","Home")?productId=1">
+                    <img src="@Url.Image("image.jpg")" title="" alt="" width="80" height="80"/>
+                </a>
+            </div>
+            <div class="prod-name">
+                <a href="#">KEYBOARD DELL 1400</a>
+            </div>
+            <div class="prod-price">450.000đ </div>
+        </div>
+        
+        <div>
+            <div class="prod-image">
+                <a href="@Url.Action("ProductDetail","Home")?productId=1">
+                    <img src="@Url.Image("image.jpg")" title="" alt="" width="80" height="80"/>
+                </a>
+            </div>
+            <div class="prod-name">
+                <a href="#">KEYBOARD DELL 1400</a>
+            </div>
+            <div class="prod-price">450.000đ </div>
+        </div>
+        
+        <div>
+            <div class="prod-image">
+                <a href="@Url.Action("ProductDetail","Home")?productId=1">
+                    <img src="@Url.Image("image.jpg")" title="" alt="" width="80" height="80"/>
+                </a>
+            </div>
+            <div class="prod-name">
+                <a href="#">KEYBOARD DELL 1400</a>
+            </div>
+            <div class="prod-price">450.000đ </div>
+        </div>
+        
+        <div>
+            <div class="prod-image">
+                <a href="@Url.Action("ProductDetail","Home")?productId=1">
+                    <img src="@Url.Image("image.jpg")" title="" alt="" width="80" height="80"/>
+                </a>
+            </div>
+            <div class="prod-name">
+                <a href="#">KEYBOARD DELL 1400</a>
+            </div>
+            <div class="prod-price">450.000đ </div>
+        </div>
+        
+        <div>
+                <div class="prod-image">
+                    <a href="@Url.Action("ProductDetail","Home")?productId=1">
+                        <img src="@Url.Image("image.jpg")" title="" alt="" width="80" height="80"/>
+                    </a>
+                </div>
+                <div class="prod-name">
+                    <a href="#">KEYBOARD DELL 1400</a>
+                </div>
+                <div class="prod-price">450.000đ </div>
+            </div>
+        
+    </div>
+    <div class="line-bottom"></div>
 }

@@ -153,11 +153,14 @@ table#d-table-main
     width: 180px;
 
 }
-
+#d-body
+{
+    width:100%;
+    height:auto;
+}
 #d-center
 {
     width: 860px;
-    min-height: 600px;
 }
 
 #d-right

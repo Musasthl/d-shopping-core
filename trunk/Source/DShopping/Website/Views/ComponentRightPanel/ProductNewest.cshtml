@@ -5,8 +5,9 @@
         Sản phẩm Mới nhất
     </div>
     <div class="d-left-box-body">
+        @if (Model != null)
+        {
 
-        @{
             foreach (var product in Model)
             {
                 
@@ -22,9 +23,7 @@
                 </table>
             </div>
             }
-    
         }
-
     </div>
 
 </div>

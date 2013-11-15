@@ -130,12 +130,17 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Content Include="Contents\Images\Home\adv_180_150.gif" />
     <Content Include="Contents\Images\Home\arrow.png" />
+    <Content Include="Contents\Images\Home\banner.gif" />
     <Content Include="Contents\Images\Home\Banner.JPG" />
     <Content Include="Contents\Images\Home\bmh.png" />
     <Content Include="Contents\Images\Home\button-search.png" />
+    <Content Include="Contents\Images\Home\icon_email.png" />
+    <Content Include="Contents\Images\Home\icon_phone.jpg" />
+    <Content Include="Contents\Images\Home\icon_yahoo.png" />
     <Content Include="Contents\Images\Home\logo.png" />
     <Content Include="Contents\Images\Home\mcn2.png" />
     <Content Include="Contents\Images\Home\menubg.png" />
+    <Content Include="Contents\Images\Home\mobile_phone_arrow.gif" />
     <Content Include="Contents\Images\Home\supermenu-bg.png" />
     <Content Include="Contents\Images\image.jpg" />
     <Content Include="Contents\Images\Slideshow\01.jpg" />
@@ -260,6 +265,27 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Home\Category.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\ComponentLeftPanel\ProductNewest.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\ComponentRightPanel\Category.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Home\AboutUs.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Home\PrepareLaptop.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Home\Contact.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Home\FAQ.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Home\OtherProduct.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

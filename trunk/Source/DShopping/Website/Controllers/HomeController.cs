@@ -44,5 +44,29 @@ namespace Website.Controllers
             return View(result);
         }
 
+        public ActionResult AboutUs()
+        {
+            return View();
+        }
+
+        public ActionResult PrepareLaptop()
+        {
+            return View();
+        }
+
+        public ActionResult Contact()
+        {
+            return View();
+        }
+
+        public ActionResult FAQ()
+        {
+            return View();
+        }
+
+        public ActionResult OtherProduct()
+        {
+            return View();
+        }
     }
 }

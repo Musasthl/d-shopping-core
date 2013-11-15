@@ -39,5 +39,11 @@ namespace Website.Controllers
         {
             return PartialView();
         }
+
+        public ActionResult ProductNewest()
+        {
+            List<ProductOverviewDto> newestProduct = ProductHandler.getNewestProduct();
+            return PartialView(newestProduct);
+        }
     }
 }

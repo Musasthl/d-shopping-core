@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using Service;
 using Service.DTO;
 using Service.Handler;
 
@@ -12,6 +13,8 @@ namespace Website.Controllers
     {
         //
         // GET: /ComponentRightPanel/
+
+        CategoryHandler _category = new CategoryHandler();
 
         public ActionResult Index()
         {
@@ -43,5 +46,14 @@ namespace Website.Controllers
         {
             return PartialView();
         }
+
+        public ActionResult Category()
+        {
+            List<CategoryDto> catList = _category.getAllCategoryByParentId(CONST.CATEGORY.CAT_SHOPMUABAN);
+
+
+            return PartialView(catList);
+        }
+
     }
 }

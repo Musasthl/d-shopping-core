@@ -9,15 +9,15 @@
 #d-header-data
 {
     position: absolute;
-    top: 19px;
-    right: 161px;
-    width: 278px;
+    top: 10px;
+    right: 50px;
+    width: 600px;
 }
 
 #d-header-search
 {
     position: absolute;
-    top: 105px;
+    top: 145px;
     right: 10px;
     width: 278px;
     z-index: 15;

@@ -24,8 +24,27 @@ namespace Service
         #region Product Converter
         public static ProductDto ConvertToProductDto(Products products)
         {
-            var prodDto = Mapper.Map<Products, ProductDto>(products);
-            return prodDto;
+            //var prodDto = Mapper.Map<Products, ProductDto>(products);
+            ProductDto productDto = new ProductDto();
+            productDto.Id = products.Id;
+            float price = 0;
+            string image = "";
+            if (products.Price == null)
+                price = 0;
+            else price = (float)products.Price;
+            IList<ProductDetails> IProdDetails = ProductDetailDAO.getAllProductDetailByTypeId(CONST.STATUS.P_IMAGE);
+            if (IProdDetails != null)
+            {
+                List<ProductDetails> prodDetails = IProdDetails.ToList();
+                if (prodDetails.Count > 0)
+                    image = prodDetails.ElementAt(0).Contents;
+            }
+            productDto.Name = products.Name;
+            productDto.Code = products.Code;
+            productDto.Description = products.Description;
+            productDto.Price = price;
+            productDto.Image = image;
+            return productDto;
         }
 
         public static List<ProductDto> ConvertToListProductDto(List<Products> listProducts)

@@ -44,6 +44,14 @@ namespace Service
             productDto.Description = products.Description;
             productDto.Price = price;
             productDto.Image = image;
+            Categories newCat = CategoryDAO.getCategoryById(products.Category.CategoryId);
+            productDto.Category = new CategoryDto()
+            {
+                CategoryId = newCat.CategoryId,
+                name = newCat.Name
+                 
+            };
+
             return productDto;
         }
 

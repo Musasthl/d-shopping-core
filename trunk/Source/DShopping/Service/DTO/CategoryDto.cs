@@ -10,14 +10,14 @@ namespace Service.DTO
 {
     public class CategoryDto
     {
-        public int id { get; set; }
+        public int CategoryId { get; set; }
         public string name { get; set; }
         private List<CategoryDto> childCategory;
 
         public CategoryDto() { }
         public CategoryDto(int id, string name)
         {
-            this.id = id;
+            this.CategoryId = id;
             this.name = name;
         }
 

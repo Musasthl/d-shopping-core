@@ -1,0 +1,24 @@
+﻿@model IList<Service.DTO.CategoryDto>
+
+
+
+<div class="d-left-container">
+    <div class="d-left-heading">
+        Các sản phẩm khác
+    </div>
+    <div class="d-left-body">
+        <ul>
+            @{
+                foreach (var cat in Model)
+                {
+                <li class="d-left-li ">
+                    <a class="d-left-a" href="@Url.Action("Category","Home")/@cat.CategoryId">@cat.name</a>
+                </li>
+
+                }
+    
+            }
+        </ul>
+    </div>
+
+</div>

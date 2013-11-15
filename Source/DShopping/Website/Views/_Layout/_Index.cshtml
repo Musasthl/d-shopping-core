@@ -46,7 +46,9 @@
                             <!-- Render section left -->
                             @Html.Action("Category", "ComponentLeftPanel")
                             <div class="d-split-row"></div>
-                            @Html.Action("ProductHot", "ComponentLeftPanel")
+                            @Html.Action("ProductNewest", "ComponentLeftPanel")
+                            <div class="d-split-row"></div>
+                            @Html.Action("Advertising", "ComponentRightPanel")
                         </div>
                     </td>
                     <td class="d-split-col" />
@@ -66,7 +68,7 @@
                     <td class="d-split-col" />
                     <td>
                         <div id="d-right">
-                            @Html.Action("ProductNewest", "ComponentRightPanel")
+                            @Html.Action("Category", "ComponentRightPanel")
                             <div class="d-split-row"></div>
                             @Html.Action("OnlineContact", "ComponentRightPanel")
                             <div class="d-split-row"></div>

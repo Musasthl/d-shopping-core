@@ -152,6 +152,8 @@
     <Content Include="Contents\Styles\ProductDetail.css" />
     <Content Include="Contents\Styles\ProductList.css" />
     <Content Include="Contents\Styles\reset.css" />
+    <Content Include="Contents\Styles\style.css" />
+    <Content Include="Contents\Styles\supermenu.css" />
     <Content Include="Global.asax" />
     <Content Include="hibernate.cfg.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>

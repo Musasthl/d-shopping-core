@@ -28,9 +28,9 @@ namespace Website.Controllers
             Logger.Instance.Info("testLog");
         }
 
-        public ActionResult ProductDetail(int productId)
+        public ActionResult ProductDetail(int id)
         {
-            var result = _productHandler.GetProductDetailById(productId);
+            var result = _productHandler.GetProductDetailById(id);
             return View(result);
         }
 

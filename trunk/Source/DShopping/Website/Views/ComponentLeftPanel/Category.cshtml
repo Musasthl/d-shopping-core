@@ -12,7 +12,7 @@
                 foreach (var cat in Model)
                 {
                 <li class="d-left-li ">
-                    <a class="d-left-a" href="@Url.Action("ProductByCategory","Home")?categoryId=@cat.id&categoryName=@cat.name">@cat.name</a>
+                    <a class="d-left-a" href="@Url.Action("Category","Home")/@cat.id">@cat.name</a>
                 </li>
 
                 }

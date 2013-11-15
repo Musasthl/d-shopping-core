@@ -34,11 +34,13 @@ namespace Website.Controllers
             return View(result);
         }
 
-        public ActionResult ProductByCategory(int categoryId, string categoryName)
+        public ActionResult Category(int id)
         {
-            ViewBag.CategoryName = categoryName;
-            var result = _productHandler.GetProductsByCategoryId(categoryId);
-
+            
+            var result = _productHandler.GetProductsByCategoryId(id);
+            if (result != null && result.Any())
+                ViewBag.CategoryName = result.FirstOrDefault().Category.name;
+            else ViewBag.CategoryName = String.Empty;
             return View(result);
         }
 

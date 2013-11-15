@@ -1,1 +1,28 @@
-﻿abc
+﻿<div class="d-left-box">
+    <div class="d-left-box-heading">
+        Thông tin
+    </div>
+    <div class="d-left-box-body">
+        @if (Model != null)
+        {
+
+            foreach (var product in Model)
+            {
+                
+            <div class="d-left-box-body-item">
+                <table>
+                    <tr>
+                        <td class="d-left-box-image"><a href="@Url.Action("ProductDetail","Home")/@product.Id"><img src="@product.Image" width="60" height="40" /></a></td>
+                        <td>
+                            <a href="/Home/ProductDetail/@product.Id" class="d-left-box-title">@product.Name</a>
+                            <div class="d-split-row"></div>
+                            <div class="d-left-box-price">@product.Price đ</div>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            }
+        }
+    </div>
+
+</div>

@@ -1,6 +1,5 @@
 ﻿#supermenu {
 	background-image: url('supermenu-bg.png');
-	background-color: #00000000;
 	height: 40px;
 	margin-bottom: 15px;
 	-webkit-border-radius: 5px 5px 5px 5px;
@@ -36,7 +35,7 @@
 	text-shadow: 0 0 1px #111;
 }
 #supermenu ul li.tlli:hover a.tll {
-	background: #292929;
+	background: #8ecb87;
 }
 #supermenu ul li div.bigdiv {
 	display: none;
@@ -73,6 +72,7 @@
 }
 #supermenu  ul  li  div  .withchild ul.child-level li a:hover {
 	background: #222;
+    
 }
 #supermenu  ul  li  div .supermenu-left {
 	display: inline-block;

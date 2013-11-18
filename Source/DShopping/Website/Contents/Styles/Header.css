@@ -33,7 +33,7 @@
     border-radius: 4px;
 }
 
-#d-header-search input
+#d-header-search input[type="text"]
 {
     background: none repeat scroll 0% 0% rgb(249, 249, 249);
     padding: 1px 1px 1px 39px;

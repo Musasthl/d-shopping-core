@@ -1,0 +1,105 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit http://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <LastUsedBuildConfiguration>Release</LastUsedBuildConfiguration>
+    <LastUsedPlatform>Any CPU</LastUsedPlatform>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <EncryptedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAALNdobVkOckOpL4o8Yoo/xAAAAAACAAAAAAAQZgAAAAEAACAAAADlagCd0artedKOPU6LY68tfOw+UQYcCs2wlQyobEJNAQAAAAAOgAAAAAIAACAAAACvrLhlxTBQR2qeAOrmLSKIReivVIfPbAEKoqA5upn8mCAAAADHFHU2awH2Q3pWQMz5LRO16oZq0bApSaRgMV7bKdCebEAAAAD5xgOzoG5WxeKCxdwv3JRU8K0vxxc4g4sG91jJu7urvXFVE4fBgyF+CJpt3bQGmfGdr0acv8MFlyDMjXUe2scU</EncryptedPassword>
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="bin/AutoMapper.dll">
+      <publishTime>11/13/2013 22:15:02</publishTime>
+    </File>
+    <File Include="bin/AutoMapper.Net4.dll">
+      <publishTime>11/13/2013 22:15:02</publishTime>
+    </File>
+    <File Include="bin/DataTier.dll">
+      <publishTime>11/16/2013 08:44:12</publishTime>
+    </File>
+    <File Include="bin/hibernate.cfg.xml">
+      <publishTime>11/13/2013 22:19:43</publishTime>
+    </File>
+    <File Include="bin/Iesi.Collections.dll">
+      <publishTime>11/04/2013 22:12:19</publishTime>
+    </File>
+    <File Include="bin/log4net.dll">
+      <publishTime>11/05/2013 21:31:44</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Web.Infrastructure.dll">
+      <publishTime>11/04/2013 22:12:21</publishTime>
+    </File>
+    <File Include="bin/Newtonsoft.Json.dll">
+      <publishTime>11/04/2013 22:12:18</publishTime>
+    </File>
+    <File Include="bin/NHibernate.dll">
+      <publishTime>11/04/2013 22:12:13</publishTime>
+    </File>
+    <File Include="bin/Service.dll">
+      <publishTime>11/16/2013 08:44:15</publishTime>
+    </File>
+    <File Include="bin/System.Net.Http.dll">
+      <publishTime>07/10/2012 21:52:12</publishTime>
+    </File>
+    <File Include="bin/System.Net.Http.Formatting.dll">
+      <publishTime>11/04/2013 22:12:19</publishTime>
+    </File>
+    <File Include="bin/System.Net.Http.WebRequest.dll">
+      <publishTime>07/10/2012 21:52:12</publishTime>
+    </File>
+    <File Include="bin/System.Web.Helpers.dll">
+      <publishTime>11/04/2013 22:12:24</publishTime>
+    </File>
+    <File Include="bin/System.Web.Http.dll">
+      <publishTime>11/04/2013 22:12:06</publishTime>
+    </File>
+    <File Include="bin/System.Web.Http.WebHost.dll">
+      <publishTime>11/04/2013 22:12:06</publishTime>
+    </File>
+    <File Include="bin/System.Web.Mvc.dll">
+      <publishTime>11/04/2013 22:12:21</publishTime>
+    </File>
+    <File Include="bin/System.Web.Razor.dll">
+      <publishTime>11/04/2013 22:12:25</publishTime>
+    </File>
+    <File Include="bin/System.Web.WebPages.Deployment.dll">
+      <publishTime>11/04/2013 22:12:24</publishTime>
+    </File>
+    <File Include="bin/System.Web.WebPages.dll">
+      <publishTime>11/04/2013 22:12:24</publishTime>
+    </File>
+    <File Include="bin/System.Web.WebPages.Razor.dll">
+      <publishTime>11/04/2013 22:12:24</publishTime>
+    </File>
+    <File Include="bin/Website.dll">
+      <publishTime>11/16/2013 08:44:17</publishTime>
+    </File>
+    <File Include="Contents/Images/Home/adv_180_150.gif">
+      <publishTime>11/05/2013 23:29:52</publishTime>
+    </File>
+    <File Include="Contents/Images/Home/arrow.png">
+      <publishTime>11/05/2013 21:57:02</publishTime>
+    </File>
+    <File Include="Contents/Images/Home/banner.gif">
+      <publishTime>11/16/2013 00:09:03</publishTime>
+    </File>
+    <File Include="Contents/Images/image.jpg">
+      <publishTime>11/09/2013 14:56:26</publishTime>
+    </File>
+    <File Include="Global.asax">
+      <publishTime>11/04/2013 22:12:02</publishTime>
+    </File>
+    <File Include="hibernate.cfg.xml">
+      <publishTime>11/13/2013 22:19:43</publishTime>
+    </File>
+    <File Include="packages.config">
+      <publishTime>11/13/2013 22:08:23</publishTime>
+    </File>
+    <File Include="Web.config">
+      <publishTime>11/16/2013 08:44:19</publishTime>
+    </File>
+  </ItemGroup>
+</Project>

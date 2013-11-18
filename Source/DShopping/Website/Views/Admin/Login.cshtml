@@ -1,0 +1,30 @@
+﻿
+@{
+    ViewBag.Title = "Login";
+    Layout = null;
+    
+}
+
+<div style="float: left; margin-right: 100px;">
+    <h1>Đăng nhập</h1>
+    <!-- Login form -->
+    <div id="loginBox">
+        <form method="post" action="@Url.Action("LoginRequest","Admin")" > 
+            <div>
+                Username
+            </div>
+            <div>
+                <input type="text" name="Username" />
+            </div>
+            <div>
+                Password
+            </div>
+            <div>
+                <input type="password" name="Password" />
+            </div>
+            <p>
+                <input type="submit" value="Đăng nhập" />
+            </p>    
+        </form>
+    </div>
+</div>

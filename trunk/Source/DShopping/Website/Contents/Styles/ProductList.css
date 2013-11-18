@@ -13,11 +13,11 @@
 }
 
 .product-grid > div {
-	width: 168px;
+	width: 200px;
 	display: inline-block;
 	vertical-align: top;
 	margin-right: 0px;
-	margin-left: 6px;
+	margin-left: 4px;
 	margin-bottom: 10px;
 	background: #fff;
 	border: 1px solid #e7e7e7;
@@ -25,14 +25,14 @@
 	padding: 3px;
 }
 
-.prod-image .prod-image {
+.prod-image  {
     display: block;
-    margin-bottom: 0px;
+    margin: 0px auto;
 }
 
 .product-grid .prod-name {
     min-height: 32px;
-    margin-top: 3px;
+    margin-top: 5px;
 	margin-bottom: 3px;
 	border-bottom: 1px solid #e7e7e7;
 }

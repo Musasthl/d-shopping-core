@@ -1,4 +1,5 @@
-﻿body {
+﻿
+body {
 	/*background: url(grid.png) repeat-y center top;*/
 	font: 16px/1.5 'Droid Sans', sans-serif;
 	width: 940px;
@@ -298,3 +299,37 @@ td:last-child {
 	margin-right: 5px;
 	float: left;				
 }
+
+
+
+
+.htabs {
+	height: 34px;
+	line-height: 16px;
+}
+.htabs a {
+	background: #b00 url('../image/menubg.png') repeat-x;
+	padding: 7px 15px 6px 15px;
+	float: left;
+	font-family: 'Signika', sans-serif;
+	font-size: 13px;
+	font-weight: bold;
+	text-align: center;
+	text-decoration: none;
+	color: #fff;
+	margin-right: 4px;
+	display: none;
+	-webkit-border-radius: 6px;
+	-moz-border-radius: 6px;
+	-khtml-border-radius: 6px;
+	border-radius: 6px;
+}
+
+.tab-content {
+	border: 1px solid #DDDDDD;
+	padding: 10px;
+	margin-bottom: 20px;
+	z-index: 2;
+	overflow: auto;
+}
+

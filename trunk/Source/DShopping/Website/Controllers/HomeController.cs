@@ -28,9 +28,9 @@ namespace Website.Controllers
             Logger.Instance.Info("testLog");
         }
 
-        public ActionResult ProductDetail(int id)
+        public ActionResult ProductDetail(string productCode)
         {
-            var result = _productHandler.GetProductDetailById(id);
+            var result = _productHandler.GetProductDetailById(1);
             return View(result);
         }
 
@@ -43,6 +43,13 @@ namespace Website.Controllers
             else ViewBag.CategoryName = String.Empty;
             return View(result);
         }
+
+        public ActionResult SearchPoducts(string searchValue)
+        {
+            var result = _productHandler.GetSearchProduct(searchValue);
+            return View(result);
+        }
+
 
         public ActionResult AboutUs()
         {

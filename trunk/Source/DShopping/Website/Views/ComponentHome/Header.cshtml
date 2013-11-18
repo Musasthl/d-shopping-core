@@ -38,8 +38,16 @@
 </div>
 
 <div id="d-header-search">
-
-    <div id="d-header-button-search"></div>
-    <input type="text" value="" placeholder="Tìm kiếm" name="search" />
-
+    <form action="@Url.Action("SearchPoducts","Home")">
+        <input type="submit" id="d-header-button-search" onclick="if ($('#d-header-textbox-search').val().length == 0) { return false; }"/>
+    <input id="d-header-textbox-search" type="text" value="" placeholder="Tìm kiếm" name="searchValue" />
+    </form>
 </div>
+
+@*<script type="text/javascript">
+    $("#d-header-button-search").click(function () {
+        var valueSearch = $("#d-header-textbox-search").val();
+        $.post("@Url.Action("SearchPoducts","Home")?searchValue=" + valueSearch, function() {
+        });
+    });
+</script>*@

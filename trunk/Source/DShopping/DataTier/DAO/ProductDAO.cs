@@ -137,5 +137,24 @@ namespace DataTier.DAO
             }
 
         }
+
+        public static IList<Products> GetProductByCodeOrName(string searchValue)
+        {
+            try
+            {
+                using (ISession session = NHibernateHelper.OpenSession())
+                {
+                    var Product = session.QueryOver<Products>()
+                                     .Where(p => (p.Code == searchValue || p.Name == searchValue)
+                                                && p.Status.Id == "Active")
+                        .List();
+                    return Product.ToList();
+                }
+            }
+            catch (Exception ex)
+            {
+                return null;
+            }
+        } 
     }
 }

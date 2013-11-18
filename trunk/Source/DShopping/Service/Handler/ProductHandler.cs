@@ -43,5 +43,15 @@ namespace Service.Handler
             }
             return new ProductDto();
         }
+
+        public List<ProductDto> GetSearchProduct(string searchValue)
+        {
+            var searchResults = ProductDAO.GetProductByCodeOrName(searchValue);
+            if (searchResults != null)
+            {
+                return Common.ConvertToListProductDto(searchResults.ToList());
+            }
+            return new List<ProductDto>();
+        }
     }
 }

@@ -1,14 +1,14 @@
-﻿@using System.Activities.Statements
-@using Website.ExtensionMethod
+﻿@using Website.ExtensionMethod
 @model IList<Service.DTO.ProductDto>
 @{
-    ViewBag.Title = "ProductByCategory";
+    ViewBag.Title = "SearchPoducts";
     Layout = "~/Views/_Layout/_Index.cshtml";
 }
 
+
 <link href="~/Contents/Styles/ProductList.css" rel="stylesheet" />
 
-<h1>@ViewBag.CategoryName</h1>
+
 @if (Model != null && Model.Any())
 {
 
@@ -31,3 +31,4 @@
     </div>
     <div class="line-bottom"></div>
 }
+

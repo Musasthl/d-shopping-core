@@ -23,20 +23,34 @@ namespace Website.Controllers
             return View();
         }
 
-        [HttpPost]
-        public ActionResult LoginRequest(String Username, String Password)
+        public ActionResult AddCategory()
         {
-            //Check login
-            UserDto currentUser = new UserDto();
-            currentUser.Username = Username;
-            currentUser.Password = Password;
-            if (currentUser.Login())
-            {
-                Session[CONST.SESSION.USER] = currentUser;
-                return RedirectToAction("Index", "Admin");
-            }
-            return RedirectToAction("Login", "Admin");
+            return View();
         }
 
+        public ActionResult ManageCategory()
+        {
+            return View();
+        }
+
+        public ActionResult RestoreCategory()
+        {
+            return View();
+        }
+
+        public ActionResult AddProduct()
+        {
+            return View();
+        }
+
+        public ActionResult ManageProduct()
+        {
+            return View();
+        }
+
+        public ActionResult RestoreProduct()
+        {
+            return View();
+        }
     }
 }

@@ -431,24 +431,115 @@ input.cart-button
             -moz-border-radius-topright: 6px;
             border-top-left-radius: 6px;
             border-top-right-radius: 6px;
+            background: #b00 url('~Content/Images/menubg.png') repeat-x;
+            color: #FFFFFF;
+            font-style: normal;
         }
 
 
             #tabs ul li a:focus
             {
-                background-color: azure;
+                background: #222 url('~Content/Images/menubg.png') repeat-x;
+                font-style: italic;
             }
 
 #tabs div
 {
-    -webkit-border-bottom-right-radius: 6px;
-    -webkit-border-bottom-left-radius: 6px;
-    -moz-border-radius-bottomright: 6px;
-    -moz-border-radius-bottomleft: 6px;
-    border-bottom-right-radius: 6px;
-    border-bottom-left-radius: 6px;
-    border: 1px solid black;
-    padding: 20px 20px;
     margin-top:9px;    
     font-weight: bold;
+}
+
+
+
+
+
+/* button */
+
+.buttons {
+	background: #FFFFFF;
+	border: 1px solid #EEEEEE;
+	overflow: auto;
+	padding: 6px;
+	margin-bottom: 20px;
+}
+.buttons .left {
+	float: left;
+	text-align: left;
+}
+.buttons .right {
+	float: right;
+	text-align: right;
+}
+.buttons .center {
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+
+a.button, input.button {
+	cursor: pointer;
+	color: #FFFFFF;
+	line-height: 15px;
+	font-family: 'Signika', sans-serif;
+	font-size: 15px;
+	font-weight: bold;
+	background: #49B712 url('../image/button.png') top left no-repeat;
+    -moz-transition: background .5s ease-in-out;
+    -webkit-transition: background .5s ease-in-out;
+    transition: background .5s ease-in-out;
+    -o-transition: background .5s ease-in-out;
+	-webkit-border-radius: 2px;
+	-moz-border-radius: 2px;
+	-khtml-border-radius: 2px;
+	border-radius: 2px;
+}
+a.button {
+	display: inline-block;
+	text-decoration: none;
+	padding: 11px 12px 10px 12px;
+}
+input.button {
+	margin: 0;
+	border: 0;
+	height: 36px;
+	padding: 0px 12px 0px 12px;
+	margin-bottom: 4px;
+}
+a.button:hover, input.button:hover {
+	background: #57D418 url('../image/button.png') top left no-repeat;
+	text-shadow: 0 0 1px #333;
+}
+
+
+.htabs {
+	height: 34px;
+	line-height: 16px;
+}
+.htabs a {
+	background: #b00 url('~Content/Images/menubg.png') repeat-x;
+	padding: 7px 15px 6px 15px;
+	float: left;
+	font-family: 'Signika', sans-serif;
+	font-size: 13px;
+	font-weight: bold;
+	text-align: center;
+	text-decoration: none;
+	color: #fff;
+	margin-right: 4px;
+	display: none;
+	-webkit-border-radius: 6px;
+	-moz-border-radius: 6px;
+	-khtml-border-radius: 6px;
+	border-radius: 6px;
+}
+.htabs a.selected {
+	background: #222 url('~Content/Images/menubg.png') repeat-x;
+}
+.tab-content {
+	border: 1px solid #DDDDDD;
+	padding: 10px;
+	margin-bottom: 20px;
+	z-index: 2;
+	overflow: auto;
 }

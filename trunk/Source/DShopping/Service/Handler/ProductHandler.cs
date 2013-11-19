@@ -44,6 +44,17 @@ namespace Service.Handler
             return new ProductDto();
         }
 
+        public ProductDto GetProductDetailByCode(string productCode)
+        {
+            var productDetail = ProductDAO.getProductByCode(productCode);
+            if (productDetail != null)
+            {
+                var result = Common.ConvertToProductDto(productDetail);
+                return result;
+            }
+            return new ProductDto();
+        }
+
         public List<ProductDto> GetSearchProduct(string searchValue)
         {
             var searchResults = ProductDAO.GetProductByCodeOrName(searchValue);

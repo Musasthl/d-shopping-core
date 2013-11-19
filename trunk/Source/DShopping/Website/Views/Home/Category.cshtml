@@ -31,14 +31,14 @@
                 {
                     <div>
                         <div class="prod-image">
-                            <a href="@Url.Action("ProductDetail", "Home")/@product.Id">
+                            <a href="@Url.Action("ProductDetail", "Home")?productCode=@product.Code">
                                 <img src="@Url.Image("image.jpg")" title="" alt="" style="width:180px;height:100px;" width="180" height="100"/>
                             </a>
                         </div>
                         <div class="prod-name">
-                            <a href="@Url.Action("ProductDetail", "Home")/@product.Id">@product.Name</a>
+                            <a href="@Url.Action("ProductDetail", "Home")?productCode=@product.Code">@product.Name</a>
                         </div>
-                        <div class="prod-price">@product.Price đ </div>
+                        <div class="prod-price">@Localizer.Currency(product.Price ?? 0) </div>
                     </div>
                 }
             </div>

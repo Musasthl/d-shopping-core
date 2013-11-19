@@ -19,5 +19,22 @@ namespace Service.Handler
             newUser.Role = RoleDAO.getRoleById(CONST.ROLE.NORMALUSER);
             newUser.Status = null;
         }
+
+        public static bool AdminLogin(String username, String password)
+        {
+            Users adminUser = UserDAO.getUserByName(username);
+            if (adminUser == null) return false;
+            else
+            {
+                if (Encrypt.EncodePassword(password).Equals(adminUser.Password))
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+        }
     }
 }

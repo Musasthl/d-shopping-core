@@ -12,7 +12,8 @@ namespace Service.DTO
     {
         public int CategoryId { get; set; }
         public string name { get; set; }
-        private List<CategoryDto> childCategory;
+        public int? ParentId { get; set; }
+        public string StatusId { get; set; }
 
         public CategoryDto() { }
         public CategoryDto(int id, string name)
@@ -21,11 +22,6 @@ namespace Service.DTO
             this.name = name;
         }
 
-        public List<CategoryDto> getChildCategory()
-        {
-            // get child
-            return childCategory;
-        }
 
     }
 

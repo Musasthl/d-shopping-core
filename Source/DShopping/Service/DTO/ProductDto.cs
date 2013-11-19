@@ -19,5 +19,6 @@ namespace Service.DTO
         public float? QuantityPending { get; set; }
         public IList<ProductDetailsDto> ProductDetails { get; set; }
         public string Image { get; set; }
+        public int CategoryId { get; set; }
     }
 }

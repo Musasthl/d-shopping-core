@@ -119,6 +119,7 @@
     <Compile Include="Controllers\ComponentProductController.cs" />
     <Compile Include="Controllers\ComponentRightPanelController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="ExtensionMethod\Localizer.cs" />
     <Compile Include="ExtensionMethod\UrlHelperMethod.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>

@@ -26,5 +26,15 @@ namespace Website.ExtensionMethod
         {
             return urlHelper.Content("~/Contents/Styles/" + stylesheetName);
         }
+
+        public static string Category(this UrlHelper urlHelper, string categoryName)
+        {
+            return urlHelper.Content(String.Format("~/Category/" + categoryName));
+        }
+
+        public static string ProductDetail(this UrlHelper urlHelper, string productCode)
+        {
+            return urlHelper.Content(String.Format("~/ProductDetail/" + productCode));
+        }
     }
 }

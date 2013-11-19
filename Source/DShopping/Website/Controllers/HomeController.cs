@@ -30,7 +30,7 @@ namespace Website.Controllers
 
         public ActionResult ProductDetail(string productCode)
         {
-            var result = _productHandler.GetProductDetailById(1);
+            var result = _productHandler.GetProductDetailByCode(productCode);
             return View(result);
         }
 

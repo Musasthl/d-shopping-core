@@ -21,6 +21,15 @@ namespace Website.ExtensionMethod
             return urlHelper.Content("~/Contents/Images/" + imageName);            
         }
 
+        public static string ImageProduct(this UrlHelper urlHelper, string imageName)
+        {
+            if (string.IsNullOrEmpty(imageName))
+            {
+                return urlHelper.Content("~/Contents/Images/image.jpg");
+            }
+            return urlHelper.Content("~/Contents/Images/Product/" + imageName);
+        }
+
         public static string Script(this UrlHelper urlHelper, string scriptName)
         {
             return urlHelper.Content("~/Contents/Scripts/" + scriptName);

@@ -73,6 +73,10 @@ namespace Website.Controllers
 
         public ActionResult OtherProduct()
         {
+            //var result = _productHandler.GetProductsByCategoryId(id);
+            //if (result != null && result.Any())
+            //    ViewBag.CategoryName = result.FirstOrDefault().Category.name;
+            //else ViewBag.CategoryName = String.Empty;
             return View();
         }
     }

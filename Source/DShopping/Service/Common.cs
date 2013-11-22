@@ -32,7 +32,7 @@ namespace Service
             if (products.Price == null)
                 price = 0;
             else price = (float)products.Price;
-            IList<ProductDetails> IProdDetails = ProductDetailDAO.getAllProductDetailByTypeId(CONST.STATUS.P_IMAGE);
+            IList<ProductDetails> IProdDetails = ProductDetailDAO.getAllProductDetailByTypeId(products.Id, CONST.STATUS.P_IMAGE);
             if (IProdDetails != null)
             {
                 List<ProductDetails> prodDetails = IProdDetails.ToList();
@@ -86,7 +86,7 @@ namespace Service
             if(products.Price == null) 
                 price = 0;
             else price = (float)products.Price;
-            IList<ProductDetails> IProdDetails = ProductDetailDAO.getAllProductDetailByTypeId(CONST.STATUS.P_IMAGE);
+            IList<ProductDetails> IProdDetails = ProductDetailDAO.getAllProductDetailByTypeId(id, CONST.STATUS.P_IMAGE);
             if (IProdDetails != null)
             {
                 List<ProductDetails> prodDetails = IProdDetails.ToList();

@@ -10,7 +10,7 @@ namespace DataTier.DAO
 {
     public class ProductDetailDAO
     {
-        public static IList<ProductDetails> getAllProductDetailByTypeId(string typeId)
+        public static IList<ProductDetails> getAllProductDetailByTypeId(int productId, string typeId)
         {
             try
             {
@@ -18,6 +18,7 @@ namespace DataTier.DAO
                 {
                     var Product = session.QueryOver<ProductDetails>()
                                      .Where(p => p.ProductTypeId.Id == typeId
+                                                && p.Product.Id == productId
                                                 && p.Status.Id == "Active")
                                                 .OrderBy(p => p.CreatedDate).Desc
                         .List();

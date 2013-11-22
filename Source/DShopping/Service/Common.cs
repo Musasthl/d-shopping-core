@@ -49,7 +49,7 @@ namespace Service
             {
                 CategoryId = newCat.CategoryId,
                 name = newCat.Name
-                 
+
             };
 
             return productDto;
@@ -65,7 +65,7 @@ namespace Service
             }
             return newListProdDto;
         }
-        
+
 
         public static List<ProductOverviewDto> convertOverview(List<Products> listProducts)
         {
@@ -82,20 +82,20 @@ namespace Service
             int id = products.Id;
             string name = products.Name;
             float price = 0;
-            string image = "" ;
-            if(products.Price == null) 
+            string image = "";
+            if (products.Price == null)
                 price = 0;
             else price = (float)products.Price;
             IList<ProductDetails> IProdDetails = ProductDetailDAO.getAllProductDetailByTypeId(id, CONST.STATUS.P_IMAGE);
             if (IProdDetails != null)
             {
                 List<ProductDetails> prodDetails = IProdDetails.ToList();
-                if ( prodDetails.Count > 0 )
+                if (prodDetails.Count > 0)
                     image = prodDetails.ElementAt(0).Contents;
             }
-            
+
             ProductOverviewDto prodDto = new ProductOverviewDto(id, name, image, price);
-            
+
             return prodDto;
         }
         #endregion
@@ -124,7 +124,7 @@ namespace Service
             hotCategoryDto.CategoryId = category.CategoryId;
             hotCategoryDto.Name = category.Name;
             List<Products> listProducts = null;
-            if(ProductDAO.getAllProductByCategory(category.CategoryId) != null)
+            if (ProductDAO.getAllProductByCategory(category.CategoryId) != null)
                 listProducts = ProductDAO.getAllProductByCategory(category.CategoryId).ToList();
             hotCategoryDto.Products = ConvertToListProductDto(listProducts);
             return hotCategoryDto;
@@ -139,6 +139,52 @@ namespace Service
 
             }
             return newListProdDto;
+        }
+        #endregion
+
+        #region Comment Converter
+
+        public static CommentDto ConvertToCommentDto(Comments comment)
+        {
+            CommentDto newCommentDto = new CommentDto();
+            if (comment != null)
+            {
+                newCommentDto.Content = comment.Content;
+                newCommentDto.Name = comment.Name;
+                newCommentDto.Phone = comment.Phone;
+                newCommentDto.Title = comment.Title;
+                newCommentDto.ProductId = comment.Product.Id;
+            }
+
+            else return null;
+            return newCommentDto;
+        }
+
+        public static List<CommentDto> ConvertToCommentDto(List<Comments> comments)
+        {
+            List<CommentDto> CommentDto = new List<CommentDto>();
+            foreach (Comments comment in comments)
+            {
+                CommentDto.Add(ConvertToCommentDto(comment));
+            }
+            return CommentDto;
+        }
+
+        public static Comments ConvertToComments(CommentDto commentDto)
+        {
+            Comments comments = new Comments();
+            if (commentDto != null)
+            {
+                comments.Title = commentDto.Title;
+                comments.Status = StatusDAO.getStatusById(CONST.STATUS.ACTIVE);
+                comments.Product = ProductDAO.getProductById(commentDto.ProductId);
+                comments.Phone = commentDto.Phone;
+                comments.Name = commentDto.Name;
+                comments.Email = commentDto.Email;
+                comments.CreatedDate = DateTime.Now;
+                comments.Content = commentDto.Content;
+            }
+            return comments;
         }
         #endregion
     }

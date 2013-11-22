@@ -71,7 +71,8 @@ namespace DataTier.DAO
                     
                 case Entity.USER:
                     return typeof(Users);
-                    
+                case Entity.COMMENT:
+                    return typeof(Comments);  
             }
             return typeof(Object);
 

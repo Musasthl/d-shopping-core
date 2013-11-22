@@ -27,6 +27,7 @@ namespace DataTier
         public const string SUPPLIER = "SUPPLIER";
         public const string UNIT = "UNIT";
         public const string USER = "USER";
+        public const string COMMENT = "COMMENT";
     }
     public class ExecuteType
     {

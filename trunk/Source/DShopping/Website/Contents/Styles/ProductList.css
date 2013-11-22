@@ -288,3 +288,89 @@ a.button:hover, input.button:hover {
 	z-index: 2;
 	overflow: auto;
 }
+ /* Hot categories */
+.box {
+	margin-bottom: 15px;
+	border: 1px solid #DBDEE1;
+	-webkit-border-radius: 2px;
+	-moz-border-radius: 2px;
+	-khtml-border-radius: 2px;
+	border-radius: 2px;
+}
+
+.box .box-heading {
+	margin: 4px;
+	padding: 9px;
+	background: #0f6b17 url('/Contents/Images/Home/menubg.png') top repeat-x;
+	font-family: 'Signika', sans-serif;
+	font-size: 16px;
+	font-weight: bold;
+	line-height: 14px;
+	color: #ebebeb;
+	-webkit-border-radius: 2px;
+	-moz-border-radius: 2px;
+	-khtml-border-radius: 2px;
+	border-radius: 2px;
+}
+
+.box .box-content {
+	background: #FFFFFF;
+	padding: 10px;
+}
+
+.box-product {
+	width: 100%;
+	overflow: auto;
+}
+
+.box-product > .item {
+	width: 150px;
+	display: inline-block;
+	vertical-align: top;
+	margin-right: 0px;
+	margin-left: 6px;
+	margin-bottom: 10px;
+	background: #fff;
+	border: 1px solid #e7e7e7;
+	border-bottom: 2px solid #e7e7e7;
+	text-align: center;
+	padding: 3px;
+}
+
+.box-product .image {
+	display: block;
+	margin-bottom: 0px;
+}
+
+.box-product .image img {
+    width: 146px;
+    height: 100px;
+}
+.box-product .name {
+    min-height: 32px;
+	margin-bottom: 3px;
+	border-bottom: 1px solid #e7e7e7;
+}
+.box-product .name a {
+	color: #333;
+	font-weight: bold;
+	text-decoration: none;
+	display: block;
+	margin-bottom: 2px;
+   -moz-transition: color .5s ease-in-out;
+   -webkit-transition: color .5s ease-in-out;
+   transition: color .5s ease-in-out;
+   -o-transition: color .5s ease-in-out;
+}
+.box-product .name a:hover {
+   color: #000;
+}
+.box-product .price {
+	display: block;
+	font-weight: bold;
+	color: #2D9E00;
+	/*margin-bottom: 4px;*/
+	font-size: 15px;
+	/*border-bottom: 1px solid #e7e7e7;*/
+}
+/*End Hot Categories*/

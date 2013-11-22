@@ -1,0 +1,39 @@
+﻿@using Website.ExtensionMethod
+@model IList<Service.DTO.HotCategoryDto>
+
+<link href="~/Contents/Styles/ProductList.css" rel="stylesheet" />
+@{
+    if (Model.Any())
+    {
+        foreach (var category in Model)
+        {
+            if (category.Products.Any())
+            {
+                <div class="box">
+                <div class="box-heading">@category.Name</div>
+                <div class="box-content">
+                    <div class="box-product">
+                        @foreach(var product in category.Products.Take(5))
+                        {
+                            <div class="item">
+                                <div class="image">
+                                    <a href="@Url.Action("ProductDetail", "Home")?productCode=@product.Code">
+                                        <img src="@Url.Image(product.Image)"/>
+                                    </a>
+                                </div>
+                                <div class="name">
+                                    <a href="@Url.Action("ProductDetail", "Home")?productCode=@product.Code">@product.Name</a>
+                                </div>
+                                <div class="price">@Localizer.Currency(product.Price ?? 0)</div>
+                            </div>
+                        }
+                        
+                    </div>
+                </div>
+            </div>
+            }
+            
+        }
+
+    }
+}

@@ -12,7 +12,7 @@ namespace Website.ExtensionMethod
         {
             if (value == 0)
             {
-                return "";
+                return "Thương lượng";
             }
             return value.ToString("c", CultureInfo.CreateSpecificCulture("vi-VN"));
         }

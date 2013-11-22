@@ -26,5 +26,10 @@ namespace DataTier.Entities {
         public virtual IList<Orders> Orders { get; set; }
         public virtual IList<ProductDetails> ProductDetails { get; set; }
         public virtual IList<ProductSuppliers> ProductSuppliers { get; set; }
+
+        public virtual int GetCategoryId()
+        {
+            return 4;
+        }
     }
 }

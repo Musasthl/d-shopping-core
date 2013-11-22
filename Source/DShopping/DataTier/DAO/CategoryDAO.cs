@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using DataTier.Entities;
 using NHibernate;
+using NHibernate.Linq;
 
 namespace DataTier.DAO
 {
@@ -64,5 +65,26 @@ namespace DataTier.DAO
                 return null;
             }
         }
+
+        public static List<Categories> GetHotCategories(int noOfCategories, int parentCategoryId)
+        {
+            try
+            {
+                using (ISession session = NHibernateHelper.OpenSession())
+                {
+                    var test = session.Query<Categories>().ToList();
+                    var Category = session.Query<Categories>()
+                        .Where(p => p.Child.Any(pr => pr.Parent.CategoryId == parentCategoryId))
+                        .OrderBy(p => p.Position)
+                        .Take(noOfCategories);
+                    
+                    return Category.ToList();
+                }
+            }
+            catch (Exception ex)
+            {
+                return null;
+            }   
+        } 
     }
 }

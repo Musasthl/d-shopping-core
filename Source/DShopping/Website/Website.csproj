@@ -120,6 +120,7 @@
     <Compile Include="Controllers\ComponentRightPanelController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\RequestController.cs" />
+    <Compile Include="ExtensionMethod\Localizer.cs" />
     <Compile Include="ExtensionMethod\UrlHelperMethod.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -704,6 +705,7 @@
     <Content Include="Views\Admin\Index.cshtml" />
     <Content Include="Views\Admin\Login.cshtml" />
     <Content Include="Views\Home\SearchPoducts.cshtml" />
+    <Content Include="Views\Component\HotCategories.cshtml" />
     <Content Include="Views\Admin\AddCategory.cshtml" />
     <Content Include="Views\Admin\ManageCategory.cshtml" />
     <Content Include="Views\Admin\RestoreCategory.cshtml" />

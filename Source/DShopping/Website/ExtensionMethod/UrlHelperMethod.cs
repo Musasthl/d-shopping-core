@@ -14,6 +14,10 @@ namespace Website.ExtensionMethod
             {
                 return urlHelper.Content("~/Contents/Images/Banner.JPG");
             }
+            else if(string.IsNullOrEmpty(imageName))
+            {
+                return urlHelper.Content("~/Contents/Images/image.jpg");
+            }
             return urlHelper.Content("~/Contents/Images/" + imageName);            
         }
 

@@ -36,5 +36,13 @@ namespace Service.Handler
 
             return catDto;
         }
+
+        public List<HotCategoryDto> GetHotCategories()
+        {
+            var hotCatDto = new List<HotCategoryDto>();
+            var hotCats = CategoryDAO.GetHotCategories(CONST.CATEGORY.CAT_HOTCATEGORY, CONST.CATEGORY.CAT_TRANBAO).ToList();
+            hotCatDto = Common.ConvertToListHotCategoryDto(hotCats);
+            return hotCatDto;
+        }
     }
 }

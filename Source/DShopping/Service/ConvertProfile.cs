@@ -15,16 +15,17 @@ namespace Service
         protected override void Configure()
         {
             base.Configure();
+            #region Category
 
+            Mapper.CreateMap<Categories, CategoryDto>();
+
+            #endregion
             #region Product
 
             Mapper.CreateMap<Products, ProductDto>()
-                .ForMemberEx(d => d.Image, 
-                                s => s.ProductDetails.
-                                        FirstOrDefault(p => p.ProductTypeId.Id == CONST.STATUS.P_IMAGE
-                                                        && p.Status.Id == "Active"
-                                                        )
-                             );
+                .ForMemberEx(d => d.CategoryId, s => s.GetCategoryId())
+                .ForMember(d => d.Category, s => s.Ignore())
+                .ForMember(d => d.ProductDetails, s => s.Ignore());
 
             Mapper.CreateMap<Products, ProductOverviewDto>()
                 .ForMemberEx(d => d.Image, 
@@ -37,11 +38,7 @@ namespace Service
 
             #endregion
 
-            #region Category
-
-            Mapper.CreateMap<Categories, CategoryDto>();
-
-            #endregion
+            
         }
     }
     #region Extensions

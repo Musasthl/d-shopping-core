@@ -117,6 +117,29 @@ namespace Service
             }
             return newListProdDto;
         }
+
+        public static HotCategoryDto ConvertToHotCategoryDto(Categories category)
+        {
+            var hotCategoryDto = new HotCategoryDto();
+            hotCategoryDto.CategoryId = category.CategoryId;
+            hotCategoryDto.Name = category.Name;
+            List<Products> listProducts = null;
+            if(ProductDAO.getAllProductByCategory(category.CategoryId) != null)
+                listProducts = ProductDAO.getAllProductByCategory(category.CategoryId).ToList();
+            hotCategoryDto.Products = ConvertToListProductDto(listProducts);
+            return hotCategoryDto;
+        }
+
+        public static List<HotCategoryDto> ConvertToListHotCategoryDto(List<Categories> listProducts)
+        {
+            List<HotCategoryDto> newListProdDto = new List<HotCategoryDto>();
+            foreach (Categories prods in listProducts)
+            {
+                newListProdDto.Add(ConvertToHotCategoryDto(prods));
+
+            }
+            return newListProdDto;
+        }
         #endregion
     }
 }

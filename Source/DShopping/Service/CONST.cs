@@ -49,7 +49,7 @@ namespace Service
         }
         public class PAGE
         {
-
+            
         }
 
         public class PRODUCT
@@ -62,7 +62,9 @@ namespace Service
         {
             public const int CAT_TRANBAO = 1;
             public const int CAT_SHOPMUABAN = 3;
+            public const int CAT_HOTCATEGORY = 2;
         }
+
 
     }
 }

@@ -7,9 +7,9 @@ namespace DataTier.Entities {
     
     public class Comments {
         public virtual int Id { get; set; }
-        public virtual Products Products { get; set; }
+        public virtual Products Product { get; set; }
         public virtual Status Status { get; set; }
-        public virtual string Contents { get; set; }
+        public virtual string Content { get; set; }
         public virtual string Title { get; set; }
         public virtual string Phone { get; set; }
         public virtual string Email { get; set; }

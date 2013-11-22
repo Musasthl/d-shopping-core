@@ -37,6 +37,10 @@
     <property name="QuantityPending">
       <column name="QuantityPending" sql-type="float" not-null="false" />
     </property>
+	    <bag name="Comments" inverse="true">
+      <key column="ProductId" />
+      <one-to-many class="Comments" />
+    </bag>
     <bag name="Orders" inverse="true">
       <key column="ProductId" />
       <one-to-many class="Orders" />

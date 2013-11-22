@@ -10,6 +10,7 @@ namespace DataTier.Entities {
 			Orders = new List<Orders>();
 			ProductDetails = new List<ProductDetails>();
 			ProductSuppliers = new List<ProductSuppliers>();
+            Comments = new List<Comments>();
         }
         public virtual int Id { get; set; }
         public virtual Categories Category { get; set; }
@@ -22,7 +23,8 @@ namespace DataTier.Entities {
         public virtual float? Price { get; set; }
         public virtual float? QuantityAvailable { get; set; }
         public virtual float? QuantityPending { get; set; }
-        public virtual DateTime CreatedDate { get; set; } 
+        public virtual DateTime CreatedDate { get; set; }
+        public virtual IList<Comments> Comments { get; set; }
         public virtual IList<Orders> Orders { get; set; }
         public virtual IList<ProductDetails> ProductDetails { get; set; }
         public virtual IList<ProductSuppliers> ProductSuppliers { get; set; }

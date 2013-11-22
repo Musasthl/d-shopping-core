@@ -55,6 +55,7 @@
     <Compile Include="Entities\Address.cs" />
     <Compile Include="Entities\Categories.cs" />
     <Compile Include="Entities\CategoryRelations.cs" />
+    <Compile Include="Entities\Comments.cs" />
     <Compile Include="Entities\Customers.cs" />
     <Compile Include="Entities\FAQs.cs" />
     <Compile Include="Entities\Invoices.cs" />
@@ -104,6 +105,9 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Mapping\Comments.hbm.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

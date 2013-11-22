@@ -3,4 +3,59 @@
     Layout = "~/Views/_Layout/_Index.cshtml";
 }
 
-<h2>Contact</h2>
+<link href="~/Contents/Styles/ProductDetail.css" rel="stylesheet" />
+
+<h1>Liên hệ với chúng tôi</h1>
+
+<form action="http://vitinhantin.com/contact" method="post" enctype="multipart/form-data">
+    <div class="contact-info">
+        <div class="content">
+            <div class="left">
+                <h1>Vi Tính Trần Bảo</h1>
+                <br />
+                <b>Địa chỉ:</b>61/6m Phạm Văn Chiêu, Phường 14, Quận Gò Vấp, Tp Hồ Chí Minh<br />
+                <b>Yahoo</b>: tran_bao16<br />
+                <b>Email</b>: tranbaolaptop@gmail.com
+            </div>
+            <div class="right">
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <b>Tel</b><br />
+                0932061639<br />
+                <br />
+            </div>
+        </div>
+    </div>
+    <br />
+    <br />
+    <h2>Thông tin của Bạn</h2>
+    <div class="content">
+        <b>Họ và Tên:</b><br />
+        <input type="text" name="name" value="" />
+        <br />
+        <br />
+        <b>E-Mail :</b><br />
+        <input type="text" name="email" value="" />
+        <br />
+        <br />
+        <b>Địa chỉ :</b><br />
+        <input type="text" name="address" value="" />
+        <br />
+        <br />
+        <b>Điện Thoại<font color="#ff0000">(*)</font> :</b><br />
+        <input type="text" name="email" value="" />
+        <br />
+        <br />
+        <b>Nội dung:</b><br />
+        <textarea name="enquiry" cols="40" rows="10" style="width: 99%;"></textarea>
+        <br />
+        <br />
+
+    </div>
+    <div class="buttons">
+        <div class="right"><a id="button-review" class="button">Tiếp tục</a></div>
+    </div>
+</form>

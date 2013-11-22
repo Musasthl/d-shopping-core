@@ -174,3 +174,16 @@ table#d-table-main
     width: 100%;
 }
 
+.contact-info {
+	overflow: auto;
+}
+.contact-info .left {
+	float: left;
+	width: 48%;
+}
+.contact-info .right {
+	float: left;
+	width: 48%;
+}
+
+

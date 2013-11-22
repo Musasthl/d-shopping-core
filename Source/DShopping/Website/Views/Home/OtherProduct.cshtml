@@ -1,6 +1,72 @@
-﻿@{
-    ViewBag.Title = "OtherProduct";
+﻿@using System.Activities.Statements
+@using Website.ExtensionMethod
+@model IList<Service.DTO.ProductDto>
+@{
+    ViewBag.Title = "Other Products";
     Layout = "~/Views/_Layout/_Index.cshtml";
 }
 
-<h2>OtherProduct</h2>
+<link href="~/Contents/Styles/ProductList.css" rel="stylesheet" />
+<script src="~/Contents/Scripts/jquery-ui-1.10.3.custom.min.js"></script>
+
+<h1>Những sản phẩm khác</h1>
+@if (Model != null && Model.Any())
+{
+
+    <div class="line-top"></div>
+    
+    <script>
+        $(function () {
+            $("#tabs").tabs();
+        });
+    </script>
+    <div id="tabs">
+        <b>Hiển Thị:</b> <ul> <br />
+            <li><a href="#tabs-1">Lưới</a></li>
+            <li><a href="#tabs-2">Danh Sách</a></li> <br /><br /><br />
+        </ul>
+        <div id="tabs-1">
+            <div class="product-grid">
+                @foreach (var product in Model)
+                {
+                    <div>
+                        <div class="prod-image">
+                            <a href="@Url.Action("ProductDetail", "Home")?productCode=@product.Code">
+                                <img src="@Url.Image("image.jpg")" title="" alt="" style="width:180px;height:100px;" width="180" height="100"/>
+                            </a>
+                        </div>
+                        <div class="prod-name">
+                            <a href="@Url.Action("ProductDetail", "Home")?productCode=@product.Code">@product.Name</a>
+                        </div>
+                        <div class="prod-price">@Localizer.Currency(product.Price ?? 0) </div>
+                    </div>
+                }
+            </div>
+        </div>
+        <div id="tabs-2">
+            <div class="product-list">
+                @foreach (var product in Model)
+                {
+                    <div>
+                        <div class="image">
+                            <a href="http://vitinhantin.com/nguon-vi-tinh-vi/acbel-vi/nguon-1100w-acbel-r9.html">
+                                <img src="http://vitinhantin.com/image/cache/data/Power PC/nguon-1100w-acbel-r9-139-80x80.jpg" title="Nguồn 1100W AcBel R9" alt="Nguồn 1100W AcBel R9" /></a>
+                        </div>
+                        <div class="name"><a href="@Url.Action("ProductDetail", "Home")/@product.Id">@product.Name</a></div>
+                        <div class="description">Nguồn 1100W AcBel R9..</div>
+                        <div class="price">
+                            @product.Price đ                       
+                    <br />
+                            <span class="price-tax">Trước thuế: @product.Price đ</span>
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+    
+    
+    
+    
+    <div class="line-bottom"></div>
+}

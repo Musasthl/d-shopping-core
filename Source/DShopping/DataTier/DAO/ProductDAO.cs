@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using DataTier.Entities;
 using NHibernate;
+using NHibernate.Linq;
 
 namespace DataTier.DAO
 {
@@ -155,6 +156,24 @@ namespace DataTier.DAO
             {
                 return null;
             }
-        } 
+        }
+
+        public static IList<Products> GetOtherProducts(int parentCategoryId)
+        {
+            try
+            {
+                using (ISession session = NHibernateHelper.OpenSession())
+                {
+                    var test = session.Query<Products>();
+                    var Product = session.Query<Products>()
+                                     .Where(p => p.Category.Child.Any(c => c.Parent.CategoryId == parentCategoryId));
+                    return Product.ToList();
+                }
+            }
+            catch (Exception ex)
+            {
+                return null;
+            }
+        }
     }
 }

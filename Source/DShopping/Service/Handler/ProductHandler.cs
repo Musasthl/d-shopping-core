@@ -65,6 +65,14 @@ namespace Service.Handler
             return new List<ProductDto>();
         }
 
-        //public List<ProductDto> 
+        public List<ProductDto> GetOtherProducts()
+        {
+            var results = ProductDAO.GetOtherProducts(CONST.CATEGORY.CAT_SHOPMUABAN);
+            if (results != null)
+            {
+                return Common.ConvertToListProductDto(results.ToList());
+            }
+            return null;
+        }
     }
 }

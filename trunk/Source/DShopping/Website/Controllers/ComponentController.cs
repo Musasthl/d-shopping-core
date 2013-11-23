@@ -31,5 +31,16 @@ namespace Website.Controllers
             return PartialView(result);
         }
 
+        public ActionResult Comment(int productId)
+        {
+            ViewBag.ProductId = productId;
+            return PartialView();
+        }
+
+        public ActionResult CommentList(int productId)
+        {
+            List<CommentDto> currentComment = ProductHandler.GetAllComment(productId);
+            return PartialView(currentComment);
+        }
     }
 }

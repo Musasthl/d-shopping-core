@@ -12,19 +12,19 @@
 @if (Model != null)
 {
     <div id="content">
-        <h1>@Model.Name</h1>
+        <h1 style="color: #a55b0c;">@Model.Name</h1>
         <div class="product-info">
             <div class="left">
                 <div class="image">
                     <a href="#" title="@Model.Name" class="colorbox" rel="colorbox">
                         <img src="@Url.ImageProduct(Model.Image)" title="@Model.Name" alt="@Model.Name" id="image" /></a>
                 </div>
-                <a title="Test" class="cart-button" href="/Home/contact">Đặt Hàng</a>
+
             </div>
             <div class="right">
                 <div class="price">
                     Giá:       @Localizer.Currency(Model.Price ?? 0)
-                <br />
+                    <br />
 
                 </div>
                 <div class="description">
@@ -53,7 +53,7 @@
         </ul>
         <div id="tabs-1">
             <div id="tab-review" class="tab-content">
-                
+
                 <h2 id="review-title">Viết đánh giá</h2>
                 <b>Tên bạn:</b><br />
                 <input type="text" name="name" value="" />
@@ -62,16 +62,67 @@
                 <b>Đánh giá của bạn:</b>
                 <textarea name="text" cols="40" rows="8" style="width: 98%;"></textarea>
                 <span style="font-size: 11px;"><span style="color: #FF0000;">Lưu ý:</span> không hỗ trợ HTML!</span><br />
-                
+
                 <br />
-                
+
                 <div class="buttons">
                     <div class="right"><a id="button-review" class="button">Tiếp tục</a></div>
                 </div>
             </div>
         </div>
         <div id="tabs-2">
-            
+            <form action="http://vitinhantin.com/contact" method="post" enctype="multipart/form-data">
+                <div class="contact-info">
+                    <div class="content">
+                        <div class="left">
+                            <h1>Vi Tính Trần Bảo</h1>
+                            <br />
+                            <b>Địa chỉ:</b>61/6m Phạm Văn Chiêu, Phường 14, Quận Gò Vấp, Tp Hồ Chí Minh<br />
+                            <b>Yahoo</b>: tran_bao16<br />
+                            <b>Email</b>: tranbaolaptop@gmail.com
+                        </div>
+                        <div class="right">
+                            <br />
+                            <br />
+                            <br />
+                            <br />
+                            <br />
+                            <b>Tel</b><br />
+                            0932061639<br />
+                            <br />
+                        </div>
+                    </div>
+                </div>
+                <br />
+                <br />
+                <h2>Thông tin của Bạn</h2>
+                <div class="content">
+                    <b>Họ và Tên:</b><br />
+                    <input type="text" name="name" value="" />
+                    <br />
+                    <br />
+                    <b>E-Mail :</b><br />
+                    <input type="text" name="email" value="" />
+                    <br />
+                    <br />
+                    <b>Địa chỉ :</b><br />
+                    <input type="text" name="address" value="" />
+                    <br />
+                    <br />
+                    <b>Điện Thoại<font color="#ff0000">(*)</font> :</b><br />
+                    <input type="text" name="email" value="" />
+                    <br />
+                    <br />
+                    <b>Nội dung:</b><br />
+                    <textarea name="enquiry" cols="40" rows="10" style="width: 99%;"></textarea>
+                    <br />
+                    <br />
+
+                </div>
+                <div class="buttons">
+                    <div class="right"><a id="button-review" class="button">Tiếp tục</a></div>
+                </div>
+            </form>
         </div>
     </div>
     

@@ -52,23 +52,9 @@
             <li><a href="#tabs-2">Đặt Hàng</a></li>
         </ul>
         <div id="tabs-1">
-            <div id="tab-review" class="tab-content">
-
-                <h2 id="review-title">Viết đánh giá</h2>
-                <b>Tên bạn:</b><br />
-                <input type="text" name="name" value="" />
-                <br />
-                <br />
-                <b>Đánh giá của bạn:</b>
-                <textarea name="text" cols="40" rows="8" style="width: 98%;"></textarea>
-                <span style="font-size: 11px;"><span style="color: #FF0000;">Lưu ý:</span> không hỗ trợ HTML!</span><br />
-
-                <br />
-
-                <div class="buttons">
-                    <div class="right"><a id="button-review" class="button">Tiếp tục</a></div>
-                </div>
-            </div>
+            @Html.Action("Comment", "Component", new { productId = Model.Id})
+            <hr />
+            @Html.Action("CommentList", "Component", new { productId = Model.Id})
         </div>
         <div id="tabs-2">
             <form action="http://vitinhantin.com/contact" method="post" enctype="multipart/form-data">

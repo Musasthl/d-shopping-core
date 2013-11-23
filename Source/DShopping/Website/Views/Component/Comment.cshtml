@@ -1,0 +1,25 @@
+﻿@{
+    var prodId = ViewBag.ProductId;
+
+}
+<div id="tab-review" class="tab-content">
+    <form method="post" id="submitPost" action="@Url.Action("PostComment", "Request")" >
+        <h2 id="review-title">Viết đánh giá</h2>
+        <input type="text" name="name" value="" placeholder="Tên của bạn" />
+        <input type="text" name="phone" value="" placeholder="Điện thoại" />
+        <br />
+        <textarea name="content" placeholder="Bình luận" cols="40" rows="6" style="width: 98%;"></textarea>
+        <span style="font-size: 11px;"><span style="color: #FF0000;">Lưu ý:</span> không hỗ trợ HTML!</span><br />
+
+        <div class="buttons">
+            <div class="right"><a id="button-review" onclick="$('#submitPost').submit();return false;" class="button">Tiếp tục</a></div>
+            <div style="display: none">
+                <input type="submit" /><input type="hidden" name="productId" value="@prodId" />
+            </div>
+        </div>
+    </form>
+</div>
+    <script type="text/javascript">
+
+        
+    </script>

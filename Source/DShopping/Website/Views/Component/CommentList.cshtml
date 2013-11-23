@@ -1,0 +1,13 @@
+﻿@using Website.ExtensionMethod
+@model IList<Service.DTO.CommentDto>
+
+@if (Model != null && Model.Any())
+{
+    foreach (var comment in Model)
+    {
+        <div>
+            @comment.Name <br />
+            @comment.Content
+                    </div>     
+    }
+}

@@ -73,6 +73,7 @@ namespace DataTier.DAO
                 {
                     var Product = session.QueryOver<Products>().List()
                                      .Where(p => p.Status.Id == "Active")
+                                     .OrderByDescending(p => p.CreatedDate)
                                      .ToList();
 
                     return Product;
@@ -93,6 +94,7 @@ namespace DataTier.DAO
                     var Product = session.QueryOver<Products>()
                                      .Where(p => p.Category.CategoryId == categoryId
                                                 && p.Status.Id == "Active")
+                                                .OrderBy(p => p.CreatedDate).Desc
                         .List();
 
                     return Product.ToList();

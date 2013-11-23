@@ -32,7 +32,7 @@
                     <div>
                         <div class="prod-image">
                             <a href="@Url.Action("ProductDetail", "Home")?productCode=@product.Code">
-                                <img src="@Url.ImageProduct(product.Image)" title="" alt="" style="width:180px;height:100px;" width="180" height="100"/>
+                                <img src="@Url.ImageProduct(product.Image)" title="" alt="" style="width:180px;height:120px;" width="180" height="100"/>
                             </a>
                         </div>
                         <div class="prod-name">
@@ -49,15 +49,15 @@
                 {
                     <div>
                         <div class="image">
-                            <a href="http://vitinhantin.com/nguon-vi-tinh-vi/acbel-vi/nguon-1100w-acbel-r9.html">
-                                <img src="http://vitinhantin.com/image/cache/data/Power PC/nguon-1100w-acbel-r9-139-80x80.jpg" title="Nguồn 1100W AcBel R9" alt="Nguồn 1100W AcBel R9" /></a>
+                            <a href="@Url.Action("ProductDetail", "Home")?productCode=@product.Code">
+                                <img src="@Url.ImageProduct(product.Image)" title="Nguồn 1100W AcBel R9" alt="Nguồn 1100W AcBel R9" /></a>
                         </div>
                         <div class="name"><a href="@Url.Action("ProductDetail", "Home")/@product.Id">@product.Name</a></div>
                         <div class="description">Nguồn 1100W AcBel R9..</div>
                         <div class="price">
-                            @product.Price đ                       
+                            @Localizer.Currency(product.Price ?? 0)               
                     <br />
-                            <span class="price-tax">Trước thuế: @product.Price đ</span>
+                            <span class="price-tax">Trước thuế: @Localizer.Currency(product.Price ?? 0)</span>
                         </div>
                     </div>
                 }

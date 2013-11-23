@@ -49,67 +49,63 @@
     </div>
     <div id="tabs">
         <ul>
-            <li><a href="#tabs-1">Đánh Giá</a></li>
-            <li><a href="#tabs-2">Đặt Hàng</a></li>
+            <li><a href="#tabs-1">Đánh giá sản phẩm</a></li>
+            <li><a href="#tabs-2">Liên hệ Đặt Hàng</a></li>
         </ul>
         <div id="tabs-1">
-            @Html.Action("Comment", "Component", new { productId = Model.Id})
+            @Html.Action("Comment", "Component", new { productId = Model.Id })
             <hr />
-            @Html.Action("CommentList", "Component", new { productId = Model.Id})
+            @Html.Action("CommentList", "Component", new { productId = Model.Id })
         </div>
         <div id="tabs-2">
-            <form action="http://vitinhantin.com/contact" method="post" enctype="multipart/form-data">
-                <div class="contact-info">
-                    <div class="content">
-                        <div class="left">
-                            <h1>Vi Tính Trần Bảo</h1>
+            <div id="tab-review" class="tab-content">
+                <form action="http://vitinhantin.com/contact" method="post" enctype="multipart/form-data">
+                    <div class="contact-info">
+                        @*                    <div class="content">
+                        <b>Địa chỉ:</b>61/6m Phạm Văn Chiêu, Phường 14, Quận Gò Vấp, Tp Hồ Chí Minh<br />
+                        <b>Yahoo</b>: tran_bao16<br />
+                        <b>Email</b>: tranbaolaptop@gmail.com
                             <br />
-                            <b>Địa chỉ:</b>61/6m Phạm Văn Chiêu, Phường 14, Quận Gò Vấp, Tp Hồ Chí Minh<br />
-                            <b>Yahoo</b>: tran_bao16<br />
-                            <b>Email</b>: tranbaolaptop@gmail.com
-                        </div>
-                        <div class="right">
-                            <br />
-                            <br />
-                            <br />
-                            <br />
-                            <br />
-                            <b>Tel</b><br />
-                            0932061639<br />
-                            <br />
-                        </div>
+                        <b>Tel: </b>0932061639<br />
+                        <br />
+                    </div>*@
                     </div>
-                </div>
-                <br />
-                <br />
-                <h2>Thông tin của Bạn</h2>
-                <div class="content">
-                    <b>Họ và Tên:</b><br />
-                    <input type="text" name="name" value="" />
                     <br />
-                    <br />
-                    <b>E-Mail :</b><br />
-                    <input type="text" name="email" value="" />
-                    <br />
-                    <br />
-                    <b>Địa chỉ :</b><br />
-                    <input type="text" name="address" value="" />
-                    <br />
-                    <br />
-                    <b>Điện Thoại<font color="#ff0000">(*)</font> :</b><br />
-                    <input type="text" name="email" value="" />
-                    <br />
-                    <br />
-                    <b>Nội dung:</b><br />
-                    <textarea name="enquiry" cols="40" rows="10" style="width: 99%;"></textarea>
-                    <br />
-                    <br />
-
-                </div>
-                <div class="buttons">
-                    <div class="right"><a id="button-review" class="button">Tiếp tục</a></div>
-                </div>
-            </form>
+                    <h2>Liên hệ với chúng tôi</h2>
+                    <div class="content">
+                        <table style="width: 100%;">
+                            <tr style="padding-bottom: 5px;">
+                                <td style="width: 200px; vertical-align: middle"><b>Họ và Tên:</b></td>
+                                <td>
+                                    <input style="width: 300px;" type="text" name="name" value="" /></td>
+                            </tr>
+                            <tr style="padding-bottom: 5px;">
+                                <td style="width: 200px; vertical-align: middle"><b>E-Mail :</b></td>
+                                <td>
+                                    <input style="width: 300px;" type="text" name="email" value="" /></td>
+                            </tr>
+                            <tr style="padding-bottom: 5px;">
+                                <td style="width: 200px; vertical-align: middle"><b>Địa chỉ :</b></td>
+                                <td>
+                                    <input style="width: 300px;" type="text" name="address" value="" /></td>
+                            </tr>
+                            <tr style="padding-bottom: 5px;">
+                                <td style="width: 200px; vertical-align: middle"><b>Điện Thoại<font color="#ff0000">(*)</font> :</b></td>
+                                <td>
+                                    <input style="width: 300px;" type="text" name="phone" value="" /></td>
+                            </tr>
+                        </table>
+                        <br />
+                        <b>Nội dung:</b><br />
+                        <textarea name="enquiry" cols="40" rows="10" style="width: 97%;"></textarea>
+                        <br />
+                        <div style="width:100%;color:red">Chúng tôi sẽ liên lạc với bạn trong vòng 8h sau khi nhận được thông tin</div>
+                    </div>
+                    <div class="buttons">
+                        <div class="right"><a id="button-review" class="button">Liên hệ với chúng tôi</a></div>
+                    </div>
+                </form>
+            </div>
         </div>
     </div>
     

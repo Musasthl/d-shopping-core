@@ -431,6 +431,7 @@ input.cart-button
             -moz-border-radius-topright: 6px;
             border-top-left-radius: 6px;
             border-top-right-radius: 6px;
+            
             background: #b00 url('~Content/Images/menubg.png') repeat-x;
             color: #FFFFFF;
             font-style: normal;

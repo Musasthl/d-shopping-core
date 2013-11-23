@@ -156,8 +156,8 @@ namespace Service
                 newCommentDto.ProductId = comment.Product.Id;
                 newCommentDto.CreatedDate = ((comment.CreatedDate != null) ? (DateTime)comment.CreatedDate: DateTime.Now);
             }
-
             else return null;
+
             return newCommentDto;
         }
 

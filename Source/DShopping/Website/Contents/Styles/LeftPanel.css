@@ -57,7 +57,7 @@
 
         .d-left-body ul li.d-left-li
         {
-            background: url("/Contents/Images/Home/arrow.png") no-repeat scroll right center transparent;
+            /*background: url("/Contents/Images/Home/arrow.png") no-repeat scroll right center transparent;*/
         }
 
             .d-left-body ul li.d-left-li a.d-left-a

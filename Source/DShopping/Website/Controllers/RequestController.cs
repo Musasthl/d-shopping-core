@@ -40,5 +40,25 @@ namespace Website.Controllers
         {
             return null;
         }
+
+        [HttpPost]
+        public ActionResult PostComment(String name, String phone, String content, String productId)
+        {
+            CommentDto comment = new CommentDto();
+            comment.Name = name;
+            try
+            {
+                comment.ProductId = int.Parse(productId);
+            }
+            catch (Exception ex)
+            {
+                comment.ProductId = 0;
+            }
+            comment.Phone = phone;
+            comment.Content = content;
+            ProductHandler prodHandler = new ProductHandler();
+            prodHandler.AddComment(comment);
+            return RedirectToAction("ProductDetail", "Home", new { productCode = productId });
+        }
     }
 }

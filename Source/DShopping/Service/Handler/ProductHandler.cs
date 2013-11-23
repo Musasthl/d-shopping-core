@@ -76,7 +76,7 @@ namespace Service.Handler
             return null;
         }
 		
-		public List<CommentDto> GetAllComment(int productId)
+		public static List<CommentDto> GetAllComment(int productId)
         {
             List<CommentDto> allComment = new List<CommentDto>();
             IList<Comments> IComments = CommentDAO.getAllCommentByProduct(productId);

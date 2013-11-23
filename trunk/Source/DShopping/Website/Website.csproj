@@ -467,6 +467,8 @@
     <Content Include="ckeditor\skins\moono\images\lock.png" />
     <Content Include="ckeditor\skins\moono\images\refresh.png" />
     <Content Include="ckeditor\styles.js" />
+    <Content Include="Contents\Admin\7AF2Qzt.png" />
+    <Content Include="Contents\Admin\8bcLQqF.png" />
     <Content Include="Contents\Admin\css\ie.css" />
     <Content Include="Contents\Admin\css\layout.css" />
     <Content Include="Contents\Admin\cupertino\images\ui-bg_diagonals-thick_90_eeeeee_40x40.png" />

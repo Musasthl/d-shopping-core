@@ -13,6 +13,7 @@ namespace Service.DTO
         public String Phone { get; set; }
         public int ProductId { get; set; }
         public String Email { get; set; }
+        public DateTime CreatedDate { get; set; }
 
     }
 }

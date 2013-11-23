@@ -154,6 +154,7 @@ namespace Service
                 newCommentDto.Phone = comment.Phone;
                 newCommentDto.Title = comment.Title;
                 newCommentDto.ProductId = comment.Product.Id;
+                newCommentDto.CreatedDate = ((comment.CreatedDate != null) ? (DateTime)comment.CreatedDate: DateTime.Now);
             }
 
             else return null;

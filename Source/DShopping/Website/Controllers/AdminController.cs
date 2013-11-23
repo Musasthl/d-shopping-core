@@ -89,5 +89,12 @@ namespace Website.Controllers
         {
             return View();
         }
+
+        public ActionResult Logout()
+        {
+            Session[CONST.SESSION.USER] = null;
+
+            return RedirectToAction("Index", "Home"); 
+        }
     }
 }

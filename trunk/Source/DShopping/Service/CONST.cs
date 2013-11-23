@@ -55,6 +55,8 @@ namespace Service
         public class PRODUCT
         {
             public const int NO_NEWEST = 5;
+            public const string IMAGE_LOCATION = "/Contents/Images/Product/";
+            public const string IMAGE_DEFAULT = "/Contents/Images/image.jpg";
 
         }
 

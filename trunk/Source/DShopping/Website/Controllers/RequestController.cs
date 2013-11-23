@@ -60,5 +60,23 @@ namespace Website.Controllers
             prodHandler.AddComment(comment);
             return RedirectToAction("ProductDetail", "Home", new { productCode = productId });
         }
+
+        [HttpPost]
+        [ValidateInput(false)]
+        public ActionResult AddProductRequest(String name, String code, String category, String price,String image,String desc)
+        {
+            ProductHandler prodHandler = new ProductHandler();
+            ProductDto product = new ProductDto();
+            product.Name = name;
+            product.Code = code;
+            product.CategoryId = int.Parse(category);
+            product.Price = float.Parse(price);
+            product.Image = image;
+
+            product.Description = System.Net.WebUtility.HtmlDecode(desc);
+            prodHandler.AddNewProduct(product);
+            return RedirectToAction("Index", "Home"); 
+
+        }
     }
 }

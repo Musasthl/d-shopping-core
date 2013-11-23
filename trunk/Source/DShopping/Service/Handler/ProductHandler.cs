@@ -13,6 +13,21 @@ namespace Service.Handler
 {
     public class ProductHandler
     {
+        public bool AddNewProduct(ProductDto productDto)
+        {
+            try
+            {
+                if (productDto == null) return false;
+                Products product = new Products();
+                product = Common.ConvertToProduct(productDto);
+                ProductDAO.Execute(product, Entity.PRODUCT, ExecuteType.ADD);
+                return true;
+            }
+            catch (Exception ex)
+            {
+                return false;
+            }
+        }
         public List<ProductDto> GetProductsByCategoryId(int categoryId)
         {
             var listProduct = ProductDAO.getAllProductByCategory(categoryId);

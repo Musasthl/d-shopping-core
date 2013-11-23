@@ -45,7 +45,7 @@
       <key column="ProductId" />
       <one-to-many class="Orders" />
     </bag>
-    <bag name="ProductDetails" inverse="true">
+    <bag name="ProductDetails" inverse="true" cascade="all" >
       <key column="ProductId" />
       <one-to-many class="ProductDetails" />
     </bag>

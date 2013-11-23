@@ -12,13 +12,14 @@ namespace Service.DTO
         public string Name { get; set; }
         public string Image { get; set; }
         public float Price { get; set; }
-
-        public ProductOverviewDto(int id, string name, string image, float price)
+        public string Code { get; set; }
+        public ProductOverviewDto(int id, string name, string image, float price,string code)
         {
             this.Id = id;
             this.Name = name;
             this.Image = image;
             this.Price = price;
+            this.Code = code;
         }
     }
 }

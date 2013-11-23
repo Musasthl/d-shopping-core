@@ -54,7 +54,30 @@ namespace Service
 
             return productDto;
         }
+        public static Products ConvertToProduct(ProductDto prodDto)
+        {
+            Products product = new Products();
+            product.Category = CategoryDAO.getCategoryById(prodDto.CategoryId);
+            if (prodDto.Code == null || prodDto.Code == "")
+                product.Code = null;
+            else product.Code = prodDto.Code;
+            product.CreatedDate = DateTime.Now;
+            product.Description = prodDto.Description;
+            product.Name = prodDto.Name;
+            product.Price = prodDto.Price;
+            product.Status = StatusDAO.getStatusById(CONST.STATUS.ACTIVE);
 
+            ProductDetails productDetail = new ProductDetails();
+            productDetail.ProductTypeId = StatusDAO.getStatusById(CONST.STATUS.P_IMAGE);
+            productDetail.Status = StatusDAO.getStatusById(CONST.STATUS.ACTIVE);
+            productDetail.CreatedDate = DateTime.Now;
+            productDetail.Contents = prodDto.Image;
+            productDetail.Product = product;
+
+            product.ProductDetails.Add(productDetail);
+
+            return product;
+        }
         public static List<ProductDto> ConvertToListProductDto(List<Products> listProducts)
         {
             List<ProductDto> newListProdDto = new List<ProductDto>();
@@ -83,6 +106,7 @@ namespace Service
             string name = products.Name;
             float price = 0;
             string image = "";
+            string code = products.Code;
             if (products.Price == null)
                 price = 0;
             else price = (float)products.Price;
@@ -94,7 +118,7 @@ namespace Service
                     image = prodDetails.ElementAt(0).Contents;
             }
 
-            ProductOverviewDto prodDto = new ProductOverviewDto(id, name, image, price);
+            ProductOverviewDto prodDto = new ProductOverviewDto(id, name, image, price,code);
 
             return prodDto;
         }
@@ -154,7 +178,7 @@ namespace Service
                 newCommentDto.Phone = comment.Phone;
                 newCommentDto.Title = comment.Title;
                 newCommentDto.ProductId = comment.Product.Id;
-                newCommentDto.CreatedDate = ((comment.CreatedDate != null) ? (DateTime)comment.CreatedDate: DateTime.Now);
+                newCommentDto.CreatedDate = ((comment.CreatedDate != null) ? (DateTime)comment.CreatedDate : DateTime.Now);
             }
             else return null;
 
@@ -188,5 +212,7 @@ namespace Service
             return comments;
         }
         #endregion
+
+
     }
 }

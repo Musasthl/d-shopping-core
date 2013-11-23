@@ -29,7 +29,9 @@ namespace Service.Handler
         {
             Mapper.AddProfile<ConverterProfile>();
             List<CategoryDto> catDto = new List<CategoryDto>();
-            List<Categories> cats = CategoryDAO.getAllActiveCategoryByParent(ParentId).ToList();
+            List<Categories> cats = new List<Categories>();
+            if(CategoryDAO.getAllActiveCategoryByParent(ParentId) != null)
+                cats = CategoryDAO.getAllActiveCategoryByParent(ParentId).ToList();
 
             catDto = Common.ConvertToListCategoryDto(cats);
             // Sorted by Position
@@ -39,10 +41,17 @@ namespace Service.Handler
 
         public List<HotCategoryDto> GetHotCategories()
         {
-            var hotCatDto = new List<HotCategoryDto>();
-            var hotCats = CategoryDAO.GetHotCategories(CONST.CATEGORY.CAT_HOTCATEGORY, CONST.CATEGORY.CAT_TRANBAO).ToList();
-            hotCatDto = Common.ConvertToListHotCategoryDto(hotCats);
-            return hotCatDto;
+            try
+            {
+                var hotCatDto = new List<HotCategoryDto>();
+                var hotCats = CategoryDAO.GetHotCategories(CONST.CATEGORY.CAT_HOTCATEGORY, CONST.CATEGORY.CAT_TRANBAO).ToList();
+                hotCatDto = Common.ConvertToListHotCategoryDto(hotCats);
+                return hotCatDto;
+            }
+            catch (Exception ex)
+            {
+                return null;
+            }
         }
     }
 }

@@ -107,7 +107,8 @@ namespace Website.Controllers
         }
         public ActionResult ManageProduct()
         {
-            return View();
+            var categories = _category.getAllCategory();
+            return View(categories);
         }
 
         public ActionResult RestoreProduct()

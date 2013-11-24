@@ -23,5 +23,6 @@ namespace Service.DTO
         public string IsActive { get; set; }
         public string LinkUpdate {get { return "<a href='javascript:;'>Update</a>"; }}
         public string LinkDelete { get { return "<a href='javascript:;'>Delete</a>"; } }
+        public string Image1{get { return "<img src='../../Contents/Images/Product/" + this.Image + "' />"; }}
     }
 }

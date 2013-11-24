@@ -164,10 +164,14 @@ namespace Service
         #endregion
 
         #region Category Converter
-        public static CategoryDto ConvertToCategoryDto(Categories products)
+        public static CategoryDto ConvertToCategoryDto(Categories categories)
         {
-            var prodDto = Mapper.Map<Categories, CategoryDto>(products);
-            return prodDto;
+            var categoryDto = new CategoryDto();
+            categoryDto.CategoryId = categories.CategoryId;
+            categoryDto.name = categories.Name;
+            categoryDto.StatusId = categories.Status.Id;
+            
+            return categoryDto;
         }
 
         public static List<CategoryDto> ConvertToListCategoryDto(List<Categories> listProducts)

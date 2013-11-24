@@ -88,7 +88,7 @@ namespace Service.Handler
             {
                 return Common.ConvertToListProductDto(results.ToList());
             }
-            return null;
+            return new List<ProductDto>();
         }
 		
 		public static List<CommentDto> GetAllComment(int productId)

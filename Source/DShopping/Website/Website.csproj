@@ -556,6 +556,7 @@
     <Content Include="Contents\Scripts\jquery-1.10.2.js" />
     <Content Include="Contents\Scripts\jquery-1.10.2.min.js" />
     <Content Include="Contents\Admin\js\jquery.jqGrid.js" />
+    <Content Include="Contents\Styles\RightPanel.css" />
     <Content Include="Contents\Styles\Footer.css" />
     <Content Include="Contents\Styles\Header.css" />
     <Content Include="Contents\Styles\LeftPanel.css" />

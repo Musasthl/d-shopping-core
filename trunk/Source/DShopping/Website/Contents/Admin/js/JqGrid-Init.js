@@ -1,26 +1,26 @@
 ﻿function JQGrid_ManageProduct(urlAction) {
-    alert("aaa");
     var grid = $("#gridReport");
+
     grid.jqGrid({
         url: urlAction,
         height: 'auto',
         rowNum: 10,
         datatype: 'json',
         rowList: [10, 20, 30],
-        loadonce: true,
+        //loadonce: true,
         mtype: 'GET',
-        colNames: ['Code', 'Name', 'Image', 'Quantity', 'IsActive', 'LinkUpdate', 'LinkDelete'],
+        colNames: ['Mã sp', 'Tên', 'Hình', 'Số lượng', 'Tình trạng', 'Thay đổi', 'Xóa'],
         colModel: [
-            { name: 'Code', index: 'Code' },
-            { name: 'Name', index: 'Name', width: '120px' },
-            { name: 'Image', index: 'Image' },
-            { name: 'Quantity', index: 'Quantity', width: '98px' },
+            { name: 'Code', index: 'Code', width : '50px' },
+            { name: 'Name', index: 'Name', width: '220px' },
+            { name: 'Image1', index: 'Image1', classes: 'item-image' },
+            { name: 'Quantity', index: 'Quantity', width: '50px' },
             { name: 'IsActive', index: 'IsActive' },
-            { name: 'LinkUpdate', index: 'LinkUpdate' },
-            { name: 'LinkDelete', index: 'LinkDelete' }
+            { name: 'LinkUpdate', index: 'LinkUpdate', classes: 'item-updateLink' },
+            { name: 'LinkDelete', index: 'LinkDelete', classes: 'item-deleteLink' }
         ],
         viewrecords: true,
-        width: 940,
+        width: 937,
         
         sortname: 'CreatedDate1',
         sortorder: 'desc',

@@ -1,4 +1,6 @@
-﻿@using Website.ExtensionMethod
+﻿@using Service
+@using Website.ExtensionMethod
+@model IList<Service.DTO.CategoryDto>  
 @{
     ViewBag.Title = "ManageProduct";
     Layout = "~/Views/_Layout/_Admin.cshtml";
@@ -10,23 +12,66 @@
 <h2>ManageProduct</h2>
 <script type="text/javascript">
     $(document).ready(function () {
-        var urlAction = "@Url.Action("ViewProductByCategory","Admin")?categoryId=4";
-        JQGrid_ManageProduct(urlAction);
+        drawView($(".select-category").val());
+        function drawView(catId) {
+            var urlAction = "@Url.Action("ViewProductByCategory","Admin")?categoryId="+catId;
+            JQGrid_ManageProduct(urlAction);
+        }
+        
 
         //$(document).on("click", "td.item-hyperlink", function () {
         //    $("#ajaxloading").show();
         //    window.location.href = "/Report/ReviewNewEmployeeHire?Code=" + $(this).html();
         //    return false;
         //});
+        
+        $(".select-category").change(function () {
+            var value = $(".select-category").val();
+            var newUrl = "@Url.Action("ViewProductByCategory","Admin")?categoryId=" + value;
+            $.ajax({
+                url: newUrl,
+                success: function (data) {
+                    $('#gridReport').setGridParam({ url: newUrl });
+                    $('#gridReport').trigger('reloadGrid');
+
+                }
+            });
+        });
     });
 </script>
-
+<style type="text/css">
+    .item-updateLink a, .item-updateLink a:hover{
+        color: rgb(5, 116, 190) !important;
+        text-decoration: underline !important;
+    }
+    .item-deleteLink a, .item-deleteLink a:hover {
+        color: red!important;
+        text-decoration: underline!important;
+    }
+    .item-image img {
+        width: 80px;
+        height: 80px;
+    }
+</style>
 <article class="module" style="width: 937px">
     <header>
         <h3 class="tabs_involved">
             Manage Products
         </h3>
     </header>
+    <label style="margin-left: 20px">Danh mục : </label>
+    <select class="select-category">
+        @if (Model.Any())
+        {
+            foreach (var cat in Model.Where(c => c.CategoryId != CONST.CATEGORY.CAT_TRANBAO && c.CategoryId != CONST.CATEGORY.CAT_SHOPMUABAN))
+            {
+                
+                <option value="@cat.CategoryId">@cat.name</option>
+            }
+            
+        }
+        
+    </select>
     <table id="gridReport"></table>
     <div id="ptoolbar"></div>
 </article>

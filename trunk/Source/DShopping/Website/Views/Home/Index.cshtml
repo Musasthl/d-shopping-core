@@ -1,12 +1,34 @@
-﻿
-@{
+﻿@{
 
     ViewBag.Title = "Trần Bảo Laptop";
     Layout = "~/Views/_Layout/_Index.cshtml";
 }
+<script type="text/javascript">
+    $(document).ready(function () {
+
+        $.ajax({
+            url: '/Component/SlideShowCenter',
+            success: function (result) {
+                $("#ajaxSlideShowCenter").html(result);
+            },
+            error: function () {
+            }
+        });
+
+        $.ajax({
+            url: '/Component/HotCategories',
+            success: function (result) {
+                $("#ajaxHotCategories").html(result);
+            },
+            error: function () {
+            }
+        });
+    });
+</script>
 <title>@ViewBag.Title</title>
 <!-- Slide show here -->
-@Html.Action("SlideShowCenter", "Component")
+<div id="ajaxSlideShowCenter"></div>
 <br />
-@Html.Action("HotCategories","Component")
+<div id="ajaxHotCategories"></div>
+@*@Html.Action("HotCategories", "Component")*@
 <!-- Code Product here -->

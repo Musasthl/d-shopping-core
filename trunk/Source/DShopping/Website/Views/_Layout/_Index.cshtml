@@ -18,7 +18,47 @@
 
 <!-- Script -->
 <script src="~/Contents/Scripts/jquery-1.10.2.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
 
+
+        $.ajax({
+            url: '/ComponentLeftPanel/ProductNewest',
+            success: function (result) {
+                $("#ajaxProductNewest").html(result);
+            },
+            error: function () {
+            }
+
+        });
+        $.ajax({
+            url: '/ComponentRightPanel/Advertising',
+            success: function (result) {
+                $("#ajaxAdvertising").html(result);
+            },
+            error: function () {
+            }
+        });
+
+        $.ajax({
+            url: '/ComponentLeftPanel/Category',
+            success: function (result) {
+                $("#ajaxCategory").html(result);
+            },
+            error: function () {
+            }
+        });
+
+        $.ajax({
+            url: '/ComponentRightPanel/Category',
+            success: function (result) {
+                $("#ajaxCategoryRight").html(result);
+            },
+            error: function () {
+            }
+        });
+    });
+</script>
 <div id="d-page">
     <div id="d-header">
         <!-- Include Logo, Shop Name -->
@@ -44,11 +84,14 @@
                     <td>
                         <div id="d-left">
                             <!-- Render section left -->
-                            @Html.Action("Category", "ComponentLeftPanel")
+                            <div id="ajaxCategory"></div>
+                            @*@Html.Action("Category", "ComponentLeftPanel")*@
                             <div class="d-split-row"></div>
-                            @Html.Action("ProductNewest", "ComponentLeftPanel")
+                            <div id="ajaxProductNewest"></div>
+                            @*@Html.Action("ProductNewest", "ComponentLeftPanel")*@
                             <div class="d-split-row"></div>
-                            @Html.Action("Advertising", "ComponentRightPanel")
+                            <div id="ajaxAdvertising"></div>
+                            @*@Html.Action("Advertising", "ComponentRightPanel")*@
                         </div>
                     </td>
                     <td class="d-split-col" />
@@ -68,7 +111,8 @@
                     <td class="d-split-col" />
                     <td>
                         <div id="d-right">
-                            @Html.Action("Category", "ComponentRightPanel")
+                            <div id="ajaxCategoryRight"></div>
+                            @*@Html.Action("Category", "ComponentRightPanel")*@
                             <div class="d-split-row"></div>
                             @Html.Action("OnlineContact", "ComponentRightPanel")
                             <div class="d-split-row"></div>

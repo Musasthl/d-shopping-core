@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using DataTier;
 using DataTier.DAO;
 using DataTier.Entities;
 using Service.DTO;
@@ -26,7 +27,7 @@ namespace Service.Handler
             if (adminUser == null) return false;
             else
             {
-                if (Encrypt.EncodePassword(password).Equals(adminUser.Password))
+                if ((password).Equals(adminUser.Password))  // Encode Later
                 {
                     return true;
                 }
@@ -34,6 +35,16 @@ namespace Service.Handler
                 {
                     return false;
                 }
+            }
+        }
+        public static void ChangePassword(String username, String password)
+        {
+            Users adminUser = UserDAO.getUserByName(username);
+            if (adminUser == null) return;
+            else
+            {
+                adminUser.Password = password;
+                UserDAO.Execute(adminUser, Entity.USER, ExecuteType.UPDATE);
             }
         }
     }

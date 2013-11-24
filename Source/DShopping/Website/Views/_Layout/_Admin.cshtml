@@ -76,8 +76,8 @@
 
     <section id="secondary_bar">
         <div class="user">
-            <p>Trần Bảo (<a href="#">3 Messages</a>)</p>
-            <a class="logout_user" href="#" title="Logout">Đăng xuất</a>
+            <p>Trần Bảo (<a href="#">@*3 Messages*@</a>)</p>
+            <a class="logout_user" href="@Url.Action("Logout","Admin")" title="Logout">Đăng xuất</a>
         </div>
         <div class="breadcrumbs_container">
             <article class="breadcrumbs"><a href="/">Website Admin</a>
@@ -101,13 +101,12 @@
         <h3>Quản lý sản phẩm</h3>
         <ul class="toggle">
             <li class="icn_new_article"><a href="@Url.Action("AddProduct","Admin")">Thêm sản phẩm</a></li>
-            <li class="icn_categories"><a href="#">Quản lý sản phẩm</a></li>
-            <li class="icn_edit_article"><a href="#">Phục hồi sản phẩm đã xóa</a></li>
+            <li class="icn_categories"><a href="@Url.Action("ManageProduct","Admin")">Quản lý sản phẩm</a></li>
+            <li class="icn_edit_article"><a href="#">@Url.Action("RestoreProduct","Admin")</a></li>
         </ul>
         <h3>Quản lý thông tin</h3>
         <ul class="toggle">
             <li class="icn_folder"><a href="#">Chỉnh sửa Giới thiệu</a></li>
-            <li class="icn_photo"><a href="#">Chỉnh sửa 'Sửa chữa Laptop'</a></li>
             <li class="icn_audio"><a href="#">Chỉnh sửa liên hệ</a></li>
             <li class="icn_video"><a href="#">Chỉnh sửa Hỏi Đáp</a></li>
         </ul>

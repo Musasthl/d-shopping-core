@@ -147,10 +147,10 @@ namespace DataTier.DAO
             {
                 using (ISession session = NHibernateHelper.OpenSession())
                 {
-                    var Product = session.QueryOver<Products>()
-                                     .Where(p => (p.Code == searchValue || p.Name == searchValue)
+                    var Product = session.Query<Products>()
+                                     .Where(p => (p.Code.Contains(searchValue) || p.Name.Contains(searchValue))
                                                 && p.Status.Id == "Active")
-                        .List();
+                        .ToList();
                     return Product.ToList();
                 }
             }

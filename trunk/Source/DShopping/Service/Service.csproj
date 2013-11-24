@@ -62,6 +62,7 @@
     <Compile Include="DTO\ProductDetailsDto.cs" />
     <Compile Include="DTO\ProductDto.cs" />
     <Compile Include="DTO\ProductOverviewDto.cs" />
+    <Compile Include="DTO\ProductsForManageDto.cs" />
     <Compile Include="DTO\RoleDto.cs" />
     <Compile Include="DTO\UserDto.cs" />
     <Compile Include="DTO\CategoryDto.cs" />

@@ -127,5 +127,17 @@ namespace Service.Handler
                 return false;
             }
         }
+
+        public List<ProductsForManageDto> GetProductsByCategoryIdForManage(int categoryId)
+        {
+            var listProduct = ProductDAO.getAllProductByCategory(categoryId);
+            if (listProduct != null)
+            {
+                var result = Common.ConvertToListProductForManageDtos(listProduct.ToList());
+                return result;
+            }
+
+            return new List<ProductsForManageDto>();
+        }
     }
 }

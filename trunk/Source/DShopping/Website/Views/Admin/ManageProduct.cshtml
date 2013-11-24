@@ -1,6 +1,32 @@
-﻿@{
+﻿@using Website.ExtensionMethod
+@{
     ViewBag.Title = "ManageProduct";
     Layout = "~/Views/_Layout/_Admin.cshtml";
 }
-
+<script src="@Url.ScriptAdmin("jquery.jqGrid.js")" type="text/javascript"></script>
+<script src="@Url.ScriptAdmin("grid.locale-en.js")" type="text/javascript"></script>
+<script src="@Url.ScriptAdmin("JqGrid-Init.js")" type="text/javascript"></script>
+<link href="@Url.StyleSheetAdmin("ui.jqgrid.css")" rel="stylesheet" type="text/css" />
 <h2>ManageProduct</h2>
+<script type="text/javascript">
+    $(document).ready(function () {
+        var urlAction = "@Url.Action("ViewProductByCategory","Admin")?categoryId=4";
+        JQGrid_ManageProduct(urlAction);
+
+        //$(document).on("click", "td.item-hyperlink", function () {
+        //    $("#ajaxloading").show();
+        //    window.location.href = "/Report/ReviewNewEmployeeHire?Code=" + $(this).html();
+        //    return false;
+        //});
+    });
+</script>
+
+<article class="module" style="width: 937px">
+    <header>
+        <h3 class="tabs_involved">
+            Manage Products
+        </h3>
+    </header>
+    <table id="gridReport"></table>
+    <div id="ptoolbar"></div>
+</article>

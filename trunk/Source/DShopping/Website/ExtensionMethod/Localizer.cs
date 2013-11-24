@@ -14,7 +14,8 @@ namespace Website.ExtensionMethod
             {
                 return "Thương lượng";
             }
-            return value.ToString("c", CultureInfo.CreateSpecificCulture("vi-VN"));
+            var xx = Convert.ToInt32(value);
+            return string.Format(CultureInfo.CreateSpecificCulture("vi-VN"), "{0:#,###.#}", value) + " đ";
         }
     }
 }

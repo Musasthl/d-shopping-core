@@ -89,6 +89,45 @@ namespace Service
             return newListProdDto;
         }
 
+        public static ProductsForManageDto ConvertToProductsForManageDto(Products products)
+        {
+            var productDto = new ProductsForManageDto();
+            productDto.Id = products.Id;
+            float price;
+            string image = "";
+            
+            if (products.Price == null)
+                price = 0;
+            else price = (float)products.Price;
+            IList<ProductDetails> IProdDetails = ProductDetailDAO.getAllProductDetailByTypeId(products.Id, CONST.STATUS.P_IMAGE);
+            if (IProdDetails != null)
+            {
+                List<ProductDetails> prodDetails = IProdDetails.ToList();
+                if (prodDetails.Count > 0)
+                    image = prodDetails.ElementAt(0).Contents;
+            }
+            productDto.Name = products.Name;
+            productDto.Code = products.Code;
+            productDto.Description = products.Description;
+            productDto.Price = price;
+            productDto.Image = image;
+            productDto.IsActive = products.Status.Id;
+            productDto.CategoryId = products.Category.CategoryId;
+            productDto.Quantity = products.Quantity;
+
+            return productDto;
+        }
+
+        public static List<ProductsForManageDto> ConvertToListProductForManageDtos(List<Products> listProducts)
+        {
+            var newListProdDto = new List<ProductsForManageDto>();
+            foreach (Products prods in listProducts)
+            {
+                newListProdDto.Add(ConvertToProductsForManageDto(prods));
+
+            }
+            return newListProdDto;
+        }
 
         public static List<ProductOverviewDto> convertOverview(List<Products> listProducts)
         {

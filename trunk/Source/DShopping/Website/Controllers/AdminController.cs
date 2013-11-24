@@ -52,6 +52,7 @@ namespace Website.Controllers
         public ActionResult ChangePassword()
         {
             ViewBag.Type = "New";
+            ViewBag.Display = "alert_warning";
             return View();
         }
 
@@ -59,10 +60,33 @@ namespace Website.Controllers
         public ActionResult ChangePassword(string oldPass, string newPass, string newPassConfirm)
         {
             UserDto user = (UserDto) Session[CONST.SESSION.USER];
+            ViewBag.Display = "visible";
             if (oldPass != user.Password)
             {
-                ViewBag.Type = "Wrong";
+                ViewBag.Display = "alert_error";
+                ViewBag.Type = "Mời bạn nhập lại mật khẩu cũ";
 
+            }
+            else if (oldPass == newPass)
+            {
+                ViewBag.Display = "alert_warning";
+                ViewBag.Type = "Mật khẩu cũ trùng với mật khẩu mới";
+            }
+            else if (newPass != newPassConfirm)
+            {
+                ViewBag.Display = "alert_warning";
+                ViewBag.Type = "Xác nhận mật khẩu mới không đúng";
+            }
+            else if (newPass.Length < 6)
+            {
+                ViewBag.Display = "alert_warning";
+                ViewBag.Type = "Mật khẩu có độ dài ít nhất 6 ký tự";
+            }
+            else
+            {
+                ViewBag.Display = "alert_success";
+                ViewBag.Type = "Đối mật khẩu thành công";
+                UserHandler.ChangePassword(user.Username, newPass);
             }
             return View();
         }

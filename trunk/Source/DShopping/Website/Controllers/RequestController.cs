@@ -24,7 +24,7 @@ namespace Website.Controllers
         {
             //Check login
 
-            if (!UserHandler.AdminLogin(Username,Password))
+            if (UserHandler.AdminLogin(Username,Password))
             {
                 UserDto currentUser = new UserDto();
                 currentUser.Username = Username;

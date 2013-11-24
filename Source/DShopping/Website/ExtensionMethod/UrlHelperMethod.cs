@@ -35,9 +35,19 @@ namespace Website.ExtensionMethod
             return urlHelper.Content("~/Contents/Scripts/" + scriptName);
         }
 
+        public static string ScriptAdmin(this UrlHelper urlHelper, string scriptName)
+        {
+            return urlHelper.Content("~/Contents/Admin/js/" + scriptName);
+        }
+
         public static string StyleSheet(this UrlHelper urlHelper, string stylesheetName)
         {
             return urlHelper.Content("~/Contents/Styles/" + stylesheetName);
+        }
+
+        public static string StyleSheetAdmin(this UrlHelper urlHelper, string stylesheetName)
+        {
+            return urlHelper.Content("~/Contents/Admin/css/" + stylesheetName);
         }
 
         public static string Category(this UrlHelper urlHelper, string categoryName)

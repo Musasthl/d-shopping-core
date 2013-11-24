@@ -64,7 +64,7 @@ namespace Service
         {
             public const int CAT_TRANBAO = 1;
             public const int CAT_SHOPMUABAN = 3;
-            public const int CAT_HOTCATEGORY = 2;
+            public const int CAT_HOTCATEGORY = 3;
         }
 
 

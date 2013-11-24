@@ -550,9 +550,12 @@
     <Content Include="Contents\Images\Slideshow\02.jpg" />
     <Content Include="Contents\Images\Slideshow\03.jpg" />
     <Content Include="Contents\Images\Slideshow\04.jpg" />
+    <Content Include="Contents\Admin\js\grid.locale-en.js" />
     <Content Include="Contents\Scripts\jqFancyTransitions.1.8.min.js" />
+    <Content Include="Contents\Admin\js\JqGrid-Init.js" />
     <Content Include="Contents\Scripts\jquery-1.10.2.js" />
     <Content Include="Contents\Scripts\jquery-1.10.2.min.js" />
+    <Content Include="Contents\Admin\js\jquery.jqGrid.js" />
     <Content Include="Contents\Styles\Footer.css" />
     <Content Include="Contents\Styles\Header.css" />
     <Content Include="Contents\Styles\LeftPanel.css" />
@@ -562,6 +565,7 @@
     <Content Include="Contents\Styles\reset.css" />
     <Content Include="Contents\Styles\style.css" />
     <Content Include="Contents\Styles\supermenu.css" />
+    <Content Include="Contents\Admin\css\ui.jqgrid.css" />
     <Content Include="Global.asax" />
     <Content Include="hibernate.cfg.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
@@ -715,8 +719,6 @@
     <Content Include="Views\Admin\AddProduct.cshtml" />
     <Content Include="Views\Admin\ManageProduct.cshtml" />
     <Content Include="Views\Admin\RestoreProduct.cshtml" />
-    <Content Include="Views\Component\Comment.cshtml" />
-    <Content Include="Views\Component\CommentList.cshtml" />
     <Content Include="Views\Admin\ChangePassword.cshtml" />
   </ItemGroup>
   <PropertyGroup>

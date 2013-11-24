@@ -13,6 +13,7 @@ namespace Website.Controllers
     {
         //
         // GET: /Admin/
+        private static ProductHandler _productHandler = new ProductHandler();
         CategoryHandler _category = new CategoryHandler();
 
         public ActionResult Index()
@@ -112,6 +113,14 @@ namespace Website.Controllers
         public ActionResult RestoreProduct()
         {
             return View();
+        }
+
+        public JsonResult ViewProductByCategory(int categoryId)
+        {
+            var result = _productHandler.GetProductsByCategoryIdForManage(categoryId);
+            var jsonResult = Json(new { rows = result }, JsonRequestBehavior.AllowGet);
+            jsonResult.MaxJsonLength = int.MaxValue;
+            return jsonResult;
         }
 
         public ActionResult Logout()

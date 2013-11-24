@@ -1,22 +1,198 @@
-﻿@model IList<Service.DTO.CategoryDto>
+﻿@using Website.ExtensionMethod
+@model IList<Service.DTO.ProductDto>
 
+<link href="~/Contents/Styles/RightPanel.css" rel="stylesheet" />
+<script type="text/javascript">
+    $(document).ready(function() {
+        $(function () {
+            $('ul.spy').simpleSpy();
+        });
 
+        (function ($) {
 
+            $.fn.simpleSpy = function (limit, interval) {
+                limit = limit || 4;
+                interval = interval || 4000;
+
+                return this.each(function () {
+                   
+                    var $list = $(this),
+                        items = [], // uninitialised
+                        currentItem = limit,
+                        total = 0, // initialise later on
+                        height = $list.find('> li:first').height();
+
+                    $list.find('> li').each(function () {
+                        items.push('<li>' + $(this).html() + '</li>');
+                    });
+
+                    total = items.length;
+
+                    $list.wrap('<div class="spyWrapper" />').parent().css({ height: height * limit });
+
+                    $list.find('> li').filter(':gt(' + (limit - 1) + ')').remove();
+
+                         
+                    function spy() {
+                        
+                        var $insert = $(items[currentItem]).css({
+                            height: 0,
+                            opacity: 0,
+                            //display : 'none'
+                        }).prependTo($list);
+
+                       
+                        $list.find('> li:last').animate({ opacity: 0 }, 1000, function () {
+                           
+                            $insert.animate({ height: height }, 1000).animate({ opacity: 1 }, 1000);
+                           
+                            $(this).remove();
+                        });
+
+                        currentItem++;
+                        if (currentItem >= total) {
+                            currentItem = 0;
+                        }
+                        setTimeout(spy, interval);
+                    }
+
+                    spy();
+                });
+            };
+
+        })(jQuery);
+    })
+    
+</script>
+<style type="text/css">
+    
+</style>
 <div class="d-left-container">
     <div class="d-left-heading">
         Các sản phẩm khác
     </div>
     <div class="d-left-body">
-        <ul>
-            @{
-                foreach (var cat in Model)
+        <ul class="spy">
+            @if (Model != null && Model.Any())
+            {
+                foreach (var prod in Model)
                 {
-                <li class="d-left-li ">
-                    <a class="d-left-a" href="@Url.Action("Category","Home")/@cat.CategoryId">@cat.name</a>
+                <li class="d-left-li">
+                    <div class="img-product">
+                        <a class="d-left-a" href="@Url.Action("ProductDetail", "Home")?productCode=@prod.Code">
+                            <img src="@Url.ImageProduct(prod.Image)" alt="@prod.Name"/>
+                        </a>
+                    </div>
+                    <p>
+                        <strong>
+                            <a class="d-left-a" href="@Url.Action("ProductDetail", "Home")?productCode=@prod.Code">@prod.Name
+                            </a>
+                        </strong>
+                    </p>
+                    <p style="text-align: justify;">
+                        <strong class="priceft"></strong>
+                    </p>
                 </li>
-
                 }
-    
+            }
+            else
+            {
+                <li class="d-left-li">
+                    <div class="img-product">
+                        <a class="d-left-a" href="@Url.Action("ProductDetail", "Home")?productCode=12">
+                            <img src="@Url.ImageProduct("17-dell-e170s-vuong-239-80x80.jpg")" alt="17-dell-e170s-vuong-239-80x80.jpg"/>
+                        </a>
+                    </div>
+                    <p>
+                        <strong>
+                            <a class="d-left-a" href="@Url.Action("ProductDetail", "Home")?productCode=12">17-dell-e170s-vuong-239-80x80.jpg
+                            </a>
+                        </strong>
+                    </p>
+                    <p style="text-align: justify;">
+                        <strong class="priceft"></strong>
+                    </p>
+                </li>
+                <li class="d-left-li">
+                    <div class="img-product">
+                        <a class="d-left-a" href="@Url.Action("ProductDetail", "Home")?productCode=12">
+                            <img src="@Url.ImageProduct("17-dell-e170s-vuong-239-80x80.jpg")" alt="17-dell-e170s-vuong-239-80x80.jpg"/>
+                        </a>
+                    </div>
+                    <p>
+                        <strong>
+                            <a class="d-left-a" href="@Url.Action("ProductDetail", "Home")?productCode=12">17-dell-e170s-vuong-239-80x80.jpg
+                            </a>
+                        </strong>
+                    </p>
+                    <p style="text-align: justify;">
+                        <strong class="priceft"></strong>
+                    </p>
+                </li>
+                <li class="d-left-li">
+                    <div class="img-product">
+                        <a class="d-left-a" href="@Url.Action("ProductDetail", "Home")?productCode=12">
+                            <img src="@Url.ImageProduct("17-dell-e170s-vuong-239-80x80.jpg")" alt="17-dell-e170s-vuong-239-80x80.jpg"/>
+                        </a>
+                    </div>
+                    <p>
+                        <strong>
+                            <a class="d-left-a" href="@Url.Action("ProductDetail", "Home")?productCode=12">17-dell-e170s-vuong-239-80x80.jpg
+                            </a>
+                        </strong>
+                    </p>
+                    <p style="text-align: justify;">
+                        <strong class="priceft"></strong>
+                    </p>
+                </li>
+                <li class="d-left-li">
+                    <div class="img-product">
+                        <a class="d-left-a" href="@Url.Action("ProductDetail", "Home")?productCode=12">
+                            <img src="@Url.ImageProduct("17-dell-e170s-vuong-239-80x80.jpg")" alt="17-dell-e170s-vuong-239-80x80.jpg"/>
+                        </a>
+                    </div>
+                    <p>
+                        <strong>
+                            <a class="d-left-a" href="@Url.Action("ProductDetail", "Home")?productCode=12">17-dell-e170s-vuong-239-80x80.jpg
+                            </a>
+                        </strong>
+                    </p>
+                    <p style="text-align: justify;">
+                        <strong class="priceft"></strong>
+                    </p>
+                </li>
+                <li class="d-left-li">
+                    <div class="img-product">
+                        <a class="d-left-a" href="@Url.Action("ProductDetail", "Home")?productCode=12">
+                            <img src="@Url.ImageProduct("17-dell-e170s-vuong-239-80x80.jpg")" alt="17-dell-e170s-vuong-239-80x80.jpg"/>
+                        </a>
+                    </div>
+                    <p>
+                        <strong>
+                            <a class="d-left-a" href="@Url.Action("ProductDetail", "Home")?productCode=12">17-dell-e170s-vuong-239-80x80.jpg
+                            </a>
+                        </strong>
+                    </p>
+                    <p style="text-align: justify;">
+                        <strong class="priceft"></strong>
+                    </p>
+                </li>
+                <li class="d-left-li">
+                    <div class="img-product">
+                        <a class="d-left-a" href="@Url.Action("ProductDetail", "Home")?productCode=12">
+                            <img src="@Url.ImageProduct("17-dell-e170s-vuong-239-80x80.jpg")" alt="17-dell-e170s-vuong-239-80x80.jpg"/>
+                        </a>
+                    </div>
+                    <p>
+                        <strong>
+                            <a class="d-left-a" href="@Url.Action("ProductDetail", "Home")?productCode=12">17-dell-e170s-vuong-239-80x80.jpg
+                            </a>
+                        </strong>
+                    </p>
+                    <p style="text-align: justify;">
+                        <strong class="priceft"></strong>
+                    </p>
+                </li>
             }
         </ul>
     </div>

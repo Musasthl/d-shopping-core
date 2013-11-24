@@ -16,6 +16,8 @@ namespace Website.Controllers
 
         CategoryHandler _category = new CategoryHandler();
 
+        private static ProductHandler _productHandler = new ProductHandler();
+
         public ActionResult Index()
         {
             return View();
@@ -49,9 +51,7 @@ namespace Website.Controllers
 
         public ActionResult Category()
         {
-            List<CategoryDto> catList = _category.getAllCategoryByParentId(CONST.CATEGORY.CAT_SHOPMUABAN);
-
-
+            List<ProductDto> catList = _productHandler.GetOtherProducts();
             return PartialView(catList);
         }
 

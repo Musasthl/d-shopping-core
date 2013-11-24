@@ -1,0 +1,34 @@
+﻿.d-left-body li {
+         overflow: hidden;
+     }
+
+    .d-left-li .img-product {
+        border: 1px solid #CCC;
+        margin-right: 8px;
+        padding: 1px;
+        width: 60px;
+        height: 60px;
+        float: left;
+        text-align: center;
+        vertical-align: middle;
+        display: table;
+    }
+
+    .d-left-li .img-product a {
+        display: table-cell;
+        text-align: center;
+        vertical-align: middle;
+    }
+
+    .d-left-li .img-product img {
+        width: 60px;
+        height: 60px;
+    }
+
+    .d-left-li p {
+        padding-bottom: 8px;
+    }
+
+    .d-left-li a {
+        background: none !important;
+    }

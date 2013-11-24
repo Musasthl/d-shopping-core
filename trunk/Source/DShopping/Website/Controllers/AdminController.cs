@@ -51,7 +51,7 @@ namespace Website.Controllers
 
         public ActionResult ChangePassword()
         {
-            ViewBag.Type = "New";
+            ViewBag.Type = "Đổi mật khẩu";
             ViewBag.Display = "alert_warning";
             return View();
         }

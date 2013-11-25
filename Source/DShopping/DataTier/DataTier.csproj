@@ -48,6 +48,7 @@
   <ItemGroup>
     <Compile Include="DAO\CategoryDAO.cs" />
     <Compile Include="DAO\CommentDAO.cs" />
+    <Compile Include="DAO\MessageDAO.cs" />
     <Compile Include="DAO\StatusDAO.cs" />
     <Compile Include="DAO\UserDAO.cs" />
     <Compile Include="DAO\DAO.cs" />

@@ -22,6 +22,7 @@
 
             </div>
             <div class="right">
+                <label >@ViewBag.Info</label>
                 <div class="price">
                     Giá:       @Localizer.Currency(Model.Price ?? 0)
                     <br />
@@ -59,17 +60,9 @@
         </div>
         <div id="tabs-2">
             <div id="tab-review" class="tab-content">
-                <form action="http://vitinhantin.com/contact" method="post" enctype="multipart/form-data">
-                    <div class="contact-info">
-                        @*                    <div class="content">
-                        <b>Địa chỉ:</b>61/6m Phạm Văn Chiêu, Phường 14, Quận Gò Vấp, Tp Hồ Chí Minh<br />
-                        <b>Yahoo</b>: tran_bao16<br />
-                        <b>Email</b>: tranbaolaptop@gmail.com
-                            <br />
-                        <b>Tel: </b>0932061639<br />
-                        <br />
-                    </div>*@
-                    </div>
+                <form method="post" id="submitOrders" action="@Url.Action("PostOrders", "Request")" >
+                    <input style="display:none" name="title" value="@Model.Name" />
+                    <input style="display:none" name="code" value="@Model.Code" />
                     <br />
                     <h2>Liên hệ với chúng tôi</h2>
                     <div class="content">
@@ -102,7 +95,7 @@
                         <div style="width:100%;color:red">Chúng tôi sẽ liên lạc với bạn trong vòng 8h sau khi nhận được thông tin</div>
                     </div>
                     <div class="buttons">
-                        <div class="right"><a id="button-review" class="button">Liên hệ với chúng tôi</a></div>
+                        <div class="right"><a id="button-review" onclick="$('#submitOrders').submit(); return false;" class="button">Liên hệ với chúng tôi</a></div>
                     </div>
                 </form>
             </div>

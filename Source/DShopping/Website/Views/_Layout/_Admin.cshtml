@@ -3,6 +3,7 @@
 @{
     Layout = null;
     var currentUser = Session[CONST.SESSION.USER];
+    var noOfMessage = Session[CONST.SESSION.MESSAGE];
     if(currentUser != null){
 
     }else{
@@ -76,7 +77,7 @@
 
     <section id="secondary_bar">
         <div class="user">
-            <p>Trần Bảo (<a href="#">@*3 Messages*@</a>)</p>
+            <p>Trần Bảo (<a href="@Url.Action("Message","Admin")">@noOfMessage đơn đặt hàng mới</a>)</p>
             <a class="logout_user" href="@Url.Action("Logout","Admin")" title="Logout">Đăng xuất</a>
         </div>
         <div class="breadcrumbs_container">
@@ -106,7 +107,7 @@
         </ul>
         <h3>Quản lý thông tin</h3>
         <ul class="toggle">
-            <li class="icn_folder"><a href="#">Chỉnh sửa Giới thiệu</a></li>
+            <li class="icn_folder"><a href="@Url.Action("Message","Admin")">Xem đơn đặt hàng mới</a></li>
             <li class="icn_audio"><a href="#">Chỉnh sửa liên hệ</a></li>
             <li class="icn_video"><a href="#">Chỉnh sửa Hỏi Đáp</a></li>
         </ul>

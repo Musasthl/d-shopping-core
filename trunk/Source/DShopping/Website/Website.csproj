@@ -721,6 +721,9 @@
     <Content Include="Views\Admin\ManageProduct.cshtml" />
     <Content Include="Views\Admin\RestoreProduct.cshtml" />
     <Content Include="Views\Admin\ChangePassword.cshtml" />
+    <Content Include="Views\Component\Comment.cshtml" />
+    <Content Include="Views\Component\CommentList.cshtml" />
+    <Content Include="Views\Admin\Message.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

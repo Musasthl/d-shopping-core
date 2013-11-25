@@ -30,6 +30,7 @@ namespace Website.Controllers
                 currentUser.Username = Username;
                 currentUser.Password = Password;
                 Session[CONST.SESSION.USER] = currentUser;
+                Session[CONST.SESSION.MESSAGE] = MessageHandler.CountMessageUnread();
                 return RedirectToAction("Index", "Admin");
             }
             return RedirectToAction("Login", "Admin");
@@ -77,6 +78,22 @@ namespace Website.Controllers
             prodHandler.AddNewProduct(product);
             return RedirectToAction("Index", "Home"); 
 
+        }
+
+        [HttpPost]
+        public ActionResult PostOrders(String name, String email, String address, String phone, String enquiry, String title, String code)
+        {
+            MessageDto Message = new MessageDto();
+            Message.Name = name;
+            Message.Email = email;
+            Message.Address = address;
+            Message.Phone = phone;
+            Message.Contents = enquiry;
+            Message.Title = title;
+            MessageHandler MessageHandler = new MessageHandler();
+            MessageHandler.AddMessage(Message);
+            ViewBag.Info = "Thao tác của bạn đã được thực hiện thành công";
+            return RedirectToAction("ProductDetail", "Home", new { productCode = code });
         }
     }
 }

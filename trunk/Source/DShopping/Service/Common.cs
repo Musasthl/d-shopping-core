@@ -256,6 +256,55 @@ namespace Service
         }
         #endregion
 
+        #region Message Converter
+
+        public static MessageDto ConvertToMessageDto(Messages Message)
+        {
+            MessageDto newMessageDto = new MessageDto();
+            if (Message != null)
+            {
+                newMessageDto.Contents = Message.Contents;
+                newMessageDto.Address = Message.Address;
+                newMessageDto.Email = Message.Email;
+                newMessageDto.MessageId = Message.MessageId;
+                newMessageDto.Name = Message.Name;
+                newMessageDto.Phone = Message.Phone;
+                newMessageDto.Title = Message.Title;
+                newMessageDto.CreatedDate = ((Message.CreatedDate != null) ? (DateTime)Message.CreatedDate : DateTime.Now);
+            }
+            else return null;
+
+            return newMessageDto;
+        }
+
+        public static List<MessageDto> ConvertToMessageDto(List<Messages> comments)
+        {
+            List<MessageDto> CommentDto = new List<MessageDto>();
+            foreach (Messages comment in comments)
+            {
+                CommentDto.Add(ConvertToMessageDto(comment));
+            }
+            return CommentDto;
+        }
+
+        public static Messages ConvertToMessages(MessageDto MessagesDto)
+        {
+            Messages Messages = new Messages();
+            if (MessagesDto != null)
+            {
+                Messages.Title = MessagesDto.Title;
+                Messages.Status = StatusDAO.getStatusById(CONST.STATUS.UNREAD);
+                Messages.Phone = MessagesDto.Phone;
+                Messages.Name = MessagesDto.Name;
+                Messages.Email = MessagesDto.Email;
+                Messages.Address = MessagesDto.Address;
+                Messages.CreatedDate = DateTime.Now;
+                Messages.Contents = MessagesDto.Contents;
+            }
+            return Messages;
+        }
+        #endregion
+
 
     }
 }

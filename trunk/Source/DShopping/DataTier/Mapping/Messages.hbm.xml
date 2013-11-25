@@ -13,6 +13,18 @@
     <property name="Title">
       <column name="Title" sql-type="nvarchar" not-null="false" />
     </property>
+    <property name="Name">
+      <column name="Name" sql-type="nvarchar" not-null="false" />
+    </property>
+    <property name="Email">
+      <column name="Email" sql-type="nvarchar" not-null="false" />
+    </property>
+    <property name="Address">
+      <column name="Address" sql-type="nvarchar" not-null="false" />
+    </property>
+    <property name="Phone">
+      <column name="Phone" sql-type="nvarchar" not-null="false" />
+    </property>
     <property name="Contents">
       <column name="Contents" sql-type="nvarchar" not-null="true" />
     </property>

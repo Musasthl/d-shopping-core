@@ -30,7 +30,8 @@ namespace Service
             public const string ACTIVE = "Active";
             public const string DELETE = "Delete";
             public const string PENDING = "Pending";
-
+            public const string UNREAD = "Unread";
+            public const string READ = "Read";
             public const string P_IMAGE = "P_Image";
         }
 
@@ -45,7 +46,7 @@ namespace Service
             public const string USER = "SESSION_USER";
             public const string PRODUCT = "SESSION_PRODUCT";
             public const string CATEGORY = "SESSION_CATEGORY";
-            
+            public const string MESSAGE = "SESSION_MESSAGE";
         }
         public class PAGE
         {

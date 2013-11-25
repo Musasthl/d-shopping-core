@@ -13,6 +13,10 @@ namespace DataTier.Entities {
         public virtual Users CreatedUser { get; set; }
         public virtual Status Status { get; set; }
         public virtual string Title { get; set; }
+        public virtual string Name { get; set; }
+        public virtual string Email { get; set; }
+        public virtual string Address { get; set; }
+        public virtual string Phone { get; set; }
         public virtual string Contents { get; set; }
         public virtual DateTime CreatedDate { get; set; }
         public virtual IList<MessageReceivers> MessageReceivers { get; set; }

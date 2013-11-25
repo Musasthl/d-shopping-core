@@ -59,6 +59,7 @@
     <Compile Include="DTO\CommentDto.cs" />
     <Compile Include="DTO\HotCategoryDto.cs" />
     <Compile Include="DTO\ExternalStore.cs" />
+    <Compile Include="DTO\MessageDto.cs" />
     <Compile Include="DTO\ProductDetailsDto.cs" />
     <Compile Include="DTO\ProductDto.cs" />
     <Compile Include="DTO\ProductOverviewDto.cs" />
@@ -68,6 +69,7 @@
     <Compile Include="DTO\CategoryDto.cs" />
     <Compile Include="Encrypt.cs" />
     <Compile Include="Handler\CategoryHandler.cs" />
+    <Compile Include="Handler\MessageHandler.cs" />
     <Compile Include="Handler\ProductHandler.cs" />
     <Compile Include="Handler\RoleHandler.cs" />
     <Compile Include="Handler\UserHandler.cs" />

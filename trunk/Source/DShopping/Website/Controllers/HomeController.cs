@@ -30,6 +30,7 @@ namespace Website.Controllers
 
         public ActionResult ProductDetail(string productCode)
         {
+            ViewBag.Info = "";
             var result = _productHandler.GetProductDetailByCode(productCode);
             return View(result);
         }

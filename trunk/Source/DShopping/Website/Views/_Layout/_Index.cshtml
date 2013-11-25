@@ -88,10 +88,11 @@
                             @*@Html.Action("Category", "ComponentLeftPanel")*@
                             <div class="d-split-row"></div>
                             <div id="ajaxProductNewest"></div>
-                            @*@Html.Action("ProductNewest", "ComponentLeftPanel")*@
+                            @*@Html.Action("ProductNewest", "ComponentLeftPanel")*@                            
                             <div class="d-split-row"></div>
-                            
-                            @*@Html.Action("Advertising", "ComponentRightPanel")*@
+                            @Html.Action("AboutUs", "ComponentRightPanel")
+                            <div class="d-split-row"></div>
+                            @Html.Action("Advertising", "ComponentLeftPanel")
                         </div>
                     </td>
                     <td class="d-split-col" />
@@ -115,8 +116,6 @@
                             @*@Html.Action("Category", "ComponentRightPanel")*@
                             <div class="d-split-row"></div>
                             @Html.Action("OnlineContact", "ComponentRightPanel")
-                            <div class="d-split-row"></div>
-                            @Html.Action("AboutUs", "ComponentRightPanel")
                             <div class="d-split-row"></div>
                             <div id="ajaxAdvertising"></div>
                             @*@Html.Action("Advertising", "ComponentRightPanel")*@

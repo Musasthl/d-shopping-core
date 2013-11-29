@@ -2,74 +2,19 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using System.Web;
-using System.Web.Mvc;
-using Service;
+using System.Text;
 using Service.DTO;
-using Service.Handler;
 
-namespace Website.Controllers
+namespace Service.Handler
 {
-    public class ComponentRightPanelController : Controller
+    public class CounterHandler
     {
-        //
-        // GET: /ComponentRightPanel/
-
-        CategoryHandler _category = new CategoryHandler();
-
-        private static ProductHandler _productHandler = new ProductHandler();
-
-        public ActionResult Index()
-        {
-            return View();
-        }
-
-        public ActionResult OnlineContact()
-        {
-            return PartialView();
-        }
-
-        public ActionResult AboutUs()
-        {
-            return PartialView();
-        }
-
-        public ActionResult ProductNewest()
-        {
-            List<ProductOverviewDto> newestProduct = ProductHandler.getNewestProduct();
-            return PartialView(newestProduct);
-        }
-
-        public ActionResult Search()
-        {
-            return PartialView();
-        }
-
-        public ActionResult Statistic()
-        {
-            CounterDto CounterDto = GetCounter();
-            WriteCounter();
-            return PartialView(CounterDto);
-        }
-
-        public ActionResult Advertising()
-        {
-            return PartialView();
-        }
-
-        public ActionResult Category()
-        {
-            List<ProductDto> catList = _productHandler.GetOtherProducts();
-            return PartialView(catList);
-        }
-
-
         public CounterDto GetCounter()
         {
             CounterDto counter = new CounterDto();
-            counter.All = int.Parse(ReadFile(Server.MapPath(CONST.COUNTER.PATH_ALL)));
+            counter.All = int.Parse(ReadFile(CONST.COUNTER.PATH_ALL));
             String today = DateTime.Now.Year.ToString() + DateTime.Now.Month.ToString() + DateTime.Now.Day.ToString() + ".txt";
-            counter.Today = int.Parse(ReadFile(Server.MapPath(CONST.COUNTER.PATH + today)));
+            counter.Today = int.Parse(ReadFile(CONST.COUNTER.PATH + today));
 
 
             return counter;
@@ -77,15 +22,15 @@ namespace Website.Controllers
 
         public void WriteCounter()
         {
-            String all = ReadFile(Server.MapPath(CONST.COUNTER.PATH_ALL));
+            String all = ReadFile(CONST.COUNTER.PATH_ALL);
             if (all == null || all == "") all = "0";
-            int Counter_all = int.Parse(ReadFile(Server.MapPath(CONST.COUNTER.PATH_ALL))) + 1;
+            int Counter_all = int.Parse(ReadFile(CONST.COUNTER.PATH_ALL)) + 1;
             String today = DateTime.Now.Year.ToString() + DateTime.Now.Month.ToString() + DateTime.Now.Day.ToString() + ".txt";
-            String countToday = ReadFile(Server.MapPath(CONST.COUNTER.PATH + today));
+            String countToday = ReadFile(CONST.COUNTER.PATH + today);
             if (countToday == null || countToday == "") countToday = "0";
             int Counter_today = int.Parse(countToday) + 1;
-            WriteFile(Server.MapPath(CONST.COUNTER.PATH_ALL), Counter_all.ToString());
-            WriteFile(Server.MapPath(CONST.COUNTER.PATH + today), Counter_today.ToString());
+            WriteFile(CONST.COUNTER.PATH_ALL, Counter_all.ToString());
+            WriteFile(CONST.COUNTER.PATH + today, Counter_today.ToString());
         }
         private String ReadFile(String filename)
         {
@@ -123,9 +68,9 @@ namespace Website.Controllers
             StreamWriter writer = null;
             try
             {
-                if (!System.IO.File.Exists(filename))
+                if (!File.Exists(filename))
                 {
-                    f = System.IO.File.Create(filename);
+                    f = File.Create(filename);
                     f.Flush();
                     f.Close();
                 }
@@ -146,6 +91,7 @@ namespace Website.Controllers
                     writer.Close();
             }
         }
+
 
     }
 }

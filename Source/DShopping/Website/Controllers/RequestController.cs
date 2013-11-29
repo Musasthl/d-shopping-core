@@ -24,7 +24,7 @@ namespace Website.Controllers
         {
             //Check login
 
-            if (UserHandler.AdminLogin(Username,Password))
+            if (UserHandler.AdminLogin(Username, Password) == CONST.ROLE.ADMIN)
             {
                 UserDto currentUser = new UserDto();
                 currentUser.Username = Username;
@@ -32,6 +32,15 @@ namespace Website.Controllers
                 Session[CONST.SESSION.USER] = currentUser;
                 Session[CONST.SESSION.MESSAGE] = MessageHandler.CountMessageUnread();
                 return RedirectToAction("Index", "Admin");
+            }
+            else if (UserHandler.AdminLogin(Username, Password) == CONST.ROLE.MOD)
+            {
+                UserDto currentUser = new UserDto();
+                currentUser.Username = Username;
+                currentUser.Password = Password;
+                Session[CONST.SESSION.USER] = currentUser;
+                Session[CONST.SESSION.MESSAGE] = MessageHandler.CountMessageUnread();
+                return RedirectToAction("Index", "Mod");
             }
             return RedirectToAction("Login", "Admin");
         }
@@ -76,6 +85,19 @@ namespace Website.Controllers
 
             product.Description = System.Net.WebUtility.HtmlDecode(desc);
             prodHandler.AddNewProduct(product);
+            if(Session[CONST.SESSION.USER] != null){
+                UserDto userDto = (UserDto)Session[CONST.SESSION.USER];
+                if (UserHandler.AdminLogin(userDto.Username, userDto.Password) == CONST.ROLE.ADMIN)
+                {
+
+                    return RedirectToAction("Index", "Admin");
+                }
+                else if (UserHandler.AdminLogin(userDto.Username, userDto.Password) == CONST.ROLE.MOD)
+                {
+
+                    return RedirectToAction("Index", "Mod");
+                }
+            }
             return RedirectToAction("Index", "Home"); 
 
         }

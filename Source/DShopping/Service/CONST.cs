@@ -15,6 +15,7 @@ namespace Service
         }
         public static class ROLE
         {
+            public const int INVALID = -1;
             public const int SADMIN = 0;
             public const int ADMIN = 10;
             public const int MOD = 20;
@@ -68,6 +69,10 @@ namespace Service
             public const int CAT_HOTCATEGORY = 3;
         }
 
-
+        public class COUNTER
+        {
+            public const string PATH = "/Contents/Counter/";
+            public const string PATH_ALL = PATH + "all.txt";
+        }
     }
 }

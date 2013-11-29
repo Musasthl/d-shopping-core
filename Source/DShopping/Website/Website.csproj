@@ -118,6 +118,7 @@
     <Compile Include="Controllers\ComponentMenuController.cs" />
     <Compile Include="Controllers\ComponentProductController.cs" />
     <Compile Include="Controllers\ComponentRightPanelController.cs" />
+    <Compile Include="Controllers\ModController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\RequestController.cs" />
     <Compile Include="ExtensionMethod\Localizer.cs" />
@@ -583,6 +584,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Contents\Counter\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
@@ -724,6 +726,14 @@
     <Content Include="Views\Component\Comment.cshtml" />
     <Content Include="Views\Component\CommentList.cshtml" />
     <Content Include="Views\Admin\Message.cshtml" />
+    <Content Include="Views\_Layout\_Mod.cshtml" />
+    <Content Include="Views\Mod\Index.cshtml" />
+    <Content Include="Views\Mod\AddProduct.cshtml" />
+    <Content Include="Views\Mod\ChangePassword.cshtml" />
+    <Content Include="Views\Mod\Login.cshtml" />
+    <Content Include="Views\Mod\ManageProduct.cshtml" />
+    <Content Include="Views\Mod\Message.cshtml" />
+    <Content Include="Views\ComponentRightPanel\Statistic.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

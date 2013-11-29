@@ -21,22 +21,23 @@ namespace Service.Handler
             newUser.Status = null;
         }
 
-        public static bool AdminLogin(String username, String password)
+        public static int AdminLogin(String username, String password)
         {
             Users adminUser = UserDAO.getUserByName(username);
-            if (adminUser == null) return false;
+            if (adminUser == null) return CONST.ROLE.INVALID;
             else
             {
                 if ((password).Equals(adminUser.Password))  // Encode Later
                 {
-                    return true;
+                    return adminUser.Role.Id;
                 }
                 else
                 {
-                    return false;
+                    return CONST.ROLE.INVALID;
                 }
             }
         }
+
         public static void ChangePassword(String username, String password)
         {
             Users adminUser = UserDAO.getUserByName(username);

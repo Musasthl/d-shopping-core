@@ -1,0 +1,27 @@
+﻿@model Service.DTO.CounterDto
+
+@if (Model != null)
+{
+    <div class="d-left-box">
+        <div class="d-left-box-heading">
+            Thống kê Truy cập
+        </div>
+        <div class="d-left-box-body">
+            <table style="margin: 8px 5px;">
+                <tr class="d-left-li " style="margin: 8px 5px;padding-bottom:5px;">
+                    <td style="color: rgb(45, 158, 0);margin: 8px 5px;padding-bottom:5px;">Hôm nay :</td>
+                    <td style="font-weight:bold;margin: 8px 5px;padding-bottom:5px;">@Model.Today</td>
+                </tr>
+                <tr class="d-left-li " style="margin: 8px 5px;padding-bottom:5px;">
+                    <td style="color: rgb(45, 158, 0);margin: 8px 5px;padding-bottom:5px;">Tổng lượt truy cập :</td>
+                    <td style="font-weight:bold;margin: 8px 5px;padding-bottom:5px;">@Model.All</td>
+                </tr>
+
+            </table>
+
+        </div>
+
+    </div>
+
+     
+}

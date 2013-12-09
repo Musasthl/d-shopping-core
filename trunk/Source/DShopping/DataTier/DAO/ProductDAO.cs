@@ -126,7 +126,8 @@ namespace DataTier.DAO
                 {
                     var Product = session.QueryOver<Products>()
                         
-                        .Where(p => p.Status.Id == "Active")
+                        .Where(p => p.Status.Id == "Active"
+                        )
                         .OrderBy(p => p.CreatedDate).Desc
                         .Take(noOfProduct)
                         .List();

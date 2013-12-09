@@ -7,6 +7,7 @@ using DataTier.DAO;
 using DataTier.Entities;
 using Service.DTO;
 using AutoMapper;
+using DataTier;
 
 namespace Service.Handler
 {
@@ -52,6 +53,19 @@ namespace Service.Handler
             {
                 return null;
             }
+        }
+
+        public void AddCategory(String CategoryName, String ParentName)
+        {
+            Categories category = new Categories();
+            category.Name = CategoryName;
+            category.Status = StatusDAO.getStatusById(CONST.STATUS.ACTIVE);
+            DAO.Execute(category, Entity.CATEGORY, ExecuteType.ADD);
+            category = CategoryDAO.getCategoryByName(CategoryName);
+            CategoryRelations rel = new CategoryRelations();
+            rel.Parent = CategoryDAO.getCategoryById(CONST.CATEGORY.CAT_TRANBAO);
+            rel.Child = category;
+            DAO.Execute(rel, Entity.CATEGORYRELATION, ExecuteType.ADD);
         }
     }
 }

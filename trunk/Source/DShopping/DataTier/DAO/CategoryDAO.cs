@@ -25,6 +25,26 @@ namespace DataTier.DAO
             }
         }
 
+        public static Categories getCategoryByName(string name)
+        {
+            try
+            {
+                using (ISession session = NHibernateHelper.OpenSession())
+                {
+                    var Categories = session.QueryOver<Categories>()
+                                    .Where(p => p.Name == name
+                                              && p.Status.Id == "Active")
+                        .List();
+
+                    return Categories.ElementAt(0);
+                }
+            }
+            catch (Exception ex)
+            {
+                return null;
+            }
+        }
+
         public static IList<Categories> getAllActiveCategory()
         {
             try

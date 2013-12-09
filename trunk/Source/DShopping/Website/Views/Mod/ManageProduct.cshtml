@@ -40,14 +40,25 @@
     });
 </script>
 <style type="text/css">
-    .item-updateLink a, .item-updateLink a:hover{
-        color: rgb(5, 116, 190) !important;
+    .item-updateLink span{
+        color: rgb(5, 116, 190);
         text-decoration: underline !important;
+        cursor: pointer;
     }
-    .item-deleteLink a, .item-deleteLink a:hover {
-        color: red!important;
-        text-decoration: underline!important;
+        .item-updateLink span:hover
+        {
+            color:red;
+        }
+
+    .item-deleteLink span {
+        color: rgb(5, 116, 190);
+        text-decoration: underline !important;
+        cursor: pointer;
     }
+        .item-deleteLink span:hover
+        {
+            color:red;
+        }
     .item-image img {
         width: 80px;
         height: 80px;

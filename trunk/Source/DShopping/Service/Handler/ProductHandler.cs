@@ -139,5 +139,15 @@ namespace Service.Handler
 
             return new List<ProductsForManageDto>();
         }
+
+        public void DeleteProduct(string productCode)
+        {
+            
+            var product = ProductDAO.getProductByCode(productCode);
+            product.Status = StatusDAO.getStatusById(CONST.STATUS.DELETE);
+
+            DAO.Execute(product, Entity.PRODUCT, ExecuteType.UPDATE);
+
+        }
     }
 }

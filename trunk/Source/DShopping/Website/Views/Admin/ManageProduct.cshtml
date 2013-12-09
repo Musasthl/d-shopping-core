@@ -11,19 +11,13 @@
 <link href="@Url.StyleSheetAdmin("ui.jqgrid.css")" rel="stylesheet" type="text/css" />
 <h2>ManageProduct</h2>
 <script type="text/javascript">
-    $(document).ready(function () {
+    
+    $(document).ready(function () {        
         drawView($(".select-category").val());
         function drawView(catId) {
             var urlAction = "@Url.Action("ViewProductByCategory","Admin")?categoryId="+catId;
-            JQGrid_ManageProduct(urlAction);
-        }
-        
-
-        //$(document).on("click", "td.item-hyperlink", function () {
-        //    $("#ajaxloading").show();
-        //    window.location.href = "/Report/ReviewNewEmployeeHire?Code=" + $(this).html();
-        //    return false;
-        //});
+            JQGrid_ManageProduct(urlAction);            
+        }      
         
         $(".select-category").change(function () {
             var value = $(".select-category").val();
@@ -37,7 +31,25 @@
                 }
             });
         });
+        
+        $('.item-deleteLink').click(function () { alert("dangok") })
     });
+    
+    function test(val) {
+        var value = $(".select-category").val();
+        var newUrl = "@Url.Action("ViewProductByCategory","Admin")?categoryId=" + value;
+        $.ajax({
+            url: "@Url.Action("DeleteProduct","Admin")?code=" + val,
+            success: function () {
+                $('#gridReport').setGridParam({ url: newUrl });
+                $('#gridReport').trigger('reloadGrid');
+
+            }
+        });
+        
+    }
+
+    $('.item-deleteLink').click(function () { alert("dangok2") })
 </script>
 <style type="text/css">
     .item-updateLink a, .item-updateLink a:hover{

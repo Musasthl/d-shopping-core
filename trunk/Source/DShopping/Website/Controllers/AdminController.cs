@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using System.Web.Helpers;
 using System.Web.Mvc;
 using Service;
 using Service.DTO;
@@ -130,6 +131,21 @@ namespace Website.Controllers
             Session[CONST.SESSION.USER] = null;
 
             return RedirectToAction("Index", "Home"); 
+        }
+
+        public ActionResult Message()
+        {
+            return View();
+        }
+
+        public JsonResult GetAllMessages()
+        {
+            return null;
+        }
+
+        public void DeleteProduct(string code) 
+        {
+            _productHandler.DeleteProduct(code);
         }
     }
 }

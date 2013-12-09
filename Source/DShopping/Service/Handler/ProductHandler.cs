@@ -21,6 +21,14 @@ namespace Service.Handler
                 Products product = new Products();
                 product = Common.ConvertToProduct(productDto);
                 ProductDAO.Execute(product, Entity.PRODUCT, ExecuteType.ADD);
+                List<Products> prodList = ProductDAO.getNewestProduct(1).ToList();
+                product = prodList.ElementAt(0);
+                if (product.Code == null || product.Code == "")
+                {
+                    product.Code = product.Id.ToString();
+
+                    ProductDAO.Execute(product, Entity.PRODUCT, ExecuteType.UPDATE);
+                }
                 return true;
             }
             catch (Exception ex)

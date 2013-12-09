@@ -1,6 +1,5 @@
-﻿
-@{
-    ViewBag.Title = "Contact";
+﻿@{
+    ViewBag.Title = "Liên hệ";
     Layout = "~/Views/_Layout/_Index.cshtml";
 }
 
@@ -8,16 +7,20 @@
 
 <h1>Liên hệ với chúng tôi</h1>
 
-<form action="http://vitinhantin.com/contact" method="post" enctype="multipart/form-data">
+<div>
     <div class="contact-info">
         <div class="content">
-            
+
             <h1>Vi Tính Trần Bảo</h1>
             <br />
-            <b>Địa chỉ:</b>61/6m Phạm Văn Chiêu, Phường 14, Quận Gò Vấp, Tp Hồ Chí Minh<br /><br />
-            <b>Yahoo</b>: tran_bao16<br /><br />
-            <b>Email</b>: tranbaolaptop@gmail.com<br /><br />
-            <b>Tel</b>: 0932061639 - 0902720839<br /><br />
+            <b>Địa chỉ:</b>61/6m Phạm Văn Chiêu, Phường 14, Quận Gò Vấp, Tp Hồ Chí Minh<br />
+            <br />
+            <b>Yahoo</b>: tran_bao16<br />
+            <br />
+            <b>Email</b>: tranbaolaptop@gmail.com<br />
+            <br />
+            <b>Tel</b>: 0932061639 - 0902720839<br />
+            <br />
             <br />
             <br />
             <br />
@@ -25,32 +28,42 @@
         </div>
     </div>
     <br />
-    <br />
-    <h2>Thông tin của Bạn</h2>
-    <div class="content">
-        <b>Họ và Tên:</b><br />
-        <input type="text" name="name" value="" />
+    <form method="post" id="submitOrders" action="@Url.Action("PostOrders", "Request")" >
+        <input style="display:none" name="title" value="Liên hệ hỏi đáp" />
+        <input style="display:none" name="code" value="Liên hệ" />
         <br />
-        <br />
-        <b>E-Mail :</b><br />
-        <input type="text" name="email" value="" />
-        <br />
-        <br />
-        <b>Địa chỉ :</b><br />
-        <input type="text" name="address" value="" />
-        <br />
-        <br />
-        <b>Điện Thoại<font color="#ff0000">(*)</font> :</b><br />
-        <input type="text" name="email" value="" />
-        <br />
-        <br />
-        <b>Nội dung:</b><br />
-        <textarea name="enquiry" cols="40" rows="10" style="width: 99%;"></textarea>
-        <br />
-        <br />
-
-    </div>
-    <div class="buttons">
-        <div class="right"><a id="button-review" class="button">Tiếp tục</a></div>
-    </div>
-</form>
+        <h2>Liên hệ với chúng tôi</h2>
+        <div class="content">
+            <table style="width: 100%;">
+                <tr style="padding-bottom: 5px;">
+                    <td style="width: 200px; vertical-align: middle"><b>Họ và Tên:</b></td>
+                    <td>
+                        <input style="width: 300px;" type="text" name="name" value="" /></td>
+                </tr>
+                <tr style="padding-bottom: 5px;">
+                    <td style="width: 200px; vertical-align: middle"><b>E-Mail :</b></td>
+                    <td>
+                        <input style="width: 300px;" type="text" name="email" value="" /></td>
+                </tr>
+                <tr style="padding-bottom: 5px;">
+                    <td style="width: 200px; vertical-align: middle"><b>Địa chỉ :</b></td>
+                    <td>
+                        <input style="width: 300px;" type="text" name="address" value="" /></td>
+                </tr>
+                <tr style="padding-bottom: 5px;">
+                    <td style="width: 200px; vertical-align: middle"><b>Điện Thoại<font color="#ff0000">(*)</font> :</b></td>
+                    <td>
+                        <input style="width: 300px;" type="text" name="phone" value="" /></td>
+                </tr>
+            </table>
+            <br />
+            <b>Nội dung:</b><br />
+            <textarea name="enquiry" cols="40" rows="10" style="width: 97%;"></textarea>
+            <br />
+            <div style="width: 100%; color: red">Chúng tôi sẽ liên lạc với bạn trong vòng 8h sau khi nhận được thông tin</div>
+        </div>
+        <div class="buttons">
+            <div class="right"><a id="button-review" onclick="$('#submitOrders').submit(); return false;" class="button">Liên hệ với chúng tôi</a></div>
+        </div>
+    </form>
+</div>

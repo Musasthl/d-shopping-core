@@ -48,7 +48,23 @@ namespace Website.Controllers
         [HttpPost]
         public ActionResult AddCategoryRequest(String CategoryName, String ParentName)
         {
-            return null;
+            CategoryHandler newHandler = new CategoryHandler();
+            newHandler.AddCategory(CategoryName, ParentName);
+            if (Session[CONST.SESSION.USER] != null)
+            {
+                UserDto userDto = (UserDto)Session[CONST.SESSION.USER];
+                if (UserHandler.AdminLogin(userDto.Username, userDto.Password) == CONST.ROLE.ADMIN)
+                {
+
+                    return RedirectToAction("Index", "Admin");
+                }
+                else if (UserHandler.AdminLogin(userDto.Username, userDto.Password) == CONST.ROLE.MOD)
+                {
+
+                    return RedirectToAction("Index", "Mod");
+                }
+            }
+            return RedirectToAction("Index", "Home"); 
         }
 
         [HttpPost]
@@ -78,6 +94,7 @@ namespace Website.Controllers
             ProductHandler prodHandler = new ProductHandler();
             ProductDto product = new ProductDto();
             product.Name = name;
+            
             product.Code = code;
             product.CategoryId = int.Parse(category);
             product.Price = float.Parse(price);
@@ -85,6 +102,7 @@ namespace Website.Controllers
 
             product.Description = System.Net.WebUtility.HtmlDecode(desc);
             prodHandler.AddNewProduct(product);
+            
             if(Session[CONST.SESSION.USER] != null){
                 UserDto userDto = (UserDto)Session[CONST.SESSION.USER];
                 if (UserHandler.AdminLogin(userDto.Username, userDto.Password) == CONST.ROLE.ADMIN)
@@ -99,6 +117,43 @@ namespace Website.Controllers
                 }
             }
             return RedirectToAction("Index", "Home"); 
+
+        }
+
+
+        [HttpPost]
+        [ValidateInput(false)]
+        public ActionResult AddProductRequest(String id, String name, String code, String category, String price, String image, String desc)
+        {
+            ProductHandler prodHandler = new ProductHandler();
+            ProductDto product = new ProductDto();
+
+            product = prodHandler.GetProductDetailById(int.Parse(id));
+            product.Name = name;
+
+            product.Code = code;
+            product.CategoryId = int.Parse(category);
+            product.Price = float.Parse(price);
+            product.Image = image;
+
+            product.Description = System.Net.WebUtility.HtmlDecode(desc);
+            prodHandler.AddNewProduct(product);
+
+            if (Session[CONST.SESSION.USER] != null)
+            {
+                UserDto userDto = (UserDto)Session[CONST.SESSION.USER];
+                if (UserHandler.AdminLogin(userDto.Username, userDto.Password) == CONST.ROLE.ADMIN)
+                {
+
+                    return RedirectToAction("Index", "Admin");
+                }
+                else if (UserHandler.AdminLogin(userDto.Username, userDto.Password) == CONST.ROLE.MOD)
+                {
+
+                    return RedirectToAction("Index", "Mod");
+                }
+            }
+            return RedirectToAction("Index", "Home");
 
         }
 

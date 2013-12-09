@@ -1,0 +1,157 @@
+﻿@using Website.ExtensionMethod
+@model Service.DTO.ProductDto
+@{
+    ViewBag.Title = "Thêm sản phẩm mới";
+    Layout = "~/Views/_Layout/_Admin.cshtml";
+
+    var listCats = ViewBag.ListCategory;
+    ViewBag.Href = Url.ImageProduct(Model.Image);
+}
+
+<script type="text/javascript">
+
+    function setValue() {
+        var name = $("#id-name").val();
+        var code = $("#id-code").val();
+        var category = $("#id-category").val();
+        var price = $("#id-price").val();
+        //var desc = $("#id-desc").val();
+
+        $("#hid_name").val(name);
+        $("#hid_code").val(code);
+        $("#hid_category").val(category);
+        $("#hid_price").val(price);
+        //$("#hid_desc").val(desc);
+        return true;
+    }
+    CKEDITOR.replace('desc');
+</script>
+<div class="product-info">
+
+    <article class="module width_full">
+        <header>
+
+            <h3>Tạo sản phẩm mới
+
+            </h3>
+
+        </header>
+        <div class="module_content">
+            <fieldset>
+
+                <label>Tên sản phẩm </label>
+                <input type="text" id="id-name" value="@Model.Name" />
+
+            </fieldset>
+            <table style="width: 100%;">
+                <tr>
+                    <td style="width: 250px; vertical-align: bottom;">
+                        @using (Html.BeginForm("AddProduct", "Admin", FormMethod.Post, new { enctype = "multipart/form-data" }))
+                        {
+                            <fieldset style="padding-left: 20px;">
+                                <label>Hình ảnh</label>
+                                <img src="@ViewBag.Href" width="200" height="140" style="width:200px;height:140px;" id="image" />
+                                <div class="clear" style="height: 10px"></div>
+                                <input type="file" name="file" id="file" />
+                                <div class="clear" style="height: 10px"></div>
+                                <input type="submit" value="Upload Image" />
+
+                            </fieldset>
+                        }
+
+                    </td>
+                    <td style="vertical-align: top">
+
+                        <fieldset style="padding-right: 10px;">
+                            <label>Danh mục</label>
+                            <select id="id-category">
+                                @{
+                                    foreach (var cat in listCats)
+                                    {
+                                    <option value="@cat.CategoryId">@cat.name</option>
+                                    }   
+                                }
+                            </select>
+
+                            <div class="clear" style="height: 10px"></div>
+                            <label>Mã sản phẩm</label>
+                            <input type="text" id="id-code" value="@Model.Code" />
+                            <div class="clear" style="height: 10px"></div>
+                            <label>Giá</label>
+                            <input type="text" id="id-price" value="@Model.Price" />
+
+                            <div class="clear" style="height: 10px"></div>
+                            <input type="reset" style="float: right" value="Clear" />
+                        </fieldset>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <form method="post" id="submitPost" action="@Url.Action("UpdateProductRequest", "Request")" >
+                            <h2>Mô tả</h2>
+                            <textarea id="id-desc" name="desc" class="ckeditor" rows="8" >@Model.Description</textarea>
+
+                            <div style="display: none">
+                                <input type="text" name="id" id="hid_id" value="@Model.Id" />
+                                <input type="text" name="name" id="hid_name" />
+                                <input type="text" name="code" id="hid_code" />
+                                <input type="text" name="category" id="hid_category" />
+                                <input type="text" name="price" id="hid_price" />
+                                <input type="text" value="@ViewBag.Image" name="image" id="hid_image"/>
+
+                            </div>
+                            <div style="margin: 10px auto; width: 200px;">
+                                <input class="alt_btn" type="submit" onclick="setValue();" value="Thêm sản phẩm" />
+
+                            </div>
+                        </form>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <footer>
+           
+        </footer>
+         Các kiểu Mô tả tiêu biểu <br />
+            <table border="1">
+                <tr>
+                    <td>
+                        <p><strong>T&iacute;nh năng nổi bật:</strong></p>
+
+<div class="thongtinsp">
+<p><strong><span style="color:#ff0000">NB Lenovo G400 - 5061</span></strong><br />
+- Intel P<strong>entium 2020M 2.4GHz</strong>&nbsp;- 2M<br />
+- DDRAM 2GB/1333<br />
+- HDD 500GB SATA<br />
+- Intel HD<br />
+- DVD-RW<br />
+- Card Reader<br />
+- 14&quot; WLED - HDMI - Webcam<br />
+- LAN 10/100 - Wireless N - Bluetooth<br />
+- Weight 2.4Kg - Battery 6 Cell<br />
+- OS Option<br />
+<strong>- Bảo h&agrave;nh 1 năm</strong>&nbsp;</p>
+</div>
+
+                    </td>
+                    <td>
+                       <p>Điểm nổi bật</p>
+
+<p>&nbsp;</p>
+
+<ul>
+	<li>Thiết kế v&ocirc; c&ugrave;ng độc đ&aacute;o c&oacute; thể lật, gập, quay ngược, sử dụng cho nhiều mục đ&iacute;ch</li>
+	<li>Chip 4th Generation Intel cực mạnh v&agrave; si&ecirc;u tiết kiệm điện năng</li>
+	<li>Hệ điều h&agrave;nh Windows 8.1 64bit mới nhất si&ecirc;u mượt v&agrave; đẹp</li>
+	<li>M&agrave;n h&igrave;nh khủng 13.3&rdquo; QHD+ LED Glossy ph&acirc;n giải khủng l&ecirc;n đến 3200x1800, cảm ứng đa điểm</li>
+	<li>Chip đồ họa cực mạnh Intel HD Graphics 4400, phục vụ tốt nhu cầu giải tr&iacute; v&agrave; l&agrave;m việc</li>
+	<li>Ổ cứng dạng rắn SSD cho khả năng vận h&agrave;nh đ&atilde; nhanh c&ograve;n nhanh hơn</li>
+</ul>
+
+                    </td>
+                </tr>
+            </table>
+    </article>
+</div>
+

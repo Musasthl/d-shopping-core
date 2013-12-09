@@ -734,6 +734,7 @@
     <Content Include="Views\Mod\ManageProduct.cshtml" />
     <Content Include="Views\Mod\Message.cshtml" />
     <Content Include="Views\ComponentRightPanel\Statistic.cshtml" />
+    <Content Include="Views\Admin\UpdateProduct.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

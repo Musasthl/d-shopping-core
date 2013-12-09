@@ -76,6 +76,10 @@ namespace Service
 
             product.ProductDetails.Add(productDetail);
 
+            if (prodDto.Id != null)
+            {
+                product.Id = prodDto.Id;
+            }
             return product;
         }
         public static List<ProductDto> ConvertToListProductDto(List<Products> listProducts)

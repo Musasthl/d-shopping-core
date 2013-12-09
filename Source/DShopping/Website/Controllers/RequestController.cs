@@ -123,7 +123,7 @@ namespace Website.Controllers
 
         [HttpPost]
         [ValidateInput(false)]
-        public ActionResult AddProductRequest(String id, String name, String code, String category, String price, String image, String desc)
+        public ActionResult UpdateProductRequest(String id, String name, String code, String category, String price, String image, String desc)
         {
             ProductHandler prodHandler = new ProductHandler();
             ProductDto product = new ProductDto();

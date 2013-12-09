@@ -42,7 +42,7 @@ namespace Website.Controllers
         {
             return View();
         }
-
+        
         public ActionResult AddProduct()
         {
 
@@ -146,6 +146,16 @@ namespace Website.Controllers
         public void DeleteProduct(string code) 
         {
             _productHandler.DeleteProduct(code);
+        }
+
+        public ActionResult UpdateProduct(string code)
+        {
+            var product = _productHandler.GetProductDetailByCode(code);
+
+            List<CategoryDto> catList = _category.getAllCategoryByParentId(CONST.CATEGORY.CAT_TRANBAO);
+
+            ViewBag.ListCategory = catList;
+            return View(product);
         }
     }
 }

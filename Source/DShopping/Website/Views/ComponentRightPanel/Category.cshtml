@@ -80,13 +80,13 @@
                 <li>
                     <div class="d-left-box-body-item">
                         <table>
-                            <tr>
+                            <tr style="height: 60px;">
                                 <td class="d-left-box-image"><a href="@Url.Action("ProductDetail", "Home")?productCode=@product.Code">
-                                    <img src="@Url.ImageProduct(product.Image)" width="60" height="40" /></a></td>
+                                    <img src="@Url.ImageProduct(product.Image)" width="60" height="60" /></a></td>
                                 <td style="padding-left: 2px; padding-right: 2px;">
-                                    <a href="@Url.Action("ProductDetail", "Home")?productCode=@product.Code" class="d-left-box-title">@product.Name</a>
+                                    <a href="@Url.Action("ProductDetail", "Home")?productCode=@product.Code" class="d-left-box-title" style="margin-top: 5px;">@product.Name</a>
                                     <div class="d-split-row"></div>
-                                    <div class="d-left-box-price">@product.Price đ</div>
+                                    <div class="d-left-box-price">@Localizer.Currency(@product.Price ?? 0)</div>
                                 </td>
                             </tr>
                         </table>

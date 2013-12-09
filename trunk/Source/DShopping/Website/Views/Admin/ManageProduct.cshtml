@@ -35,7 +35,7 @@
         $('.item-deleteLink').click(function () { alert("dangok") })
     });
     
-    function test(val) {
+    function deleteProduct(val) {
         var value = $(".select-category").val();
         var newUrl = "@Url.Action("ViewProductByCategory","Admin")?categoryId=" + value;
         $.ajax({
@@ -49,7 +49,12 @@
         
     }
 
-    $('.item-deleteLink').click(function () { alert("dangok2") })
+    function updateProduct(val) {
+        var url = "@Url.Action("UpdateProduct","Admin")?code=" + val;
+        window.location.href = url;
+        
+
+    }
 </script>
 <style type="text/css">
     .item-updateLink span{

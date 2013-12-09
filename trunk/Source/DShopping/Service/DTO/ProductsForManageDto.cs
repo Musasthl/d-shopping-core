@@ -21,8 +21,8 @@ namespace Service.DTO
         public string Image { get; set; }
         public int CategoryId { get; set; }
         public string IsActive { get; set; }
-        public string LinkUpdate { get { return "<span onclick='test(\"" + this.Code.ToString() + "\")'>Update</span>"; } }
-        public string LinkDelete { get { return "<span onclick='test(\""+this.Code.ToString()+"\")'>Delete</span>"; } }
+        public string LinkUpdate { get { return "<span onclick='updateProduct(\"" + this.Code.ToString() + "\")'>Update</span>"; } }
+        public string LinkDelete { get { return "<span onclick='deleteProduct(\"" + this.Code.ToString() + "\")'>Delete</span>"; } }
         public string Image1{get { return "<img src='../../Contents/Images/Product/" + this.Image + "' />"; }}
     }
 }

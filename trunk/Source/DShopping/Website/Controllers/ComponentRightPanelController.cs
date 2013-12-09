@@ -59,7 +59,7 @@ namespace Website.Controllers
 
         public ActionResult Category()
         {
-            List<ProductDto> catList = _productHandler.GetOtherProducts();
+            List<ProductDto> catList = _productHandler.GetComputerProducts();
             return PartialView(catList);
         }
 

@@ -90,7 +90,15 @@ namespace Service.Handler
             }
             return new List<ProductDto>();
         }
-		
+        public List<ProductDto> GetComputerProducts()
+        {
+            var results = ProductDAO.GetOtherProducts(CONST.CATEGORY.CAT_TRANBAO);
+            if (results != null)
+            {
+                return Common.ConvertToListProductDto(results.ToList());
+            }
+            return new List<ProductDto>();
+        }
 		public static List<CommentDto> GetAllComment(int productId)
         {
             List<CommentDto> allComment = new List<CommentDto>();

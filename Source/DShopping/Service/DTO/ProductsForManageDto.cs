@@ -22,7 +22,7 @@ namespace Service.DTO
         public int CategoryId { get; set; }
         public string IsActive { get; set; }
         public string LinkUpdate {get { return "<a href='javascript:;'>Update</a>"; }}
-        public string LinkDelete { get { return "<a href='javascript:;'>Delete</a>"; } }
+        public string LinkDelete { get { return "<span onclick='test(\""+this.Code.ToString()+"\")'>Delete</span>"; } }
         public string Image1{get { return "<img src='../../Contents/Images/Product/" + this.Image + "' />"; }}
     }
 }
